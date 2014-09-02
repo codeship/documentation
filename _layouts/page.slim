@@ -1,0 +1,16 @@
+---
+layout: default
+---
+
+| {% include search.html %}
+
+.contentWrapper.has-meta
+  | {% include meta.html tags=page.tags %}
+
+  .grid: .colxs100
+    | {% include breadcrumbs.html  %}
+    
+    h2.pageTitle
+      | {{ page.title }}
+
+    | {{ content }}
