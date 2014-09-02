@@ -3,7 +3,6 @@ title: ElasticSearch
 layout: page
 tags:
   - services
-  - databases
   - elasticsearch
 categories:
   - services
