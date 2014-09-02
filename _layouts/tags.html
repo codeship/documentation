@@ -1,20 +1,36 @@
 ---
-layout: default
+layout: page
 ---
 
-{% include search.html %}
+<p>
+  This is some description text. No there is some cupcake ipsum stuff. Gummi bears muffin jelly beans gummi bears ice cream tiramisu biscuit. Jelly fruitcake macaroon jujubes jelly-o pudding powder. Chocolate toffee cotton candy oat cake lemon drops muffin jelly-o bonbon. Lollipop macaroon pudding apple pie pastry.
+</p>
 
-<div class="contentWrapper">
-  <div class="grid">
-    <div class="colxs100">
-      <h2>{{ page.title }}</h2>
 
-      <ul>
-      {% for tagged_page in site.tags[page.tag] %}
-        <li><a class="tag" href="{{ site.baseurl }}{{ tagged_page.url }}">#{{ tagged_page.title }}</a></li>
-      {% endfor %}
-      </ul>
+<ul class="ul ul--columnized">
+  {% for tagged_page in site.tags[page.tag] %}
+    <li><a class="tag" href="{{ site.baseurl }}{{ tagged_page.url }}">#{{ tagged_page.title }}</a></li>
+  {% endfor %}
+  <li><a class="tag" href="#">#Some Tag</a></li>
+  <li><a class="tag" href="#">#Some Tag</a></li>
+  <li><a class="tag" href="#">#Some Tag</a></li>
+  <li><a class="tag" href="#">#Some Tag</a></li>
+</ul>
 
+<h3>Tutorials &amp; Helpfull Articles</h3>
+<div class="row">
+  <div class="colxs100 col--cling">
+    <div class="well well--paper">
+      <div class="colxs90 colxs--offset5">
+        <ul class="ul ta-left">
+          <li><a href="#">Link to an Article on our Blog</a></li>
+          <li><a href="#">Link to an Article on our Blog</a></li>
+          <li><a href="#">Link to an Article on our Blog</a></li>
+          <li><a href="#">Link to an Article on our Blog</a></li>
+        </ul>
+      </div>
     </div>
   </div>
 </div>
+
+{% include newsletter.html %}

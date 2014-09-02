@@ -177,3 +177,77 @@ body.is-blue {
     color: $cAnchor;
   }
 }
+
+.ul--columnized {
+  font-size: 0;
+  padding: 2rem 0;
+
+  li {
+    display: inline-block;
+    width: 50%;
+    box-sizing: border-box;
+
+    @media (max-width: $bpSmall) {
+      width: 100%;
+    }
+  }
+}
+
+.newsletterSubscribe {
+  background-image: url(../img/newsletterbox.jpg);
+  background-size: cover;
+  background-position-x: center;
+  padding: 1rem 4rem;
+  text-align: center;
+  border-radius: .5rem;
+  margin: 4rem 0;
+
+  h2,p {
+    color: $_cWhite;
+  }
+
+  form {
+    width: 100%;
+    max-width: 30rem;
+    display: inline-block;
+  }
+
+}
+
+.label--newsletter {
+  padding-right: 7rem;
+  margin: 1rem 0 3rem 0;
+
+  input {
+    border: none !important;
+    border-radius: .5rem;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    border: 0;
+    width: 7rem;
+    background: $_cGreen;
+    font-size: 1rem;
+    color: $_cWhite;
+    text-transform: uppercase;
+    border-top-right-radius: .5rem;
+    border-bottom-right-radius: .5rem;
+    cursor: pointer;
+    letter-spacing: 1px;
+
+    &:hover {
+      background: darken($_cGreen,4%);
+    }
+
+    &:active {
+      background: darken($_cGreen,8%);
+    }
+
+  }
+}
