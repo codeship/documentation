@@ -9,19 +9,7 @@ layout: default
   <div class="grid">
     <div class="colxs100">
 
-      {% capture url_parts %} {{ page.url | remove: "/index.html" | replace:'/'," " }}{% endcapture %}
-      {% capture num_parts %}{{ url_parts | number_of_words | minus: 1 }}{% endcapture %}
-      {% assign previous="" %}
-      <div class="breadcrumbs">
-        <a href="{{ site.baseurl }}">Home</a>
-        {% assign crumbs = page.url | split: '/' %}
-        {% assign crumbstotal = crumbs | size %}
-        {% for crumb in crumbs offset: 1 %}
-            {% unless crumb == 'index.html' %}
-                <a href="#">{{ crumb | capitalize | remove: '.html' }} </a>
-            {% endunless %}
-        {% endfor %}
-      </div>
+      {% include breadcrumbs.html %}
 
       <h2 class="pageTitle">{{ page.title | capitalize }}</h2>
       {{ content }}
