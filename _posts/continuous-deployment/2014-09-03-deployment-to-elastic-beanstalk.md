@@ -60,6 +60,71 @@ Once you added the above script to your repository, you can activate it on the *
 
 ![Beanstalk Deployment Script]({{ site.baseurl }}/images/continuous-deployment/script_beanstalk.png)
 
+## IAM permissions for deploy script
+In order to run the deploy script you'll need these IAM permissions, replace the S3 buckets and other names with yours:
+
+```json
+{
+  "Statement": [
+    {
+      "Sid": "Stmt1411390060340",
+      "Action": [
+        "elasticbeanstalk:CreateApplicationVersion",
+        "elasticbeanstalk:DeleteApplicationVersion",
+        "elasticbeanstalk:UpdateEnvironment"
+      ],
+      "Effect": "Allow",
+      "Resource": "*"
+    },
+    {
+      "Sid": "Stmt1411390060341",
+      "Action": [
+        "cloudformation:GetTemplate"
+      ],
+      "Effect": "Allow",
+      "Resource": "arn:aws:cloudformation:us-east-1:334918212912:stack/awseb-e-gh2phvff6p-stack/dabc86c0-4005-11e4-9c8c-500150b34c18"
+    },
+    {
+      "Sid": "Stmt1411390060342",
+      "Action": [
+        "ec2:DescribeImages",
+        "ec2:DescribeKeyPairs"
+      ],
+      "Effect": "Allow",
+      "Resource": "*"
+    },
+    {
+      "Sid": "Stmt1411390160651",
+      "Action": [
+        "s3:ListBucket"
+      ],
+      "Effect": "Allow",
+      "Resource":"arn:aws:s3:::elasticbeanstalk-us-east-1-334918212912"
+    },
+    {
+      "Sid": "Stmt1411390160659",
+      "Action": [
+        "s3:ListBucket",
+        "s3:PutObject",
+        "s3:GetObject",
+        "s3:DeleteObject"
+      ],
+      "Effect": "Allow",
+      "Resource":"arn:aws:s3:::elasticbeanstalk-us-east-1-334918212912/*"
+    },
+    {
+      "Sid": "Stmt1411390160661",
+      "Action": [
+        "s3:ListBucket",
+        "s3:GetObject"
+      ],
+      "Effect": "Allow",
+      "Resource":"arn:aws:s3:::elasticbeanstalk-env-resources-us-east-1/*"
+    }
+  ]
+}
+```
+
 ## See also
 
 + [Latest ```awscli``` documentation](http://docs.aws.amazon.com/cli/latest/reference/)
