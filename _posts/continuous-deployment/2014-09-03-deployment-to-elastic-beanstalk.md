@@ -67,9 +67,9 @@ In order to run the deploy script you'll need these IAM permissions, replace the
 {
   "Statement": [
     {
-      "Sid": "Stmt1411390060340",
       "Action": [
         "elasticbeanstalk:CreateApplicationVersion",
+        "elasticbeanstalk:DescribeEnvironments",
         "elasticbeanstalk:DeleteApplicationVersion",
         "elasticbeanstalk:UpdateEnvironment"
       ],
@@ -77,24 +77,49 @@ In order to run the deploy script you'll need these IAM permissions, replace the
       "Resource": "*"
     },
     {
-      "Sid": "Stmt1411390060341",
       "Action": [
-        "cloudformation:GetTemplate"
+        "sns:CreateTopic",
+        "sns:GetTopicAttributes",
+        "sns:ListSubscriptionsByTopic",
+        "sns:Subscribe"
       ],
       "Effect": "Allow",
-      "Resource": "arn:aws:cloudformation:us-east-1:334918212912:stack/awseb-e-gh2phvff6p-stack/dabc86c0-4005-11e4-9c8c-500150b34c18"
+      "Resource": "arn:aws:sns:us-east-1:334918212912:*"
     },
     {
-      "Sid": "Stmt1411390060342",
+      "Action": [
+        "autoscaling:SuspendProcesses",
+        "autoscaling:DescribeScalingActivities",
+        "autoscaling:ResumeProcesses",
+        "autoscaling:DescribeAutoScalingGroups"
+      ],
+      "Effect": "Allow",
+      "Resource": "*"
+    },
+    {
+      "Action": [
+        "cloudformation:GetTemplate",
+        "cloudformation:DescribeStackResource",
+        "cloudformation:UpdateStack"
+      ],
+      "Effect": "Allow",
+      "Resource": "arn:aws:cloudformation:us-east-1:334918212912:*"
+    },
+    {
       "Action": [
         "ec2:DescribeImages",
         "ec2:DescribeKeyPairs"
       ],
       "Effect": "Allow",
       "Resource": "*"
-    },
+    }
+  ]
+}
+```
+```json
+{
+  "Statement": [
     {
-      "Sid": "Stmt1411390160651",
       "Action": [
         "s3:ListBucket"
       ],
@@ -102,29 +127,35 @@ In order to run the deploy script you'll need these IAM permissions, replace the
       "Resource":"arn:aws:s3:::elasticbeanstalk-us-east-1-334918212912"
     },
     {
-      "Sid": "Stmt1411390160659",
       "Action": [
         "s3:ListBucket",
         "s3:PutObject",
         "s3:GetObject",
-        "s3:DeleteObject"
+        "s3:DeleteObject",
+        "s3:GetObjectAcl"
       ],
       "Effect": "Allow",
       "Resource":"arn:aws:s3:::elasticbeanstalk-us-east-1-334918212912/*"
     },
     {
-      "Sid": "Stmt1411390160661",
       "Action": [
         "s3:ListBucket",
         "s3:GetObject"
       ],
       "Effect": "Allow",
       "Resource":"arn:aws:s3:::elasticbeanstalk-env-resources-us-east-1/*"
+    },
+    {
+      "Action": [
+        "s3:GetBucketPolicy",
+        "s3:PutObjectAcl"
+      ],
+      "Effect": "Allow",
+      "Resource":"*"
     }
   ]
 }
 ```
-
 ## See also
 
 + [Latest ```awscli``` documentation](http://docs.aws.amazon.com/cli/latest/reference/)
