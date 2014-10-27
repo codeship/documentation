@@ -263,6 +263,11 @@ code {
   transform: translateY(-1px);
 }
 
+code.highlight {
+  width: 100%;
+  overflow-x: scroll;
+}
+
 pre {
   padding: $base-padding $base-padding/2;
 

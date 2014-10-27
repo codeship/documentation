@@ -40,7 +40,6 @@ markdown: kramdown
 kramdown:
   input: GFM
   hard_wrap: false
-  use_coderay: true
-  coderay:
-    coderay_line_numbers:      table
-    coderay_css:               class
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    line_numbers: false
