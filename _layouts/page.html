@@ -19,6 +19,10 @@ layout: default
 
 {% include search.html %}
 
+
+{% if page.notIncludeContentWrapper %}
+{{ content }}
+{% else %}
 <div class="contentWrapper has-meta">
   {% include meta.html tags=page.tags %}
   <div class="grid">
@@ -39,3 +43,4 @@ layout: default
     </div>
   </div>
 </div>
+{% endif %}
