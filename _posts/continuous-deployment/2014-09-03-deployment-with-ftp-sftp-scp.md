@@ -11,30 +11,30 @@ categories:
 ---
 We generally advise to use any SSH based tools like SFTP or SCP for deployment and only use FTP if not possible otherwise.
 
-When we checkout your repository we clone it to a folder called ```clone``` directly beneath the home directory. So when you see references to ```~/clone/``` folder, we talk about our local copy of your repository.
+When we checkout your repository we clone it to a folder called `clone` directly beneath the home directory. So when you see references to `~/clone/` folder, we talk about our local copy of your repository.
 
 * include a table of contents
 {:toc}
 
 ## Continuous Deployment with FTP
 
-For ftp we have recommend using _lftp_ for uploading your files. The following section will help you get started.
+For ftp we have recommend using `lftp` for uploading your files. The following section will help you get started.
 
 To keep your password out of your build logs, add it as an environment variable in your project configuration
 
-~~~shell
+```shell
 FTP_PASSWORD="your_ftp_password"
 FTP_USER="ftp_user"
-~~~
+```
 
 So if you wanted to copy all of your repository to a remote server, you could add the following command to a _script deployment_ on the branch you want to deploy.
 
 * Make sure your _remote dir_ does not end with a slash unless you want your copy to live in a subdirectory called _clone_.
 * Also make sure your _remote dir_ already exists before trying your first deployment.
 
-~~~shell
+```shell
 lftp -c "open -u $FTP_USER,$FTP_PASSWORD ftp.yoursite.com; set ssl:verify-certificate no; mirror -R ~/clone/ /remote/dir"
-~~~
+```
 
 For more information on using _lftp_ please see the [LFTP man page]({% man_url lftp %}) available online.
 
@@ -42,16 +42,18 @@ For more information on using _lftp_ please see the [LFTP man page]({% man_url l
 
 All of the methods below can use key based authentication. As this does not require you to provide your account password to Codeship, we strongly advise to configure this.
 
-You need to add the [Codeship public SSH key]({{ site.baseurl }}{% post_url continuous-integration/2014-09-03-where-can-i-find-the-ssh-public-key-for-my-project %}) to your authorized_keys file on the server. This file is located in a folder called ```.ssh``` beneath your home directory. Below are the commands you need to prepare everything and open an editor window where you can simply paste your key and save the file. Please run those commands via an SSH session on your server.
+You need to add the [Codeship public SSH key]({{ site.baseurl }}{% post_url continuous-integration/2014-09-03-where-can-i-find-the-ssh-public-key-for-my-project %}) for your project to the `~/.ssh/authorized_keys` file on your server. Below are the commands you need to prepare everything and open an editor window where you can simply paste your key and save the file. Please run those commands via an SSH session on your server.
 
-~~~shell
+```shell
 mkdir -p ~/.ssh
 touch ~/.ssh/authorized_keys
 chmod -R go-rwx ~/.ssh/
 
 # add the Codeship public SSH key to ~/.ssh/authorized_keys
 editor ~/.ssh/authorized_keys
-~~~
+```
+
+See [Run commands on a remote server via SSH](#run-commands-on-a-remote-server-via-ssh) on how to run commands on a remote server when building your application on Codeship.
 
 ## Continuous Deployment with SFTP
 
@@ -61,34 +63,34 @@ As with the the FTP example above, we will deploy the complete repository conten
 
 Please add a file containing the following directives to your repository. You can name it any way you like. In our case we will call it _production_ and store it in a subdirectory called _deploy_.
 
-~~~ftp
+```ftp
 mkdir /path/on/server
 put -rp ~/clone/* /path/on/server/
-~~~
+```
 
 For the [branch you want to deploy]({{ site.baseurl }}{% post_url continuous-deployment/2014-09-03-deployment-pipelines %}) you create a script deployment that contains:
 
-~~~shell
+```shell
 sftp -b deploy/production ssh_user@your.server.com
-~~~
+```
 
 Make sure you add the [SSH key of your project]({{ site.baseurl }}{% post_url continuous-integration/2014-09-03-where-can-i-find-the-ssh-public-key-for-my-project %})
 into your servers ***authorized_keys*** file.
 
 ## Continuous Deployment with SCP
 
-SCP allows you to copy files from your local system to another server. With the ***-r*** option
+SCP allows you to copy files from your local system to another server. With the `-r` option
 you can also recursively upload directories. You can read more about the different options
 in the [LFTP man page]({% man_url scp %}).
 
 For the [branch you want to deploy]({{ site.baseurl }}{% post_url continuous-deployment/2014-09-03-deployment-pipelines %}) you create a script deployment that contains:
 
-~~~shell
+```shell
 scp -rp ~/clone/* ssh_user@your.server.com:/path/on/server/
-~~~
+```
 
 Make sure you add the [SSH key of your project]({{ site.baseurl }}{% post_url continuous-integration/2014-09-03-where-can-i-find-the-ssh-public-key-for-my-project %})
-into your servers ***authorized_keys*** file.
+into your servers `~/.ssh/authorized_keys` file.
 
 ## Continuous Deployment with RSYNC
 
@@ -97,22 +99,24 @@ will check the files and only upload files that have changed.
 
 For the [branch you want to deploy]({{ site.baseurl }}{% post_url continuous-deployment/2014-09-03-deployment-pipelines %}) you create a script deployment that contains the following code.
 
-~~~shell
+```shell
 rsync -av ~/clone/ ssh_user@your.server.com:/path/on/server/
-~~~
+```
 
 Or you can also run rsync over ssh.
 
-~~~shell
+```shell
 rsync -avz -e "ssh" ~/clone/ ssh_user@your.server.com:/path/on/server/
-~~~
+```
 
 You can read more about the Rsync options in the [Rsync man page]({% man_url rsync %}).
 
-## Start services for deployment through SSH
+## Run commands on a remote server via SSH
 
-If you give a command as the last parameter to SSH it will run this command on the server and exit with the return status of that command. This can be used to start services or trigger a deployment on an external system. If, for example, you already copied a script named ```restart_apache.sh``` to your server in a previous step, you would be able to call it with the following snippet.
+If you give a command as the last parameter to SSH it will run this command on the server and exit with the return status of that command. This can be used to start services or trigger a deployment on an external system.
 
-~~~shell
-ssh ssh_user@your.server.com "restart_apache.sh"
-~~~
+To restart _Apache_ on a remote server, you could call e.g. the following command. (This would require the _deploy_ user to be able to call `sudo` without a password though.)
+
+```shell
+ssh deploy@your.server.com 'sudo service apache restart'
+```

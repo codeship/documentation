@@ -17,7 +17,7 @@ We will use the GitHub Oauth Token we got when you connected Codeship to your Gi
 By default anyone who either owns a project or was added as a team member will receive an email whenever a build fails and if a build on a branch passes when the one before failed. So whenever a branch is back to OK you will be notified.
 
 ### Disable Email
-If you don't want to receive any emails you can set that on your [account page](https://www.codeship.io/user/edit).
+If you don't want to receive any emails you can set that on your [account page](https://www.codeship.com/user/edit).
 
 ### Receive emails when I am involved
 In your projects notification settings you can set the option that you only receive an email when the build was on the master branch or if you started this build

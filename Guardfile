@@ -12,4 +12,6 @@ guard "jekyll-plus",
   ignore /^_site/
   ignore /^Gemfile(.lock)?/
   ignore /^Guardfile/
+  ignore /^Readme.md/
+  ignore /^License.md/
 end

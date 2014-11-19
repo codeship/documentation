@@ -221,7 +221,7 @@ body.is-blue {
   h3{ @extend .like-h5; margin-bottom: 0; margin-top: 1.5em;}
   h4{ @extend .like-h6; margin-bottom: 0; margin-top: 1.5em;}
 
-  h2 {
+  h2, h3 {
     a {
       display: none;
       color: $cAnchor;
@@ -250,10 +250,6 @@ body.is-blue {
 
   ol {
     @extend .ol;
-  }
-
-  [data-swiftype-name="body"] > div {
-    overflow-x: scroll;
   }
 
   .tag {

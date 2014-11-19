@@ -8,7 +8,7 @@ categories:
   - analytics
 ---
 There is no specific setup necessary to use Code Climate on Codeship.
-You can follow the [Code Climate docs](http://docs.codeclimate.com/category/3-test-coverage)
+You can follow the [Code Climate docs](http://docs.codeclimate.com/article/219-setting-up-test-coverage)
 set it up with your application and just include the Code Climate API key either
 in the environment settings or prefix your test commands with it as explained in their docs.
 

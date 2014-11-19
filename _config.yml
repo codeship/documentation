@@ -1,5 +1,5 @@
 # Site settings
-url: https://www.codeship.io/documentation
+url: https://www.codeship.com/documentation
 baseurl: /documentation
 permalink: /:categories/:title/
 tags_dir: tags
@@ -18,6 +18,7 @@ defaults:
 # Jekyll
 exclude:
   - Readme.md
+  - License.md
   - Guardfile
   - Gemfile
   - Gemfile.lock
@@ -40,7 +41,6 @@ markdown: kramdown
 kramdown:
   input: GFM
   hard_wrap: false
-  use_coderay: true
-  coderay:
-    coderay_line_numbers:      table
-    coderay_css:               class
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    line_numbers: false

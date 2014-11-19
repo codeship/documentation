@@ -263,6 +263,14 @@ code {
   transform: translateY(-1px);
 }
 
+[class^="highlighter-"] pre {
+  overflow-x: scroll;
+
+  code {
+    padding: 0 5px;
+  }
+}
+
 pre {
   padding: $base-padding $base-padding/2;
 

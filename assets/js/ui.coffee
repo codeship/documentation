@@ -65,7 +65,7 @@ $ ->
         anchor.innerHTML = "<i class=\"fa fa-link\"></i>";
         return anchor;
 
-      $headers = $('.pageContent').find('h2')
+      $headers = $('.pageContent').find('h2,h3')
       $headers.each ->
         if $(this).attr('id') != ''
           $(this).append anchorForId($(this).attr('id'))

@@ -31,7 +31,7 @@ Check out the [S3 documentation](http://docs.aws.amazon.com/cli/latest/reference
 
 We don't keep your artifacts on the Codeship: After your build is finished we delete all data for security reasons.
 
-As an example learn [how we deploy our documentation to S3](http://blog.codeship.io/2014/02/04/continuous-deployment-static-pages-amazon-s3.html).
+As an example learn [how we deploy our documentation to S3](http://blog.codeship.com/middleman-s3-deploy/).
 
 ## Upload through SFTP
 

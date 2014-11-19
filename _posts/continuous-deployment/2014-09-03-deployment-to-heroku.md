@@ -34,5 +34,5 @@ heroku_run bundle exec rake db:migrate my_herokuapp_name
 - [My push to Heroku got rejected]({{ site.baseurl }}{% post_url faq/2014-09-10-push-to-heroku-rejected %})
 
 ## Related Content
-On our blog you will find a full tutorial on how to [deploy a Rails app from GitHub to Heroku](http://blog.codeship.io/2013/09/26/how-to-deploy-a-ruby-on-rails-app-from-github-to-heroku.html).
+On our blog you will find a full tutorial on how to [deploy a Rails app from GitHub to Heroku](http://blog.codeship.com/github-heroku-rails-deployment/).
 The part about deploying to Heroku is the same for any application, framework, GitHub or Bitbucket.

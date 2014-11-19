@@ -35,4 +35,4 @@ https://lighthouse.codeship.io/bitbucket/YOUR_PROJECT_UUID
 
 ## Issues with Codeship
 
-It also might be possible that there are issues on Codeship. Please check our [Codeship Status Page](http://status.codeship.io){:target="_blank"} for further information.
+It also might be possible that there are issues on Codeship. Please check our [Codeship Status Page](http://status.codeship.com){:target="_blank"} for further information.
