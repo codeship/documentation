@@ -1,6 +1,9 @@
 <!doctype html>
 <html lang="en">
 <head>
+  {% if page.apiary_embed %}
+  <script src="http://api.apiary.io/seeds/embed.js"></script>
+  {% endif %}
   <meta charset="UTF-8">
   {% include head.html %}
   <meta name="viewport" content="width=device-width">
