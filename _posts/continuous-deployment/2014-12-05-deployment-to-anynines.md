@@ -27,7 +27,7 @@ Then create a new **script based** deployment and paste the following commands.
 cf6 api https://api.de.a9s.eu
 cf6 auth "${CF_USER}" "${CF_PASSWORD}"
 cf6 target -o "${CF_ORG}" -s "${CF_SPACE}"
-cf6 push "${CF_APP}"
+cf6 push "${CF_APPLICATION}"
 ```
 
 This will deploy your application on each push to the specific branch you configured the deployment for.
