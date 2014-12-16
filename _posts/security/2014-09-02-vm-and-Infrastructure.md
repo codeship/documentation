@@ -8,7 +8,7 @@ categories:
   - security
 ---
 ## OS & Virtualization
-We use **Ubuntu 12.10** as our base image for the host as well as the test machines. To virtualize the test machines we use **Linux Containers**.
+We use **Ubuntu 14.04 (Trusty Tahr)** as our base image for the host as well as the test machines. To virtualize the test machines we use **Linux Containers**.
 
 **Every build gets a new completely clean virtual machine.** Changes done to the filesystem during the build are stored on a temporary filesystem in memory so your code never touches a harddrive and is completely removed as soon as we shut down the virtual machine.
 
