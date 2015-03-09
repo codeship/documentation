@@ -60,6 +60,102 @@ Once you added the above script to your repository, you can activate it on the *
 
 ![Beanstalk Deployment Script]({{ site.baseurl }}/images/continuous-deployment/script_beanstalk.png)
 
+## IAM permissions for deploy script
+In order to run the deploy script you'll need these IAM permissions, replace the S3 buckets and other names with yours:
+
+```json
+{
+  "Statement": [
+    {
+      "Action": [
+        "elasticbeanstalk:CreateApplicationVersion",
+        "elasticbeanstalk:DescribeEnvironments",
+        "elasticbeanstalk:DeleteApplicationVersion",
+        "elasticbeanstalk:UpdateEnvironment"
+      ],
+      "Effect": "Allow",
+      "Resource": "*"
+    },
+    {
+      "Action": [
+        "sns:CreateTopic",
+        "sns:GetTopicAttributes",
+        "sns:ListSubscriptionsByTopic",
+        "sns:Subscribe"
+      ],
+      "Effect": "Allow",
+      "Resource": "arn:aws:sns:us-east-1:334918212912:*"
+    },
+    {
+      "Action": [
+        "autoscaling:SuspendProcesses",
+        "autoscaling:DescribeScalingActivities",
+        "autoscaling:ResumeProcesses",
+        "autoscaling:DescribeAutoScalingGroups"
+      ],
+      "Effect": "Allow",
+      "Resource": "*"
+    },
+    {
+      "Action": [
+        "cloudformation:GetTemplate",
+        "cloudformation:DescribeStackResource",
+        "cloudformation:UpdateStack"
+      ],
+      "Effect": "Allow",
+      "Resource": "arn:aws:cloudformation:us-east-1:334918212912:*"
+    },
+    {
+      "Action": [
+        "ec2:DescribeImages",
+        "ec2:DescribeKeyPairs"
+      ],
+      "Effect": "Allow",
+      "Resource": "*"
+    }
+  ]
+}
+```
+```json
+{
+  "Statement": [
+    {
+      "Action": [
+        "s3:ListBucket"
+      ],
+      "Effect": "Allow",
+      "Resource":"arn:aws:s3:::elasticbeanstalk-us-east-1-334918212912"
+    },
+    {
+      "Action": [
+        "s3:ListBucket",
+        "s3:PutObject",
+        "s3:GetObject",
+        "s3:DeleteObject",
+        "s3:GetObjectAcl"
+      ],
+      "Effect": "Allow",
+      "Resource":"arn:aws:s3:::elasticbeanstalk-us-east-1-334918212912/*"
+    },
+    {
+      "Action": [
+        "s3:ListBucket",
+        "s3:GetObject"
+      ],
+      "Effect": "Allow",
+      "Resource":"arn:aws:s3:::elasticbeanstalk-env-resources-us-east-1/*"
+    },
+    {
+      "Action": [
+        "s3:GetBucketPolicy",
+        "s3:PutObjectAcl"
+      ],
+      "Effect": "Allow",
+      "Resource":"*"
+    }
+  ]
+}
+```
 ## See also
 
 + [Latest `awscli` documentation](http://docs.aws.amazon.com/cli/latest/reference/)
