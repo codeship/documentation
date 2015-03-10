@@ -8,58 +8,20 @@ tags:
 categories:
   - continuous-deployment
 ---
+<<<<<<< HEAD
+You can deploy your [Java]({{ site.baseurl }}{% post_url languages/2014-09-03-java-and-jvm-based-languages %}), [Ruby]({{ site.baseurl }}{% post_url languages/2014-09-03-ruby %}) or [Python]({{ site.baseurl }}{% post_url languages/2014-09-03-python %}) applications to Google App Engine through Codeship.
+=======
 ## Prerequisites
 
 This deployment method is not yet able to create Elastic Beanstalk environments, neither does it configure the S3 Bucket needed to upload new versions of your application. Please configure your Elastic Beanstalk environment by hand for your first deploy. All later deployments can then be handled by the scripts provided in this article.
+>>>>>>> master
 
 ## Configuration
 
-Please add the following variables to the ***Environment*** page in your project configuration.
+The first time you want to connect Codeship to Elastic Beanstalk, we will ask to insert your project's variables from your project configuration.
 
-```shell
-AWS_ACCESS_KEY_ID
-AWS_SECRET_ACCESS_KEY
-AWS_DEFAULT_REGION
-APP_NAME
-ENV_NAME
-S3_BUCKET
-```
-
-## Deploy Script
-
-Here is a script (`deploy_beanstalk.sh`) that you can put into your repository. Feel free to adapt and modify it to your specific needs.
-
-Keep in mind that the script resets the working copy to a pristine state. If you precompile assets, be sure to add a build step after the call to `git clean`.
-
-```shell
-#!/bin/sh
-
-export APP_VERSION=`git rev-parse --short HEAD`
-pip install awscli
-
-# clean build artifacts and create the application archive (also ignore any files named .git* in any folder)
-git clean -fd
-
-# precompile assets, ...
-
-# zip the application
-zip -x *.git* -r "${APP_NAME}-${APP_VERSION}.zip" .
-
-# delete any version with the same name (based on the short revision)
-aws elasticbeanstalk delete-application-version --application-name "${APP_NAME}" --version-label "${APP_VERSION}"  --delete-source-bundle
-
-# upload to S3
-aws s3 cp ${APP_NAME}-${APP_VERSION}.zip s3://${S3_BUCKET}/${APP_NAME}-${APP_VERSION}.zip
-
-# create a new version and update the environment to use this version
-aws elasticbeanstalk create-application-version --application-name "${APP_NAME}" --version-label "${APP_VERSION}" --source-bundle S3Bucket="${S3_BUCKET}",S3Key="${APP_NAME}-${APP_VERSION}.zip"
-aws elasticbeanstalk update-environment --environment-name "${ENV_NAME}" --version-label "${APP_VERSION}"
-```
-
-Once you added the above script to your repository, you can activate it on the ***Deployment*** page, via the *Custom script* option.
-
-![Beanstalk Deployment Script]({{ site.baseurl }}/images/continuous-deployment/script_beanstalk.png)
-
+![Configure AWS Environment Variables]({{ site.baseurl }}/images/continuous-deployment/beanstalk_config.png)
+	
 ## See also
 
 + [Latest `awscli` documentation](http://docs.aws.amazon.com/cli/latest/reference/)
