@@ -21,7 +21,7 @@ When you start a SSH Debug session we will clone the repository and set up all e
 
 ## Codeship Command
 
-Inside the SSH session, you have access to the Codeship command. It provides some convient methods to debug your project.
+Inside the SSH session, you have access to the Codeship command. It provides some convenient methods to debug your project.
 
 ```shell
 cs help

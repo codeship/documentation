@@ -19,6 +19,18 @@ bundle exec guard
 
 You can then access the site at [http://localhost:4000](http://localhost:4000)
 
+### Linting
+
+#### SCSS
+
+SCSS files are automatically linted using [scss-lint](https://github.com/causes/scss-lint). To run it execute the following command
+
+```bash
+bundle exec scss-lint
+```
+
+It's configured in [.scss-lint.yml](.scss-lint.yml) and the default configuration is [available online](https://github.com/causes/scss-lint/blob/master/config/default.yml) as well.
+
 ### Contributing
 
 1. [Fork it](https://github.com/codeship/documentation/fork)

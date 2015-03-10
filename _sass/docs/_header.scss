@@ -1,11 +1,7 @@
-/*
- * ------------------------------------------------------------------------------ *
- * PageHeader for the Website
- *
- * This Element is used only once on the Website
- * ------------------------------------------------------------------------------ *
- */
-
+//
+// PageHeader for the Website
+//This Element is used only once on the Website
+//
 .pageHeader {
   width: 100%;
   display: block;
@@ -38,7 +34,7 @@
     position: relative;
 
     &.has-new-badge::before {
-      content: "NEW";
+      content: 'NEW';
       position: absolute;
       color: $_cWhite;
       background: #7ad07c;
@@ -57,7 +53,7 @@
     margin-top: 4px;
   }
 
-  .nav--small .nav__link{
+  .nav--small .nav__link {
     padding-bottom: 0;
     padding-left: 2px;
     font-size: .8rem;
@@ -129,7 +125,7 @@
     position: absolute;
     right: 0;
     top: 0;
-    border: none;
+    border: 0;
     color: $_cWhite;
     background: none;
     top: 0;
@@ -140,7 +136,8 @@
       color: $cPageHeaderBg;
     }
 
-    &:active,&:focus {
+    &:active,
+    &:focus {
       background: transparent;
     }
   }

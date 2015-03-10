@@ -100,11 +100,12 @@ body.is-blue {
 
 .tag {
   color: $_cWhite;
-  background: darken($_cGrey,5%);
+  background: darken($_cGrey, 5%);
   display: inline-block;
   padding: .1rem .5rem;
   border-radius: .2rem;
   font-size: .9rem;
+  white-space: nowrap;
 
   &:hover {
     background: $cAnchor;
@@ -122,7 +123,7 @@ body.is-blue {
   overflow-x: initial;
 
   a {
-    color: darken($_cGrey,10%);
+    color: darken($_cGrey, 10%);
     display: inline-block;
     margin: 0 .5rem;
     font-size: .9rem;
@@ -132,7 +133,7 @@ body.is-blue {
     }
 
     &:not(:last-of-type)::after {
-      content: "/";
+      content: '/';
       position: relative;
       right: -.5rem;
     }
@@ -180,7 +181,7 @@ body.is-blue {
   .box__counter {
     float: right;
     display: inline-block;
-    color: rgba(#000,.2);
+    color: rgba(#000, .2);
     font-weight: 200;
     letter-spacing: 0;
   }
@@ -217,11 +218,12 @@ body.is-blue {
 .pageContent {
   padding-top: 2rem;
 
-  h2{ @extend .like-h4; margin-bottom: 0; margin-top: 1.5em;}
-  h3{ @extend .like-h5; margin-bottom: 0; margin-top: 1.5em;}
-  h4{ @extend .like-h6; margin-bottom: 0; margin-top: 1.5em;}
+  h2 { @extend .like-h4; margin-bottom: 0; margin-top: 1.5em; }
+  h3 { @extend .like-h5; margin-bottom: 0; margin-top: 1.5em; }
+  h4 { @extend .like-h6; margin-bottom: 0; margin-top: 1.5em; }
 
-  h2, h3 {
+  h2,
+  h3 {
     a {
       display: none;
       color: $cAnchor;
@@ -232,7 +234,7 @@ body.is-blue {
       position: absolute;
       left: 1rem;
       font-size: .9em;
-      transform: translate(-60%,0.2em);
+      transform: translate(-60%, 0.2em);
     }
 
     &:hover a {
@@ -240,7 +242,8 @@ body.is-blue {
     }
   }
 
-  img,table {
+  img,
+  table {
     margin: 0.7rem 0;
   }
 
@@ -295,7 +298,7 @@ body.is-blue {
 // *******************************************************
 
 .newsletterSubscribe {
-  background-image: url(../img/newsletterbox.jpg);
+  background-image: url('../img/newsletterbox.jpg');
   background-size: cover;
   background-position-x: center;
   padding: 1rem 4rem;
@@ -303,7 +306,8 @@ body.is-blue {
   border-radius: .5rem;
   margin: 4rem 0;
 
-  h2,p {
+  h2,
+  p {
     color: $_cWhite;
   }
 
@@ -343,11 +347,11 @@ body.is-blue {
     letter-spacing: 1px;
 
     &:hover {
-      background: darken($_cGreen,4%);
+      background: darken($_cGreen, 4%);
     }
 
     &:active {
-      background: darken($_cGreen,8%);
+      background: darken($_cGreen, 8%);
     }
 
   }

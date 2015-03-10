@@ -87,7 +87,7 @@
       h3 {
         text-align: left;
         a {
-          font-family: "Lato";
+          font-family: 'Lato';
           font-size: 1.2rem;
           text-decoration: none;
         }
@@ -109,7 +109,8 @@
       }
     }
 
-    .st-next,.st-prev {
+    .st-next,
+    .st-prev {
       @extend .btn;
       @extend .btn--clean;
       padding: .3rem;
