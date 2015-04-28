@@ -65,7 +65,7 @@ Please add a file containing the following directives to your repository. You ca
 
 ```shell
 mkdir /path/on/server
-put -rp "${HOME}/clone/*" /path/on/server/
+put -rp "/home/rof/clone/*" /path/on/server/
 ```
 
 For the [branch you want to deploy]({{ site.baseurl }}{% post_url continuous-deployment/2014-09-03-deployment-pipelines %}) you create a script deployment that contains:
