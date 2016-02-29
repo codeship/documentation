@@ -18,7 +18,7 @@ sudo /etc/init.d/cassandra start
 ```
 
 <div class="info-block">
-Note, that this is the only command available via `sudo` and root access to run any other commands is not available on the build VMs.
+Note, that this is one of the only commands available via `sudo` and root access to run any other commands is not available on the build VMs.
 </div>
 
 If you require a CLI tool to access or Cassandra server, we would recommend [cqlsh](https://pypi.python.org/pypi/cqlsh) available via pip.
