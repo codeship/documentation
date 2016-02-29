@@ -9,7 +9,7 @@ categories:
   - databases
 ---
 
-RethinkDB is installed on our test VMs but not running by default. To use the RethinkDB during your builds, start the service via the following command:
+RethinkDB is installed on the test VMs but not running by default. To use the RethinkDB during your builds, start the service via the following command:
 
 ```shell
 sudo /etc/init.d/rethinkdb start
