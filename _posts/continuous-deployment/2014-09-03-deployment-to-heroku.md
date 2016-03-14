@@ -38,7 +38,6 @@ heroku run --exit-code --app ${HEROKU_APPLICATION_NAME} -- bundle exec rake db:m
 
 ## Troubleshooting
 - [check_url fails when deploying to Heroku]({{ site.baseurl }}{% post_url faq/2014-09-10-check_url-fails-for-heroku-deployment %})
-- [My push to Heroku got rejected]({{ site.baseurl }}{% post_url faq/2014-09-10-push-to-heroku-rejected %})
 
 ## Related Content
 On our blog you will find a full tutorial on how to [deploy a Rails app from GitHub to Heroku](http://blog.codeship.com/github-heroku-rails-deployment/).
