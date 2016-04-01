@@ -5,6 +5,10 @@ permalink: /:categories/:title/
 tags_dir: tags
 ubuntu_version: trusty
 
+# Discourse Comments
+# See https://github.com/oblakeerickson/jekyll_discourse_comments
+discourse_url: "https://community.codeship.com/"
+
 # Defaults for posts
 defaults:
   -
