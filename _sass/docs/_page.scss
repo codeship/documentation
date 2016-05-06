@@ -280,6 +280,11 @@ body.is-blue {
     }
   }
 
+  code,
+  pre {
+    overflow-x: auto;
+  }
+
   .tag {
     margin-right: .5rem;
   }
