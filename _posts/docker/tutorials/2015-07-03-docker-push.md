@@ -64,7 +64,7 @@ app:
 
 **Prerequisites:** You will need to have a robot account for your Quay repository. Please see the documentation on [Robot Accounts](http://docs.quay.io/glossary/robot-accounts.html) for Quay.io on how to set it up for your repository.
 
-* Once you have configured the robot account, download the `.dockercfg` file for this account, by heading over to the _Robots Account_ tab in your settings, clicking the gear icon, selecting _View Credentials_ and hitting the download button.
+* Once you have configured the robot account, download the `.dockercfg` file for this account, by heading over to the _Robots Account_ tab in your settings, clicking the gear icon, and selecting _View Credentials_. Then select _Docker Configuration_ and download the credentials config file.
 
     Save the file as `dockercfg` in your repository (you'll probably want to add it to the `.gitignore` file as well).
 
