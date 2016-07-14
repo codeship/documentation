@@ -112,7 +112,8 @@ Please replace `[region]` and `[accountid]` with the respective values for your 
      "s3:GetObjectAcl",
      "s3:ListBucket",
      "s3:DeleteObject",
-     "s3:GetBucketPolicy"
+     "s3:GetBucketPolicy",
+     "s3:CreateBucket"
    ],
    "Effect": "Allow",
    "Resource": [
