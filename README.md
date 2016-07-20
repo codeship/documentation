@@ -21,7 +21,7 @@ For content related changes and fixes, it's easiest to use GitHubs [File Edit UI
 
 ### Setup
 
-We need to be brief, so clone the repository,
+We need to be brief,
 
 ```bash
 git clone git@github.com:codeship/documentation.git
