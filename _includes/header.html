@@ -1,44 +1,61 @@
-<header class="pageHeader">
-  <div class="contentWrapper only-till-sm">
-    <h1 class="is-hidden">Codeship</h1>
-    <figure class="pageHeader__logo"><a href="https://codeship.com/"><img alt="Codeship Logo" src="{{ site.baseurl }}/assets/img/logo.png" /></a></figure>
-    <nav class="nav nav--small" id="subNav">
-      <ul>
-        <li><a class="nav__link has-new-badge" href="https://codeship.com/features/parallelci">Parallelci</a></li>
-        <li><a class="nav__link" href="https://codeship.com/resources">Free Resources</a></li>
-        <li><a class="nav__link" href="https://codeship.com/codeshipped">Codeshipped</a></li>
-        <li><a class="nav__link" href="{{ site.baseurl }}">Documentation</a></li>
-        <li><a class="nav__link" href="http://blog.codeship.com">Blog</a></li>
-        <li><a class="nav__link" href="https://codeship.com/jobs">Jobs</a></li>
-      </ul>
-    </nav>
-    <nav class="nav" id="mainNav">
-      <ul>
-        <li><a class="nav__link" href="https://codeship.com/pricing">Pricing</a></li>
-        <li><a class="nav__link" href="https://codeship.com/features">Features</a></li>
-        <li><a class="nav__link" href="https://codeship.com/customers">Customers</a></li>
-        <li><a class="nav__link" href="https://codeship.com/team">Team</a></li>
-      </ul>
-    </nav>
-    <div class="pageHeader__signup">
-      <a class="btn has-icon" href="https://codeship.com/sessions/new" id="signin">Sign in <i class="icon fa fa-user"></i></a>
+<button class="flexMenuToggleButton -right" data-rig-flexmenu-element="toggle">
+  <span class="icon fa fa-bars"></span>
+</button>
+<div class="flexMenu -right" data-rig-ui-menu="horizontal" data-rig-flexmenu-element="menu">
+  <nav class="flexMenu_nav -topRow">
+    <div class="flexMenu_block -left">
+      <div class="flexMenu_block_item -phone">
+        <a href="https://pages.codeship.com/contact-sales">
+          <span class="icon fa fa-phone"></span>&nbsp;855.790.8079
+        </a>
+      </div>
     </div>
-  </div>
-  <div class="contentWrapper pageHeader__mobile">
-    <h1 class="is-hidden">Codeship</h1>
-    <button class="btn btn--mobileMenu js-mobileMenu"><i class="icon fa fa-bars"></i></button>
-    <figure class="pageHeader__logo"><a href="https://codeship.com/"><img alt="Codeship Logo" src="{{ site.baseurl }}/assets/img/logo-only.png" /></a></figure>
-    <nav class="nav nav--mobileMenu">
-      <ul>
-        <li><a class="nav__link" href="https://codeship.com/pricing">Pricing</a></li>
-        <li><a class="nav__link" href="https://codeship.com/features">Features</a></li>
-        <li><a class="nav__link" href="https://codeship.com/features/parallelci">Parallelci</a></li>
-        <li><a class="nav__link" href="https://codeship.com/codeshipped">Codeshipped</a></li>
-        <li><a class="nav__link" href="https://codeship.com/customers">Customers</a></li>
-        <li><a class="nav__link" href="https://codeship.com/team">Team</a></li>
-        <li><a class="nav__link" href="http://blog.codeship.com">Blog</a></li>
-        <li><a class="btn btn--primary is-success" href="https://codeship.com/">Codeship Homepage</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
+    <ul class="flexMenu_block -right">
+      <li class="flexMenu_block_item -showMobile ta-center">
+        <a href="https://codeship.com/"><img alt="Codeship Logo" src="{{ site.baseurl }}/assets/img/logo.png" /></a>
+      </li>
+      <li class="flexMenu_block_item">
+        <a href="https://codeship.com/resources">Resources</a>
+      </li>
+      <li class="flexMenu_block_item">
+        <a href="https://blog.codeship.com">Blog</a>
+      </li>
+      <li class="flexMenu_block_item">
+        <a href="https://pages.codeship.com/press">Press</a>
+      </li>
+      <li class="flexMenu_block_item">
+        <a href="{{ site.baseurl }}">Documentations</a>
+      </li>
+      <li class="flexMenu_block_item">
+        <a href="https://pages.codeship.com/contact-sales?utm_source=codeship-documentation&utm_medium=hp-navbar&utm_campaign=hp-navbar-contactsales">Contact Sales</a>
+      </li>
+      <li class="flexMenu_block_item -hideMobile">
+        <a href="https://codeship.com/sessions/new">Login</a>
+      </li>
+    </ul>
+  </nav>
+  <nav class="flexMenu_nav">
+
+    <div class="flexMenu_block -left -logo">
+        <a href="https://codeship.com/"><img alt="Codeship Logo" src="{{ site.baseurl }}/assets/img/logo.png" /></a>
+    </div>
+    <ul class="flexMenu_block -right">
+
+      <li class="flexMenu_block_item">
+        <a href="https://pages.codeship.com/docker?utm_source=codeship&utm_medium=navbar&utm_campaign=docker-addon">Docker Platform</a>
+      </li>
+      <li class="flexMenu_block_item">
+        <a href="https://codeship.com/features">Features</a>
+      </li>
+      <li class="flexMenu_block_item">
+        <a href="https://codeship.com/pricing">Pricing</a>
+      </li>
+      <li class="flexMenu_block_item -showMobile">
+        <a href="https://codeship.com/sessions/new">Login</a>
+      </li>
+      <li class="flexMenu_block_item">
+        <a href="https://codeship.com/registrations/new" class="signUpButton">Free Signup</a>
+      </li>
+    </ul>
+  </nav>
+</div>
