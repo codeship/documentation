@@ -43,13 +43,8 @@ $ ->
         $(this).parent().removeClass 'has-focus'
 
     _handleMobileMenu: ->
-      $('.js-mobileMenu').on "click", (e) ->
-        e.preventDefault()
-        $menu = $('.nav--mobileMenu')
-        if $menu.hasClass('is-visible')
-          $menu.removeClass('is-visible').velocity "slideUp", {duration: 200}
-        else
-          $menu.addClass('is-visible').velocity "slideDown", {duration: 200}
+      $('[data-rig-flexmenu-element=toggle]').on 'click', (e) ->
+        $('[data-rig-flexmenu-element=menu]').toggleClass 'is-open'
 
     _linkfyAnchors: ->
 
