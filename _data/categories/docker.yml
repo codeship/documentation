@@ -2,5 +2,6 @@ title: Docker Infrastructure
 weight: 84
 introduction: >
   <div class="info-block">
-    Codeship's Docker based infrastructure is available to customers on a invite only basis at the moment. Please see the [Docker feature page](http://pages.codeship.com/docker) for information and to request access.
+    <p>Fore more information on our Docker-based infrastructure, and to request access, visit our [Docker feature page](http://pages.codeship.com/docker).</p>
+    <p>We also have a Docker Getting Started Guide that you can follow along with <a href="https://documentation.codeship.com/docker-guide/">available here.</a></p>
   </div>
