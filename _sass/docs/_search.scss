@@ -5,12 +5,12 @@
   background-position-x: center;
   background-position-y: center;
   display: block;
-  margin-top: 78px;
+  margin-top: 88px;
   padding: 4rem 1rem;
   text-align: center;
 
-  @media only screen and (max-width: $bpMedium) {
-    margin-top: 52px;
+  @media only screen and (max-width: 900px) {
+    margin-top: 0;
   }
 
   h2 {
