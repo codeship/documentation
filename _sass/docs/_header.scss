@@ -1,6 +1,9 @@
 // Latest RIG Flexmenu Base Code
 // Already compiled css because we don't should introduce new mixins and functions now
+// scss-lint:disable TrailingSemicolon, SpaceBeforeBrace, MergeableSelector, SingleLinePerSelector, VendorPrefix, SpaceAfterPropertyColon
 .flexMenu{display:inline-block;position:fixed;top:0;height:100vh;width:100%;max-width:300px;background:#fff;overflow-x:hidden;overflow-y:scroll;text-align:left;z-index:100}@media screen and (max-width: 900px){.flexMenu{-webkit-transition:-webkit-transform 300ms;transition:transform 300ms;}.flexMenu.-left{-webkit-transform:translateX(-100%);-ms-transform:translateX(-100%);transform:translateX(-100%)}.flexMenu.-right{-webkit-transform:translateX(100%);-ms-transform:translateX(100%);transform:translateX(100%)}.flexMenu.is-open{-webkit-transform:translateX(0);-ms-transform:translateX(0);transform:translateX(0)}}.flexMenu.-left{left:0;border-right:1px solid #ccc}.flexMenu.-right{right:0;border-left:1px solid #ccc}.flexMenu a{display:block;background-image:none}.flexMenu_nav{display:block}.flexMenuToggleButton{position:fixed;top:15px;left:15px;right:15px}@media screen and (min-width: 900px){.flexMenuToggleButton{display:none;}}.flexMenuToggleButton.-left{right:auto}.flexMenuToggleButton.-right{left:auto}.flexMenu_block{padding:0 15px;z-index:101}.flexMenu_block a{display:block;padding:4px 0}.flexMenu_block.-logo{padding:0}.flexMenu_block.-logo>a{-webkit-transition:color 300ms,background 300ms;transition:color 300ms,background 300ms;padding:0 15px;text-decoration:none;background-image:none;color:#242628}.flexMenu_block.-logo>a:hover{color:#2e77cc;background:#eaeaea}.flexMenu_block_item{display:block;position:relative}.flexMenu_block_item>a{padding:4px 0}@media screen and (min-width: 900px){.flexMenu:not([data-rig-ui-menu=horizontal]).-left ~ .container{padding-left:300px}.flexMenu:not([data-rig-ui-menu=horizontal]).-right ~ .container{padding-right:300px}}@media screen and (min-width: 1400px){.flexMenu:not([data-rig-ui-menu=horizontal]).-left ~ .container{padding-left:150px}.flexMenu:not([data-rig-ui-menu=horizontal]).-right ~ .container{padding-right:150px}}@media screen and (min-width: 1500px){.flexMenu:not([data-rig-ui-menu=horizontal]).-left ~ .container{padding-left:100px}.flexMenu:not([data-rig-ui-menu=horizontal]).-right ~ .container{padding-right:100px}}@media screen and (min-width: 1700px){.flexMenu:not([data-rig-ui-menu=horizontal]).-left ~ .container{padding-left:0}.flexMenu:not([data-rig-ui-menu=horizontal]).-right ~ .container{padding-right:0}}@media screen and (min-width: 900px){.flexMenu[data-rig-ui-menu=horizontal]{display:block;height:auto;max-width:100%;border:0;border-bottom:1px solid #ccc;overflow:visible}.flexMenu[data-rig-ui-menu=horizontal] .flexMenu_nav{display:table;width:100%}.flexMenu[data-rig-ui-menu=horizontal] .flexMenu_block{display:table-cell;vertical-align:middle;height:auto;text-align:left}.flexMenu[data-rig-ui-menu=horizontal] .flexMenu_block.-left,.flexMenu[data-rig-ui-menu=horizontal] .flexMenu[data-rig-ui-menu=horizontal] .flexMenu_block.-left{margin-left:0}.flexMenu[data-rig-ui-menu=horizontal] .flexMenu_block.-right{margin-right:0;text-align:right}.flexMenu[data-rig-ui-menu=horizontal] .flexMenu_block_item{display:inline-block}.flexbox .flexMenu[data-rig-ui-menu=horizontal] .flexMenu_nav{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between}.flexbox .flexMenu[data-rig-ui-menu=horizontal] .flexMenu_block{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-flex:1;-webkit-flex-grow:1;-ms-flex-positive:1;flex-grow:1;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;text-align:center}.flexbox .flexMenu[data-rig-ui-menu=horizontal] .flexMenu_block.-left,.flexbox .flexMenu[data-rig-ui-menu=horizontal] .flexMenu_block.-right{width:auto;-webkit-box-flex:0;-webkit-flex-grow:0;-ms-flex-positive:0;flex-grow:0}.flexbox .flexMenu[data-rig-ui-menu=horizontal] .flexMenu_block_item{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex}.flexbox .flexMenu[data-rig-ui-menu=horizontal] ul.flexMenu_block{-webkit-flex-flow:row wrap;-ms-flex-flow:row wrap;flex-flow:row wrap;-webkit-box-pack:start;-webkit-justify-content:flex-start;-ms-flex-pack:start;justify-content:flex-start}}
+
+// scss-lint:enable TrailingSemicolon, SpaceBeforeBrace, SingleLinePerSelector, VendorPrefix, SpaceAfterPropertyColon
 
 // COLOR MAP
 // ---------
@@ -13,7 +16,7 @@ $m-colors: (
   ),
   signupButton: (
     base: #fff,
-    bg: #60CC69,
+    bg: #60cc69,
     bgHover: #4dc657
   ),
   anchor: (
@@ -104,10 +107,11 @@ $m-breakpoints: (
 }
 
 .flexMenu_block.-logo { // scss-lint:disable MergeableSelector
+  text-align: center;
+
   @include smaller-than('medium-screen') {
     display: none;
   }
-  text-align: center;
 
   a {
     padding: 10px 15px;
