@@ -12,11 +12,6 @@
       {% if site.data.categories[part].title %}
         <a href="{{ site.baseurl }}{{ previous }}/">{{ site.data.categories[part].title }}</a>
       {% else %}
-        {% if part == "faq" %}
-          <a href="{{ site.baseurl }}{{ previous }}/">FAQ</a>
-        {% else %}
-          <a href="{{ site.baseurl }}{{ previous }}/">{{ part | capitalize | remove: '.html'  }}</a>
-        {% endif %}
       {% endif %}
     {% endcase %}
   {% endfor %}
