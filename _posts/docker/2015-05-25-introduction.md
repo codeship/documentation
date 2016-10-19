@@ -1,7 +1,7 @@
 ---
 title: Welcome to Codeship’s Docker Infrastructure
 layout: page
-weight: 95
+weight: 100
 tags:
   - docker
   - introduction

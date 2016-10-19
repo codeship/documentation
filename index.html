@@ -15,16 +15,16 @@ bodyclass: is-blue
       {% if site.categories[category_name] %}
         {% assign category_pages = site.categories[category_name] | sort: 'weight' %}
         {% assign number_category_pages = site.categories[category_name] | size %}
-        {% assign page_offset = number_category_pages | minus: 5 %}
-        <div class="colxs100 colsm50 colmd33 collg33">
+        {% assign page_offset = number_category_pages | minus: 10 | sort: 'weight' %}
+        <div class="colxs100 colsm50 colmd50 collg50">
           <div class="box">
             <h2 class="box__title">{{ category.title }}</h2>
               <ul class="box__links ul">
-                {% for content_page in category_pages reversed limit: 5 offset: page_offset %}
+                {% for content_page in category_pages reversed limit: 10 offset: page_offset %}
                 <li><a href="{{ site.baseurl }}{{ content_page.url }}" class="box__link">{{ content_page.title }}</a></li>
                 {% endfor %}
               </ul>
-            {% if number_category_pages > 5 %}
+            {% if number_category_pages > 10 %}
             <div class="box__footer">
               <a href="{{ site.baseurl }}/{{ category_name }}/">Read More</a>
               <span class="box__counter">{{ number_category_pages }} Topics</span>
