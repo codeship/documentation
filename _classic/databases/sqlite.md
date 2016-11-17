@@ -5,6 +5,6 @@ tags:
   - services
   - databases
   - sqlite
-category: Getting Started
+category: Databases
 ---
 SQLite `3.7.13` is installed and can be used with any language specific library.
