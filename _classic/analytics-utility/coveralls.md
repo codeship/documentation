@@ -4,10 +4,10 @@ layout: page
 tags:
   - analytics
   - integrations
-category: Services
+category: Analytics & Utility
 redirect_from:
   - /analytics/coveralls/
-  - /classic/getting-started/coveralls
+  - /classic/getting-started/coveralls/
 ---
 ## Coveralls Discount Code
 

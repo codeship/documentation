@@ -8,7 +8,7 @@ tags:
 category: Databases
 redirect_from:
   - /databases/rethinkdb/
-  - /classic/getting-started/rethinkdb
+  - /classic/getting-started/rethinkdb/
 ---
 
 RethinkDB is installed on our test VMs but not running by default. To use the RethinkDB during your builds, start the service via the following command:

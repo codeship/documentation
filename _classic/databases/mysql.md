@@ -8,7 +8,7 @@ tags:
 category: Databases
 redirect_from:
   - /databases/mysql/
-  - /classic/getting-started/mysql
+  - /classic/getting-started/mysql/
 ---
 MySQL **5.6** runs on the default port and the credentials are stored in the `MYSQL_USER` and `MYSQL_PASSWORD` environment variables.
 

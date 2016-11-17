@@ -8,7 +8,7 @@ tags:
 category: Databases
 redirect_from:
   - /databases/cassandra/
-  - /classic/getting-started/cassandra
+  - /classic/getting-started/cassandra/
 ---
 
 The latest version from the `2.0.x` release of [Apache Cassandra](http://cassandra.apache.org/) is installed on the build VMs, but not running by default.

@@ -4,7 +4,7 @@ layout: page
 tags:
   - analytics
   - integrations
-category: Services
+category: Analytics & Utility
 redirect_from:
   - /analytics/code-climate/
   - /classic/getting-started/code-climate/
