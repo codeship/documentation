@@ -5,9 +5,10 @@ tags:
   - services
   - queues
   - rabbitmq
-category: Getting Started
+category: Queues
 redirect_from:
   - /queues/rabbitmq/
+  - /classic/getting-started/rabbitmq/
 ---
 RabbitMQ `3.2.4` runs on the default port and doesn't require any credentials.
 

@@ -5,9 +5,10 @@ tags:
   - services
   - databases
   - mongodb
-category: Getting Started
+category: Databases
 redirect_from:
   - /databases/mongodb/
+  - /classic/getting-started/mongodb/
 ---
 MongoDB **2.6.4** runs on the default port and doesn't require any credentials.
 

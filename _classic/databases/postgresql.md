@@ -5,9 +5,10 @@ tags:
   - services
   - databases
   - postgresql
-category: Getting Started
+category: Databases
 redirect_from:
   - /databases/postgresql/
+  - /classic/getting-started/postgresql/
 ---
 * include a table of contents
 {:toc}
