@@ -10,6 +10,7 @@ $ ->
 
     init: =>
 
+      @autofocusSearch()
       @_watchInputs $('[data-watch="input"]') if $('[data-watch="input"]').length > 0
       @_watchInputs $('[data-watch="textarea"]'), 'textarea' if $('[data-watch="textarea"]').length > 0
       @_setTitleImage()
@@ -60,6 +61,9 @@ $ ->
       $headers.each ->
         if $(this).attr('id') != ''
           $(this).append anchorForId($(this).attr('id'))
+
+    autofocusSearch: ->
+      $('#search').focus()
 
     setScrollToEvents: ->
 
