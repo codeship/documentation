@@ -217,6 +217,74 @@ When using a private repository, or a non-standard tag in the `image_name`, keep
 
 As for the `encrypted_dockercfg_path` directive, we support both, the older `.dockercfg` as well as the newer `${HOME}/.docker/config.json` format. You can simply encrypt either of those files via `jet encrypt` and commit the encrypted files to the repository and the configuration will be picked up.
 
+## Failure Handling
+
+OnFail steps specify what should happen in case a step or a group step fails. They don't stop the build, and cannot change a failed build to a successful build, but provides you with the ability to e.g. clean up environments or send specific messages in case of errors. 
+
+The `on_fail` directive is used to specify a failure scenario.
+
+OnFail steps share the following directives with regular run steps:
+
+* `command` the command to run. This is always required, and identifies a step as a run step. Note that quotes are respected to split up arguments, but special characters such as `&&`, `|` or `>` are not.
+* `service` the service to run the command on. If you already specified a service at the group level you can not specify a service again, otherwise this directive is required.
+
+
+OnFail steps are added as part of a step or a step group, and will trigger in case any of the related steps fail. They can also be layered on top of other OnFail steps to handle complex scenarios of errors and recovery options. Below are expamples of single step, grouped steps and layered use of OnFail steps.
+
+```yaml
+# Example 1 - single step on_fail
+- name: foo_step
+  tag: master
+  service: app
+  command: echo foo
+  on_fail:
+    - service: slack
+      command: send_message
+- name: bar_step
+  service: app
+  command: echo bar
+
+# Example 2 - grouped steps on_fail
+- type: parallel
+  tag: "^(master|staging/.*)$"
+  dockercfg_service: dockercfg_generator
+  steps:
+  - type: serial
+    on_fail:
+      - service: slack
+        command: send_message
+    steps:
+      - service: foo
+        command: echo one
+      - service: foo
+        command: echo two
+
+# Example 2 - layered on_fail steps
+- type: parallel
+  tag: "^(master|staging/.*)$"
+  dockercfg_service: dockercfg_generator
+  steps:
+  - type: serial
+    on_fail:
+      - service: slack
+        command: send_message
+    steps:
+      - service: foo
+        command: echo one
+      - service: deploy
+        command: deploy_to_test.sh
+        on_fail:
+          - service: deploy
+            command: clean_test.sh
+            on_fail:
+              - service: pagerduty
+                command: send_deploy_failed_page
+
+```
+For grouped steps, if one step in the group fails, the OnFail step will be triggered.
+
+Note that when layering OnFail steps, the innermost failure will be triggered first. What that means, is that if the cleanup in the above example fails, the Pagerduty page would be send first and then the Slack message would be sent.
+
 ## Build Environment
 
 For each step, the running container is provided with a set of environment variables from the CI process. These values can help your containers to make decisions based on your build pipeline.
