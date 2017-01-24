@@ -226,7 +226,7 @@ The `on_fail` directive is used to specify a failure scenario.
 OnFail steps share the following directives with regular run steps:
 
 * `command` the command to run. This is always required, and identifies a step as a run step. Note that quotes are respected to split up arguments, but special characters such as `&&`, `|` or `>` are not.
-* `service` the service to run the command on. If you already specified a service at the group level you can not specify a service again, otherwise this directive is required.
+* `service` the service to run the command on. This directive is required.
 
 
 OnFail steps are added as part of a step or a step group, and will trigger in case any of the related steps fail. They can also be layered on top of other OnFail steps to handle complex scenarios of errors and recovery options. Below are expamples of single step, grouped steps and layered use of OnFail steps.
