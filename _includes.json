@@ -1,0 +1,6 @@
+[{
+	"repository": "git@github.com:mlocher/docs-test.git",
+  "branch": "master",
+	"source": "docs",
+	"destination": "_posts/jet"
+}]
