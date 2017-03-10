@@ -54,4 +54,4 @@ You can learn more about security on Codeship [by clicking here]({% link _genera
 
 - On [Codeship Pro](https://codeship.com/features/pro), we have no direct access to your source control but our support team can see your builds and build logs, as well as account information.
 
-As always, feel free to contact [support@codeship.com](mailto:support@codeship.com) if you have any questions.
+As always, feel free to contact [support@codeship.com](mailto:support@codeship.com) should you have any questions.
