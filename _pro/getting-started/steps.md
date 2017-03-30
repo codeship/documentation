@@ -46,8 +46,8 @@ Steps are specified in a list, such as:
 Steps are executed in the order they are specified. All steps share these directives:
 
 * `name` specifies the name of the step, outputted in the logs. This must be unique for all steps. **This field is optional** and will be auto-generated if not specified.
-* `tag` this field will cause the step to be executed only when the build tag matches the `tag` value. During a Codeship build, the build tag is either the branch name or tag associated with the commit. If you are using this feature locally, you can pass in `jet steps --tag TAG_NAME` to create a build tag. This field is optional.
-* `exclude` this field prevents the step from being executed on branches or tags that match the `exclude` tag value. During a Codeship build, the build tag is either the branch name or tag associated with the commit. If you are using this feature locally, you can pass in `jet steps --tag TAG_NAME` to create a build tag. This field is the functional opposite of the `tag` field above. This field is optional. It takes precedence over the `tag` field.
+* `tag` this field will cause the step to be executed only when the branch name being updated on the source repository matches the `tag` value. If you are using this feature locally, you can pass in `jet steps --tag TAG_NAME` to create a build tag. This field is optional.
+* `exclude` this field prevents the step from being executed on branches or tags that match the `exclude` tag value. If you are using this feature locally, you can pass in `jet steps --tag TAG_NAME` to create a build tag. This field is the functional opposite of the `tag` field above. This field is optional. It takes precedence over the `tag` field.
 * `encrypted_dockercfg_path` the path to your relevant dockercfg file, encrypted using `jet encrypt`. This is required for any steps using private base images or push steps. The dockercfg **must** contain an account for the registry being hit (e.g. _quay.io_ or _index.docker.io_)  with access to the repository being pulled.
 
 ## Limiting steps to specific branches / tags
