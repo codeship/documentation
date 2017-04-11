@@ -6,7 +6,9 @@
     {% for category in categories %}
     {% assign documents = category.items | sort: 'weight' %}
       <li class="ul__title">
-        <strong>{{ category.name }}</strong>
+        <input type="checkbox" {% if page.category == category.name %}checked{% endif %}>
+        <i></i>
+        <h5 class="title">{{ category.name }}</h5>
         <ul>
           {% for document in documents %}
             <li>

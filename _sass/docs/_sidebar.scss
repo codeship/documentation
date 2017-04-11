@@ -1,0 +1,92 @@
+.Sidebar,
+.Content {
+  display: inline-block;
+  font-size: 1rem;
+  vertical-align: top;
+}
+
+.Sidebar {
+  width: 20%;
+  text-align: left;
+  border-right: 1px solid $cInputBorder;
+
+  a {
+    font-size: 85%;
+    line-height: 85%;
+  }
+
+  li {
+    margin-bottom: .5em;
+  }
+
+  ul li {
+    font-size: 1.1rem;
+  }
+
+  @media (max-width: $bpMedium) {
+    width: 100%;
+  }
+}
+
+.Sidebar .ul__title {
+  position: relative;
+
+
+  h5.title {
+    margin: 0;
+    padding: 0;
+    font-size: 1.2rem;
+  }
+
+  & ul:first-of-type {
+    display: none;
+    z-index: 5;
+  }
+
+  i {
+    position: absolute;
+    right: 20px;
+    top: 27px;
+
+    &:before , &:after {
+      content: "";
+      position: absolute;
+      background-color: $cAnchor;
+      width: 3px;
+      height: 9px;
+    }
+
+    &:before{
+      transform: translate( -2px , -2px ) rotate( -45deg );
+    }
+
+    &:after{
+      transform: translate( -2px , 2px ) rotate( -135deg );
+    }
+  }
+
+  input[type=checkbox] {
+    position: absolute;
+    cursor: pointer;
+    width: 100%;
+    height: 2.8rem;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    opacity: 0;
+    &:checked {
+      &~i {
+        &:before {
+          transform: translate( 0 , 0 ) rotate( 45deg );
+        }
+        &:after {
+          transform: translate( -4px , 0 ) rotate( -45deg );
+        }
+      }
+
+      &~ul {
+        display: block;
+      }
+    }
+  }
+}

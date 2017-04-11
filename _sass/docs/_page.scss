@@ -324,32 +324,6 @@ div#rating_info_8520732 {
   margin-bottom: 3rem;
 }
 
-.Sidebar,
-.Content {
-  display: inline-block;
-  font-size: 1rem;
-  vertical-align: top;
-}
-
-.Sidebar {
-  width: 20%;
-  text-align: left;
-  border-right: 1px solid $cInputBorder;
-
-  a {
-    font-size: 85%;
-    line-height: 85%;
-   }
-
-  li {
-    margin-bottom: .5em;
-   }
-
-  @media (max-width: $bpMedium) {
-    width: 100%;
-  }
-}
-
 .Content {
   width: 80%;
 
