@@ -4,7 +4,7 @@ layout: page
 tags:
   - api
   - integrations
-category: Getting Started
+
 redirect_from:
   - /integrations/api/
 ---

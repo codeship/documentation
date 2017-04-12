@@ -7,7 +7,7 @@ tags:
   - git
   - builds
   - testing
-category: Getting Started
+
 redirect_from:
   - /docker/skipping-builds/
 ---

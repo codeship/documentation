@@ -5,7 +5,7 @@ tags:
   - jenkins
   - organizations
   - migrating
-category: Guides
+
 ---
 There’s always someone who ends up with the responsibility of managing users and roles within an organization. This is a task that just needs done, and it has a sunk investment in setup and maintenance. However, it’s a vitally important task that needs to be finished and managed reliably each day.
 

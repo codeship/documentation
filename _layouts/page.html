@@ -4,17 +4,9 @@ layout: default
 {% if page.title %}
   {% assign title = page.title %}
 {% elsif page.category %}
-  {% if site.data.categories[page.category].title %}
-    {% assign title = site.data.categories[page.category].title %}
-  {% else %}
-    {% assign title = page.category | capitalize %}
-  {% endif %}
+  {% assign title = page.category | capitalize %}
 {% elsif page.tag %}
-  {% if site.data.tags[page.tag].title %}
-    {% assign title = site.data.tags[page.tag].title %}
-  {% else %}
-    {% capture title %}#{{ page.tag }} {% endcapture %}
-  {% endif %}
+  {% capture title %}#{{ page.tag }}{% endcapture %}
 {% endif %}
 
 <div class="contentWrapper">

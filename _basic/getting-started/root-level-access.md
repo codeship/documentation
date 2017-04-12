@@ -5,7 +5,7 @@ tags:
   - faq
   - sudo
   - packages
-category: Getting Started
+
 redirect_from:
   - /faq/root-level-access/
 ---

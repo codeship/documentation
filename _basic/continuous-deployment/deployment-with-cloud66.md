@@ -3,7 +3,7 @@ title: Deploy via Cloud66
 tags:
   - deployment
   - cloud66
-category: Continuous Deployment
+
 redirect_from:
   - /continuous-deployment/deployment-with-cloud66/
 ---

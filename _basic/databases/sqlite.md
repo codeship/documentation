@@ -5,7 +5,7 @@ tags:
   - services
   - databases
   - sqlite
-category: Databases
+
 redirect_from:
   - /databases/sqlite/
   - /classic/getting-started/sqlite/

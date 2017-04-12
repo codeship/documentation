@@ -4,7 +4,7 @@ weight: 90
 tags:
   - ruby
   - languages
-category: Languages &amp; Frameworks
+
 redirect_from:
   - /languages/ruby/
 ---

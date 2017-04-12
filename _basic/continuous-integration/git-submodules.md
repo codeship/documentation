@@ -4,7 +4,7 @@ weight: 50
 tags:
   - git
   - submodules
-category: Continuous Integration
+
 redirect_from:
   - /continuous-integration/git-submodules/
 ---

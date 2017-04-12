@@ -4,7 +4,7 @@ layout: page
 tags:
   - administration
   - notifications
-category: Account
+
 redirect_from:
   - /administration/notifications/
   - /basic/getting-started/webhooks/

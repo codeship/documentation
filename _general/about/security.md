@@ -4,7 +4,7 @@ layout: page
 tags:
   - security
   - gpg key
-category: About
+
 redirect_from:
   - /security/
   - /security/security/

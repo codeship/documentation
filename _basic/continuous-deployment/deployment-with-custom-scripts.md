@@ -6,7 +6,7 @@ tags:
   - deployment
   - custom
   - scripts
-category: Continuous Deployment
+
 redirect_from:
   - /continuous-deployment/deployment-with-custom-scripts/
 ---

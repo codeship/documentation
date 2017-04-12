@@ -5,7 +5,7 @@ tags:
 - AMI
 - continuous integration
 - packages
-category: Getting Started
+
 ---
 
 * include a table of contents

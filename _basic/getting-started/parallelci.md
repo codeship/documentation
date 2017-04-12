@@ -6,7 +6,7 @@ tags:
 - continuous integration
 - parallelci
 - parallelism
-category: Getting Started
+
 redirect_from:
   - /continuous-integration/parallelci/
 ---

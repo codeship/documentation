@@ -7,7 +7,6 @@ tags:
   - jet
   - tools
   - browser
-category: Continuous Integration
 redirect_from:
   - /docker/browser-testing/
 ---

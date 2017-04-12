@@ -5,7 +5,7 @@ weight: 47
 tags:
   - docker
   - tutorial
-category: Getting Started
+
 redirect_from:
   - /docker/caching/
 ---

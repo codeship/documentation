@@ -6,7 +6,7 @@ tags:
   - docker
   - jet
   - release notes
-category: Getting Started
+
 redirect_from:
   - /docker/release-notes/
 ---

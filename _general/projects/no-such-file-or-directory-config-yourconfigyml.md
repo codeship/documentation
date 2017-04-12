@@ -4,7 +4,7 @@ layout: page
 tags:
   - troubleshooting
   - build error
-category: Projects
+
 redirect_from:
   - /troubleshooting/no-such-file-or-directory-config-yourconfigyml/
   - /faq/no-such-file-or-directory-config-yourconfigyml/

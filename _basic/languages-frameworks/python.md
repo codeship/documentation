@@ -4,7 +4,7 @@ weight: 70
 tags:
   - python
   - languages
-category: Languages &amp; Frameworks
+
 redirect_from:
   - /languages/python/
 ---

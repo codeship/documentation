@@ -3,7 +3,7 @@ title: Signing Up For Codeship
 weight: 10
 tags:
 - account
-category: Account
+
 ---
 
 ## Setting Up A New Codeship Account

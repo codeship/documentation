@@ -6,7 +6,7 @@ tags:
   - docker
   - jet
   - images
-category: Getting Started
+
 redirect_from:
   - /docker/community-images/
 ---

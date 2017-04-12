@@ -4,7 +4,7 @@ weight: 85
 tags:
   - testing
   - faq
-category: Continuous Integration
+
 redirect_from:
   - /continuous-integration/run-a-command-in-the-background/
 ---

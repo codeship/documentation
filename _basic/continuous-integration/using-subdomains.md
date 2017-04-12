@@ -7,7 +7,7 @@ tags:
   - dns
   - xip.io
   - lvh.me
-category: Continuous Integration
+
 redirect_from:
   - /continuous-integration/using-subdomains/
 ---

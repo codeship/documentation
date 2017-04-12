@@ -7,7 +7,7 @@ tags:
   - introduction
   - commands
   - running locally
-category: Getting Started
+
 redirect_from:
   - /docker/cli/
   - /pro/cli/

@@ -4,7 +4,7 @@ layout: page
 tags:
   - troubleshooting
   - build error
-category: Projects
+
 redirect_from:
   - /troubleshooting/cant-find-file-in-repository/
   - /faq/cant-find-file-in-repository/

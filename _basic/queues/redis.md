@@ -5,7 +5,7 @@ tags:
   - services
   - queues
   - redis
-category: Queues
+
 redirect_from:
   - /queues/redis/
   - /classic/getting-started/redis/

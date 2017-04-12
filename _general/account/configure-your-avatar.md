@@ -5,7 +5,7 @@ tags:
   - faq
   - avatar
   - gravatar
-category: Account
+
 redirect_from:
   - /faq/configure-your-avatar/
 ---

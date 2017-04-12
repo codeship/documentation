@@ -8,7 +8,7 @@ tags:
   - ios
   - swift
   - objective-c
-category: About
+
 ---
 Codeship does not officially support any mobile development on either Codeship Basic or Codeship Pro. This includes both iOS and Android.
 

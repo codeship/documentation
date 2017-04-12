@@ -7,7 +7,7 @@ tags:
   - aws
   - cli
   - amazon
-category: Continuous Deployment
+
 redirect_from:
   - /continuous-deployment/deployment-with-awscli/
 ---

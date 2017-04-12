@@ -6,7 +6,7 @@ tags:
   - github
   - scm
   - 3rd party restrictions
-category: Account
+
 redirect_from:
   - /troubleshooting/github-3rd-party-restrictions/
   - /faq/github-3rd-party-restrictions/

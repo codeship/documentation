@@ -6,7 +6,7 @@ tags:
   - deployment
   - amazon
   - lambda
-category: Continuous Deployment
+
 redirect_from:
   - /continuous-deployment/deployment-to-aws-lambda/
 ---

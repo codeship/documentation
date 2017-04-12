@@ -6,7 +6,7 @@ tags:
   - deployment
   - git
   - push
-category: Continuous Deployment
+
 redirect_from:
   - /continuous-deployment/push-to-remote-repository/
 ---

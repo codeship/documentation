@@ -6,7 +6,7 @@ tags:
   - project
   - organizations
   - team management
-category: Account
+
 redirect_from:
   - /administration/organizations/
 ---

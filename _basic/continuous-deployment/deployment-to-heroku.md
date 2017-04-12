@@ -5,7 +5,7 @@ layout: page
 tags:
   - deployment
   - heroku
-category: Continuous Deployment
+
 redirect_from:
   - /continuous-deployment/deployment-to-heroku/
 ---

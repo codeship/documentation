@@ -3,7 +3,7 @@ title: Go
 tags:
 - go
 - languages
-category: Languages &amp; Frameworks
+
 redirect_from:
   - /languages/go/
 ---

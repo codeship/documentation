@@ -5,7 +5,7 @@ tags:
   - java
   - languages
   - docker
-category: Languages &amp; Frameworks
+
 redirect_from:
   - /docker-integration/java/
 ---

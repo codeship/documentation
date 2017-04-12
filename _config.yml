@@ -1,8 +1,8 @@
 # Site settings
 url: https://documentation.codeship.com
 baseurl:
-permalink: /:categories/:title/
-tags_dir: tags
+# permalink: /:categories/:title/
+# tags_dir: tags
 ubuntu_version: trusty
 
 # SEO Tag
@@ -22,6 +22,103 @@ defaults:
       weight: 50
       comments: true
       image: /assets/img/og_documentation.jpg
+  - scope:
+      path: "_basic/analytics"
+    values:
+      category: "Analytics"
+  - scope:
+      path: "_basic/continuous-deployment"
+    values:
+      category: "Continuous Deployment"
+  - scope:
+      path: "_basic/continuous-integration"
+    values:
+      category: "Continuous Integration"
+  - scope:
+      path: "_basic/getting-started"
+    values:
+      category: "Getting Started"
+  - scope:
+      path: "_basic/languages-frameworks"
+    values:
+      category: "Languages &amp; Frameworks"
+  - scope:
+      path: "_basic/queues"
+    values:
+      category: "Queues"
+  - scope:
+      path: "_basic/services"
+    values:
+      category: "Services"
+  - scope:
+      path: "_basic/databases"
+    values:
+      category: "Databases"
+  - scope:
+      path: "_pro/continuous-deployment"
+    values:
+      category: "Continuous Deployment"
+  - scope:
+      path: "_pro/continuous-integration"
+    values:
+      category: "Continuous Integration"
+  - scope:
+      path: "_pro/getting-started"
+    values:
+      category: "Getting Started"
+  - scope:
+      path: "_pro/languages-frameworks"
+    values:
+      category: "Languages &amp; Frameworks"
+  - scope:
+      path: "_general/about"
+    values:
+      category: "About"
+  - scope:
+      path: "_general/account/guides"
+    values:
+      category: "Guides"
+  - scope:
+      path: "_general/account"
+    values:
+      category: "Account"
+  - scope:
+      path: "_general/projects"
+    values:
+      category: "Projects"
+
+sidebar_order:
+  - "Getting Started"
+  - "Languages &amp; Frameworks"
+  - "Databases"
+  - "Continuous Deployment"
+  - "Continuous Integration"
+  - "Analytics"
+  - "Queues"
+  - "Services"
+  - "About"
+  - "Account"
+  - "Projects"
+
+collections:
+  general:
+    title: General
+    shortname: general
+    permalink: /general/:path/
+    sort_order: 1
+    output: true
+  basic:
+    title: Codeship Basic
+    shortname: basic
+    permalink: /basic/:path/
+    sort_order: 2
+    output: true
+  pro:
+    title: Codeship Pro
+    shortname: pro
+    permalink: /pro/:path/
+    sort_order: 3
+    output: true
 
 # Jekyll
 exclude:
@@ -48,25 +145,6 @@ gems:
   - jekyll-seo-tag
   - jekyll-sitemap
   - jekyll-redirect-from
-collections:
-  general:
-    title: General
-    shortname: general
-    permalink: /general/:path/
-    sort_order: 1
-    output: true
-  basic:
-    title: Codeship Basic
-    shortname: basic
-    permalink: /basic/:path/
-    sort_order: 2
-    output: true
-  pro:
-    title: Codeship Pro
-    shortname: pro
-    permalink: /pro/:path/
-    sort_order: 3
-    output: true
 
 # SASS
 sass:
@@ -86,40 +164,40 @@ kramdown:
     line_numbers: false
 
 # Prose.io
-prose:
-  rooturl: '_posts'
-  siteurl: 'https://documentation.codeship.com/'
-  media: 'images'
-  ignore:
-    - index.md
-    - _config.yml
-    - /_layouts
-    - /_includes
-  metadata:
-    _posts:
-      - name: 'layout'
-        field:
-          element: 'hidden'
-          value: 'page'
-      - name: 'title'
-        field:
-          element: 'text'
-          label: 'Page Title'
-      - name: 'categories'
-        field:
-          element: 'select'
-          label: 'Category'
-          options: 'https://documentation.codeship.com/metadata/categories.jsonp'
-      - name: 'tags'
-        field:
-            element: 'multiselect'
-            label: 'Tags'
-            placeholder: 'Choose Tags'
-            alterable: true
-            options: 'http://documentation.codeship.com/metadata/tags.jsonp'
-      - name: 'weight'
-        field:
-          element: 'number'
-          label: 'Page Weight'
-          help: 'Used for sorting subpages in listings'
-          value: 50
+# prose:
+#   rooturl: '_posts'
+#   siteurl: 'https://documentation.codeship.com/'
+#   media: 'images'
+#   ignore:
+#     - index.md
+#     - _config.yml
+#     - /_layouts
+#     - /_includes
+#   metadata:
+#     _posts:
+#       - name: 'layout'
+#         field:
+#           element: 'hidden'
+#           value: 'page'
+#       - name: 'title'
+#         field:
+#           element: 'text'
+#           label: 'Page Title'
+#       - name: 'categories'
+#         field:
+#           element: 'select'
+#           label: 'Category'
+#           options: 'https://documentation.codeship.com/metadata/categories.jsonp'
+#       - name: 'tags'
+#         field:
+#             element: 'multiselect'
+#             label: 'Tags'
+#             placeholder: 'Choose Tags'
+#             alterable: true
+#             options: 'http://documentation.codeship.com/metadata/tags.jsonp'
+#       - name: 'weight'
+#         field:
+#           element: 'number'
+#           label: 'Page Weight'
+#           help: 'Used for sorting subpages in listings'
+#           value: 50

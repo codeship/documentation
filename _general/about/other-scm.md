@@ -5,7 +5,7 @@ tags:
   - faq
   - scm
   - svn
-category: About
+
 redirect_from:
   - /faq/other-scm/
 ---

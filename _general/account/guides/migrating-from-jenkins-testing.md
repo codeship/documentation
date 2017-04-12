@@ -5,7 +5,7 @@ tags:
   - jenkins
   - testing
   - migrating
-category: Guides
+
 ---
 In every project there is a need to test and confirm that functionality is working as planned. This takes the the form of numerous practices to determine: from unit, integration, or user interface testing to smoke testing, black box, or others. Some of these forms of testing are simple while some are complex in their configuration, management, and usage.
 

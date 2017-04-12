@@ -9,7 +9,7 @@ tags:
   - getting started
   - project configuration
   - tutorial
-category: Getting Started
+
 redirect_from:
   - /docker/codeship-configuration/
 ---

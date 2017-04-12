@@ -7,7 +7,7 @@ tags:
   - tutorial
   - ssh key
   - encryption
-category: Getting Started
+
 redirect_from:
   - /docker/ssh-key-authentication/
 ---

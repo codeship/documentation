@@ -6,7 +6,7 @@ tags:
   - docker
   - encryption
   - environment variables
-category: Getting Started
+
 redirect_from:
   - /docker/encryption/
   - /pro/getting-started/encryption/

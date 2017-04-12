@@ -4,7 +4,7 @@ layout: page
 tags:
   - faq
   - getting started
-category: About
+
 redirect_from:
   - /faq/getting_started_with_ci/
 ---

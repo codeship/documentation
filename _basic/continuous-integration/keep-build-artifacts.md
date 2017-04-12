@@ -4,7 +4,7 @@ weight: 60
 tags:
   - faq
   - artifacts
-category: Continuous Integration
+
 redirect_from:
   - /continuous-integration/keep-build-artifacts/
 ---

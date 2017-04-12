@@ -5,7 +5,7 @@ tags:
   - services
   - databases
   - mongodb
-category: Databases
+
 redirect_from:
   - /databases/mongodb/
   - /classic/getting-started/mongodb/

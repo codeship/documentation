@@ -5,7 +5,7 @@ tags:
   - faq
   - build error
   - ruby
-category: Projects
+
 redirect_from:
   - /faq/could-not-find-gemname-in-any-of-the-sources/
 ---

@@ -5,7 +5,7 @@ tags:
   - services
   - databases
   - postgresql
-category: Databases
+
 redirect_from:
   - /databases/postgresql/
   - /classic/getting-started/postgresql/

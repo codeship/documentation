@@ -8,7 +8,7 @@ tags:
   - configuration
   - services
   - databases
-category: Getting Started
+
 redirect_from:
   - /docker/services-and-databases/
 ---

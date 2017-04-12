@@ -5,7 +5,7 @@ weight: 45
 tags:
   - docker
   - tutorial
-category: Getting Started
+
 redirect_from:
   - /docker/docker-volumes/
 ---

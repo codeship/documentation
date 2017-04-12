@@ -4,7 +4,7 @@ layout: page
 tags:
   - deployment
   - capistrano
-category: Continuous Deployment
+
 redirect_from:
   - /continuous-deployment/deployment-with-capistrano/
 ---

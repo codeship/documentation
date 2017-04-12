@@ -5,7 +5,7 @@ tags:
   - project settings
   - ssh key
   - faq
-category: Projects
+
 redirect_from:
   - /continuous-integration/where-can-i-find-the-ssh-public-key-for-my-project/
   - /general/projects/where-can-i-find-the-ssh-public-key-for-my-project/

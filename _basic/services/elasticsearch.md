@@ -4,7 +4,6 @@ layout: page
 tags:
   - services
   - elasticsearch
-category: Services
 redirect_from:
   - /services/elasticsearch/
   - /classic/getting-started/elasticsearch/

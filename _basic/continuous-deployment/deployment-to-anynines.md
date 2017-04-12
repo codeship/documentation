@@ -3,7 +3,7 @@ title: Deploy to anynines
 tags:
   - deployment
   - anynines
-category: Continuous Deployment
+
 redirect_from:
   - /continuous-deployment/deployment-to-anynines/
 ---

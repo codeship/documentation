@@ -5,7 +5,7 @@ weight: 46
 tags:
   - docker
   - tutorial
-category: Getting Started
+
 ---
 
 * include a table of contents

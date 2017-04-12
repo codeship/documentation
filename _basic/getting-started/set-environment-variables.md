@@ -4,7 +4,7 @@ weight: 96
 tags:
   - testing
   - environment variables
-category: Getting Started
+
 redirect_from:
   - /continuous-integration/set-environment-variables/
 ---

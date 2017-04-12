@@ -4,7 +4,7 @@ layout: page
 tags:
   - security
   - infrastructure
-category: About
+
 redirect_from:
   - /security/vm-and-infrastructure/
 ---

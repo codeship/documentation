@@ -10,7 +10,7 @@ tags:
   - shallow clone
   - push
   - git
-category: Projects
+
 redirect_from:
   - /troubleshooting/push-to-remote-repositories/
   - /faq/push-to-remote-repositories/

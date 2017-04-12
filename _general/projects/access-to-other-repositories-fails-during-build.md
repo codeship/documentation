@@ -9,7 +9,7 @@ tags:
   - bitbucket
   - gitlab
   - private repository
-category: Projects
+
 redirect_from:
   - /faq/access-to-other-repositories-fails-during-build/
 ---

@@ -10,7 +10,7 @@ tags:
   - getting started
   - tutorial
   - getting started jet
-category: Getting Started
+
 redirect_from:
   - /docker-guide/getting-started-part-two/
 ---

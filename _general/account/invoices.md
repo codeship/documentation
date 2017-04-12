@@ -6,7 +6,7 @@ tags:
   - account
   - invoices
   - billing
-category: Account
+
 redirect_from:
   - /administration/invoices/
 ---

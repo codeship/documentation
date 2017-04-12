@@ -5,7 +5,7 @@ tags:
   - testing
   - faq
   - builds
-category: Getting Started
+
 redirect_from:
   - /continuous-integration/skipping-builds/
 ---

@@ -5,7 +5,7 @@ tags:
   - faq
   - build error
   - heroku
-category: Projects
+
 redirect_from:
   - /faq/check_url-fails-for-heroku-deployment/
 ---

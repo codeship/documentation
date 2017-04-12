@@ -7,7 +7,7 @@ tags:
   - npm
   - yarn
   - framework
-category: Languages &amp; Frameworks
+
 redirect_from:
   - /languages/nodejs/
 ---

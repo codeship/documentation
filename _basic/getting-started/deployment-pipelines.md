@@ -3,7 +3,7 @@ title: Deployment Pipelines
 layout: page
 tags:
   - deployment
-category: Getting Started
+
 redirect_from:
   - /continuous-deployment/deployment-pipelines/
   - /basic/getting-started/wildcard-deployment-pipelines/

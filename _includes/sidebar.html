@@ -1,14 +1,20 @@
-{% assign collection = site.collections | where: 'label', page.collection %}
-{% assign categories = collection.first.docs | group_by: 'category' | sort: 'name' %}
+{% assign c = site.collections | where: 'label', page.collection | first %}
+{% assign g = site.collections | where: 'label', 'general' | first %}
+{% assign c = c.docs | group_by: 'category' %}
+{% assign g = g.docs | group_by: 'category' %}
+{% assign collection = c | concat: g  %}
+{% assign categories = collection %}
 
 <aside class="Sidebar">
   <ul class="ul">
-    {% for category in categories %}
-    {% assign documents = category.items | sort: 'weight' %}
+    {% for category in site.sidebar_order %}
+      {% assign current = categories | where:"name", category | first %}
+      {% assign documents = current.items %}
+      {% unless documents == nil %}
       <li class="ul__title">
-        <input type="checkbox" {% if page.category == category.name %}checked{% endif %}>
+        <input type="checkbox" {% if page.category == current.name %}checked{% endif %}>
         <i></i>
-        <h5 class="title">{{ category.name }}</h5>
+        <h5 class="title">{{ current.name }}</h5>
         <ul>
           {% for document in documents %}
             <li>
@@ -17,6 +23,7 @@
           {% endfor %}
         </ul>
       </li>
+      {% endunless %}
     {% endfor %}
   </ul>
 </aside>

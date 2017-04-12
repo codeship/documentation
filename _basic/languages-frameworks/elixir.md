@@ -3,7 +3,7 @@ title: Elixir
 tags:
   - elixir
   - languages
-category: Languages &amp; Frameworks
+
 ---
 
 * include a table of contents

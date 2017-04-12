@@ -5,7 +5,7 @@ tags:
   - services
   - databases
   - mysql
-category: Databases
+
 redirect_from:
   - /databases/mysql/
   - /classic/getting-started/mysql/

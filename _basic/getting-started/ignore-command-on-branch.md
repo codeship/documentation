@@ -5,7 +5,7 @@ tags:
   - faq
   - commands
   - branch
-category: Getting Started
+
 redirect_from:
   - /faq/ignore-command-on-branch/
 ---

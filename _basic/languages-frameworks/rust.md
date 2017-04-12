@@ -4,7 +4,7 @@ tags:
 - rust
 - cargo
 - languages
-category: Languages &amp; Frameworks
+
 ---
 
 * include a table of contents

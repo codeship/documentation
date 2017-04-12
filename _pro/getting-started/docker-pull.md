@@ -7,7 +7,7 @@ tags:
   - tutorial
   - pull
   - registry
-category: Getting Started
+
 redirect_from:
   - /docker/docker-pull/
 ---

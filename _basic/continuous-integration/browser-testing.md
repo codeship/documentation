@@ -4,7 +4,7 @@ weight: 80
 tags:
   - testing
   - continuous integration
-category: Continuous Integration
+
 redirect_from:
   - /continuous-integration/browser-testing/
 ---

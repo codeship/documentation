@@ -4,7 +4,7 @@ layout: page
 tags:
   - administration
   - project
-category: Projects
+
 redirect_from:
   - /administration/delete-a-project/
   - /general/projects/delete-a-project/

@@ -5,7 +5,7 @@ tags:
   - ruby
   - languages
   - docker
-category: Languages &amp; Frameworks
+
 redirect_from:
   - /docker-integration/ruby/
 ---

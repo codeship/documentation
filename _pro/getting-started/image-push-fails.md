@@ -6,7 +6,7 @@ tags:
   - faq
   - builds
   - docker
-category: Getting Started
+
 redirect_from:
   - /docker/image-push-fails/
 ---

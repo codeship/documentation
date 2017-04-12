@@ -5,7 +5,7 @@ tags:
   - services
   - queues
   - rabbitmq
-category: Queues
+
 redirect_from:
   - /queues/rabbitmq/
   - /classic/getting-started/rabbitmq/

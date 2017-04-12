@@ -9,7 +9,7 @@ tags:
   - environment
   - pro
   - build arguments
-category: Getting Started
+
 ---
 
 * include a table of contents

@@ -7,7 +7,7 @@ tags:
   - jet
   - codeship pro
   - migration
-category: Getting Started
+
 ---
 
 * include a table of contents

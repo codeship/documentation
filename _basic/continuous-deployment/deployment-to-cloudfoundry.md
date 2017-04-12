@@ -3,7 +3,7 @@ title: Deploy with Cloud Foundry
 tags:
   - deployment
   - cloudfoundry
-category: Continuous Deployment
+
 redirect_from:
   - /continuous-deployment/deployment-to-cloudfoundry/
 ---

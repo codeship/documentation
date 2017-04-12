@@ -6,7 +6,7 @@ tags:
   - firewall
   - ip addresses
   - iam
-category: Projects
+
 redirect_from:
   - /faq/enabling-access-to-servers/
 ---

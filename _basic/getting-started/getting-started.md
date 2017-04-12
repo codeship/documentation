@@ -4,7 +4,7 @@ layout: page
 tags:
   - getting started
   - codeship basic
-category: Getting Started
+
 ---
 
 * include a table of contents

@@ -7,7 +7,7 @@ tags:
   - jet
   - configuration
   - services
-category: Getting Started
+
 redirect_from:
   - /docker/services/
 ---

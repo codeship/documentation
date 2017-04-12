@@ -5,7 +5,7 @@ layout: page
 tags:
   - deployment
   - google app engine
-category: Continuous Deployment
+
 redirect_from:
   - /continuous-deployment/deployment-to-google-app-engine/
 ---

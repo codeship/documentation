@@ -4,7 +4,7 @@ weight: 85
 tags:
   - cache
   - dependencies
-category: Getting Started
+
 ---
 
 * include a table of contents

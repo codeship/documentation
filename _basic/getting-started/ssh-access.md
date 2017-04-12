@@ -6,7 +6,7 @@ tags:
   - ssh
   - key
   - debug
-category: Getting Started
+
 redirect_from:
   - /continuous-integration/ssh-access/
 ---

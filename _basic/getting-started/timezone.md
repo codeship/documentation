@@ -3,7 +3,7 @@ title: Setting Timezone On Codeship Basic
 layout: page
 tags:
   - timezone
-category: Getting Started
+
 ---
 
 * include a table of contents

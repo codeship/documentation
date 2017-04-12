@@ -5,7 +5,7 @@ tags:
   - deployment
   - aws
   - docker
-category: Continuous Deployment
+
 redirect_from:
   - /docker-integration/aws/
 ---

@@ -6,7 +6,7 @@ tags:
   - azure
   - microsoft
   - Docker
-category: Continuous Deployment
+
 
 ---
 <div class="info-block">

@@ -3,7 +3,7 @@ title: Dart
 tags:
   - dart
   - languages
-category: Languages &amp; Frameworks
+
 redirect_from:
   - /languages/dart/
 ---

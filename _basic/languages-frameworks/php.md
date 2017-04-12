@@ -4,7 +4,7 @@ weight: 60
 tags:
   - php
   - languages
-category: Languages &amp; Frameworks
+
 redirect_from:
   - /languages/php/
 ---

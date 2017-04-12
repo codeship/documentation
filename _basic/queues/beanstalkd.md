@@ -5,7 +5,7 @@ tags:
   - services
   - queues
   - beanstalkd
-category: Queues
+
 redirect_from:
   - /queues/beanstalkd/
   - /classic/getting-started/beanstalkd/

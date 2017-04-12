@@ -7,7 +7,7 @@ tags:
   - github
   - bitbucket
   - gitlab
-category: Projects
+
 redirect_from:
   - /troubleshooting/builds-are-not-triggered/
   - /faq/builds-are-not-triggered/

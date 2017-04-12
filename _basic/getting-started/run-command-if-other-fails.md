@@ -5,7 +5,7 @@ tags:
   - faq
   - build error
   - commands
-category: Getting Started
+
 redirect_from:
   - /faq/run-command-if-other-fails/
 ---

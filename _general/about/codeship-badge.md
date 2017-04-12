@@ -4,7 +4,7 @@ layout: page
 tags:
   - faq
   - badge
-category: About
+
 redirect_from:
   - /faq/codeship-badge/
 ---

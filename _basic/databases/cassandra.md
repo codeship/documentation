@@ -5,7 +5,7 @@ tags:
   - services
   - databases
   - cassandra
-category: Databases
+
 redirect_from:
   - /databases/cassandra/
   - /classic/getting-started/cassandra/

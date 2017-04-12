@@ -7,7 +7,7 @@ tags:
   - jet
   - configuration
   - steps
-category: Getting Started
+
 redirect_from:
   - /docker/steps/
 ---

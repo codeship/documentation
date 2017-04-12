@@ -5,7 +5,7 @@ tags:
   - services
   - databases
   - rethinkdb
-category: Databases
+
 redirect_from:
   - /databases/rethinkdb/
   - /classic/getting-started/rethinkdb/

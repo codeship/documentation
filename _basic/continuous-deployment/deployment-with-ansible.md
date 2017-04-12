@@ -5,7 +5,7 @@ published: false
 tags:
   - deployment
   - ansible
-category: Continuous Deployment
+
 ---
 
 * include a table of contents

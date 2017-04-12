@@ -8,7 +8,7 @@ tags:
   - introduction
   - installation
   - running locally
-category: Getting Started
+
 redirect_from:
   - /docker/installation/
   - /pro/installation/

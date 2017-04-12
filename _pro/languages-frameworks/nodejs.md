@@ -5,7 +5,7 @@ tags:
   - node.js
   - languages
   - docker
-category: Languages &amp; Frameworks
+
 redirect_from:
   - /docker-integration/nodejs/
 ---

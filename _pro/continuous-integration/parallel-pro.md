@@ -7,7 +7,6 @@ tags:
   - jet
   - tools
   - tests
-category: Continuous Integration
 ---
 
 * include a table of contents
