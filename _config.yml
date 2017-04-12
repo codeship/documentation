@@ -75,13 +75,13 @@ defaults:
     values:
       category: "About"
   - scope:
-      path: "_general/account/guides"
-    values:
-      category: "Guides"
-  - scope:
       path: "_general/account"
     values:
       category: "Account"
+  - scope:
+      path: "_general/account/guides"
+    values:
+      category: "Guides"
   - scope:
       path: "_general/projects"
     values:
@@ -98,6 +98,7 @@ sidebar_order:
   - "Services"
   - "About"
   - "Account"
+  - "Guides"
   - "Projects"
 
 collections:
