@@ -1,8 +1,8 @@
 # Site settings
 url: https://documentation.codeship.com
 baseurl:
-# permalink: /:categories/:title/
-# tags_dir: tags
+permalink: /:categories/:title/
+tags_dir: tags
 ubuntu_version: trusty
 
 # SEO Tag
