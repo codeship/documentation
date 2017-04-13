@@ -25,11 +25,12 @@
 
   .ul__title {
     position: relative;
+    padding: .8em .8em 0 1.2em;
 
     h5.title {
       margin: 0;
       padding: 0;
-      font-size: 1.1rem;
+      font-size: 1rem;
     }
 
     ul:first-of-type {
@@ -41,7 +42,8 @@
     i {
       display: inline-block;
       float: right;
-      margin-top: 8px;
+      margin-top: 6px;
+      margin-left: 10px;
 
       &::before,
       &::after {
