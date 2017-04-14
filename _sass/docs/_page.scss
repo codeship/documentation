@@ -176,6 +176,36 @@ body.is-blue {
   }
 }
 
+.product-indicator {
+
+  p {
+    display: block;
+    padding: 10px 10px 10px 20px;
+    color: #fff;
+    border-radius: 25px;
+    margin: 0 0 2rem;
+    width: 50%;
+  }
+
+  .product-basic {
+    background-color: #52c45c;
+  }
+
+  .product-pro {
+    background-color: #132132;
+  }
+
+  .product-general {
+    background-color: #5c92d6;
+  }
+
+  a {
+    color: #fff !important;
+    font-weight: bold;
+  }
+
+}
+
 // *******************************************************
 // Notification Blocks
 // *******************************************************
