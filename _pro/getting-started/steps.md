@@ -256,4 +256,4 @@ For each step, the running container is provided with a set of environment varia
 * `CI` (defaults to `true`)
 * `CI_NAME` (defaults to `codeship`)
 
-Please see our [Docker Push Tutorial]({{ site.baseurl }}{% link _pro/getting-started/docker-push.md %}) for an example on how to push to [Quay.io](https://quay.io) or the Docker Hub.
+Please see our [Docker Push Tutorial]({{ site.baseurl }}{% link _pro/getting-started/image-registries.md %}) for an example on how to push to [Quay.io](https://quay.io) or the Docker Hub.

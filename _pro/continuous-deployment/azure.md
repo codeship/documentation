@@ -31,7 +31,7 @@ We will use the [microsoft/azure-cli](https://hub.Docker.com/r/microsoft/azure-c
 Prior to getting started, please ensure you have the following installed in your local linux/unix environment.
 
 - [An Understanding Of Codeship Pro]({% link _pro/getting-started/getting-started.md %})
-- [Codeship's Jet CLI]({% link _pro/getting-started/installation.md %})
+- [Codeship's Jet CLI]({% link _pro/getting-started/cli.md %})
 - [Docker](https://www.Docker.com/products/overview)
 - [A Microsoft Azure Account](https://azure.microsoft.com/)
 

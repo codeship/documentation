@@ -13,7 +13,7 @@ redirect_from:
 ---
 
 <div class="info-block">
-To follow this tutorial on your own computer, please [install the `jet` CLI locally first]({{ site.baseurl }}{% link _pro/getting-started/installation.md %}).
+To follow this tutorial on your own computer, please [install the `jet` CLI locally first]({{ site.baseurl }}{% link _pro/getting-started/cli.md %}).
 </div>
 
 * include a table of contents
@@ -73,7 +73,7 @@ NAME=codeship
 URL=www.codeship.com
 ```
 
-Once you create this file and save it in your project directory, we'll encrypt it. This will require that you have installed the [Jet CLI]({{ site.baseurl }}{% link _pro/getting-started/installation.md %}) and that you have downloaded your [AES key](#downloading-your-aes-key) to your project root, as well.
+Once you create this file and save it in your project directory, we'll encrypt it. This will require that you have installed the [Jet CLI]({{ site.baseurl }}{% link _pro/getting-started/cli.md %}) and that you have downloaded your [AES key](#downloading-your-aes-key) to your project root, as well.
 
 From your terminal, you will run:
 
@@ -115,7 +115,7 @@ If you want to set environment variables just for the purpose of using secrets i
 
 ### Image Push Registry Authentication
 
-See the tutorials on [Docker Push]({{ site.baseurl }}{% link _pro/getting-started/docker-push.md %}) and [Private Base Images]({{ site.baseurl }}{% link _pro/getting-started/docker-pull.md %}) for the exact steps required to encrypt the Docker configuration.
+See the tutorials on [Docker Push]({{ site.baseurl }}{% link _pro/getting-started/image-registries.md %}) and [Private Base Images]({{ site.baseurl }}{% link _pro/getting-started/image-registries.md %}) for the exact steps required to encrypt the Docker configuration.
 
 ### Managing Local Credential Differences
 
@@ -123,7 +123,7 @@ In some situations, you may find that you want to run one set of credentials loc
 
 For the time being, there are several workarounds that may be worth investigating for your team if you have this need:
 
-- You can create another, separate version of your service in your [Services file]({{ site.baseurl }}{% link _pro/getting-started/services.md %}), such as `services_local` , that would use a different encrypted env file. Your team would keep this alternative file locally, with their personal credentials, and it would be added to .gitignore so that it is not committed. Your [Steps file]({{ site.baseurl }}{% link _pro/getting-started/steps.md %}) would only reference your main service definition, which would use the encrypted env file that you commit. Locally with the [Jet CLI]({{ site.baseurl }}{% link _pro/getting-started/installation.md %}), you would run `jet steps service_name command` rather than just `jet steps`.
+- You can create another, separate version of your service in your [Services file]({{ site.baseurl }}{% link _pro/getting-started/services.md %}), such as `services_local` , that would use a different encrypted env file. Your team would keep this alternative file locally, with their personal credentials, and it would be added to .gitignore so that it is not committed. Your [Steps file]({{ site.baseurl }}{% link _pro/getting-started/steps.md %}) would only reference your main service definition, which would use the encrypted env file that you commit. Locally with the [Jet CLI]({{ site.baseurl }}{% link _pro/getting-started/cli.md %}), you would run `jet steps service_name command` rather than just `jet steps`.
 
 - You could keep a different encrypted env file on hand locally. From there, you would maintain local `.gitignore` files so that the local credential files are not committed by individual developers and only the canonical, production encrypted environment file would be in the repo. The developers would then need to override the pulled encrypted enviroment variables file with their own, but it would be ignored on all commits back to the repo because of the `.gitignore`.
 

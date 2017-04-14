@@ -16,7 +16,7 @@ redirect_from:
 ---
 
 <div class="info-block">
-To follow this tutorial on your own computer, please [install the `jet` CLI locally first]({{ site.baseurl }}{% link _pro/getting-started/installation.md %}).
+To follow this tutorial on your own computer, please [install the `jet` CLI locally first]({{ site.baseurl }}{% link _pro/getting-started/cli.md %}).
 </div>
 
 * include a table of contents
@@ -152,7 +152,7 @@ To tag your image based on the Commit ID, use the string `"{% raw %}{{ .CommitID
 
 Using Codeship Pro, you can easily use private Docker images as base images for your containers.
 
-Similar to [pushing images]({{ site.baseurl }}{% link _pro/getting-started/docker-push.md %}), you need to save your encrypted `dockercfg` file in the registry and reference it for any step using private base images (or for groups of steps). You also need to specify in your `Dockerfile` and your `codeship-services.yml` file which images from your registry you want to use.
+Similar to [pushing images]({{ site.baseurl }}{% link _pro/getting-started/image-registries.md %}), you need to save your encrypted `dockercfg` file in the registry and reference it for any step using private base images (or for groups of steps). You also need to specify in your `Dockerfile` and your `codeship-services.yml` file which images from your registry you want to use.
 
 You can also pull images from multiple registries within the same build, as long as you provide all necessary credentials.
 

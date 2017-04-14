@@ -116,7 +116,7 @@ By running `jet steps`, you are running your full CI/CD process on your local ma
 
 ### Jet Encrypt
 
-Jet also allows you to encrypt [environment variables]({{ site.baseurl }}{% link _pro/getting-started/environment-variables.md %}), [build arguments]({{ site.baseurl }}{% link _pro/getting-started/build-arguments.md %}) and [registry credentials]({{ site.baseurl }}{% link _pro/getting-started/docker-pull.md %}). This is done with the `jet encrypt` command. Click the links in this paragraph for specific instructions on encrypting different types of secrets.
+Jet also allows you to encrypt [environment variables]({{ site.baseurl }}{% link _pro/getting-started/environment-variables.md %}), [build arguments]({{ site.baseurl }}{% link _pro/getting-started/build-arguments.md %}) and [registry credentials]({{ site.baseurl }}{% link _pro/getting-started/image-registries.md %}). This is done with the `jet encrypt` command. Click the links in this paragraph for specific instructions on encrypting different types of secrets.
 
 ### Jet Run
 
