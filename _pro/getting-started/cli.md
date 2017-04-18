@@ -1,101 +1,127 @@
 ---
-title: Codeship local development CLI
+title: Jet Local CLI For Codeship Pro
 layout: page
-weight: 2
+weight: 1
 tags:
   - docker
+  - jet
   - introduction
-  - commands
+  - installation
   - running locally
 
 redirect_from:
-  - /docker/cli/
-  - /pro/cli/
-  - /jet/
+  - /docker/installation/
+  - /pro/installation/
+  - /pro/getting-started/installation/
 ---
 
 <div class="info-block">
-These commands are applicable if you want to run the Codeship local development CLI, `jet` binary, locally. Some of these options are only available locally and are unavailable in the hosted Codeship environment. If you haven't already, [you will need to install Jet.]({{ site.baseurl }}{% link _pro/getting-started/installation.md %})
+Jet is used to locally debug and test builds for Codeship Pro, as well as to assist with several important tasks like encrypting secure credentials. If you are using Codeship Basic, you will not need to use Jet.
 </div>
 
 * include a table of contents
 {:toc}
 
-For a list of all available _Jet_ commands simply run the following on a command line.
+## What is Jet?
+
+Jet is a CLI tool designed to make working with Codeship Pro faster and easier, as well as to put more power in a developer's hands so that there is less time spent configuring and debugging projects via a web UI.
+
+## Prerequisites
+
+In order to run the _Jet_ binary on your computer, you need to have Docker installed and configured, with a running Docker host such as [Docker For Mac](https://docs.docker.com/docker-for-mac/).
+
+## Installing Jet
+
+Please follow the steps below for the operating system you are using. See the [Jet Release Notes]({{ site.baseurl }}{% link _pro/getting-started/release-notes.md %}) for the ChangeLog.
+
+See the [sha256sums]({{ site.data.jet.base_url }}/{{ site.data.jet.version }}/sha256sums) file for checksums for the latest release. To check the downloaded files on Linux / Unix based systems run the following command.
 
 ```bash
-jet help
+shasum -c -a 256 sha256sums
 ```
 
-All of the available commands have these common flags:
+### Installing Jet On Mac OS X
 
-* `--system` print extra system log information.
+The `jet` CLI is now included in [Homebrew Cask](https://caskroom.github.io/). If you already have [Homebrew installed](http://brew.sh/) and the [Caskroom tapped](https://caskroom.github.io/)[^1] you can install `jet` by running the following command
 
-## Main commands
-
-These are the main commands to use for loading and running services and steps.
-
-All of the main commands have some common flags:
-
-* `--dir` specify a different context directory
-* `--keep-volume-containers` by default at the end of a run, all volume containers are deleted. This will keep them around.
-* `--no-cache` do not use Docker's local image cache. All services will be rebuilt.
-* `--print-build-output` by default, docker build's output is suppressed. If you want to have it, use this flag.
-* `--services-path` specify the path to the YAML or JSON services file, if the file you want to use is not in one of the default locations.
-* `--key-path` if you have encrypted environment variables, this specifies the path to your encryption key. If not specified, this uses the default location from `jet generate`.
-
-### `jet steps`
-
-This is the command to run your steps as specified in your configuration.
-
-This command has some additional flags:
-
-* `--no-parallel` turn off parallelism. This will run your parallel steps serially. Generally, you shouldn't use this, and this is included for debugging purposes only. _This flag might be removed before the first stable release._
-* `-T` disable pseudo-tty allocation, which is done by default for the steps command.
-* `--steps-path` specify the path to the YAML or JSON steps file, if the file you want to use is not in one of the default locations.
-* `--tag` the tag to use
-
-__For a full list of all the variables and commands you can pass when running `jet steps`, just run `jet steps --help`__.
-
-### `jet run`
-
-This is analogous to _docker-compose_'s run command This runs a one-off command on a service specified in your configuration.
-
-For example, if your configuration specifies a service named _app_ and this image has the `echo` binary available, running the following command will print _Hello World_ to your screen.
-
-```shell
-jet run app echo "Hello World"
+```bash
+brew cask install jet
 ```
 
-This command has some additional flags:
+The formula will install Docker as well. If you already have Docker installed, but didn't use Homebrew to install it, you will be asked by Homebrew if you want to overwrite the Docker binary. If you don't want to manage Docker via Homebrew, please use the alternative installation method below.
 
-* `-e` add or override an environment variable, similar to docker run. This flag can be used multiple times.
-* `--entrypoint` override the entry point of the image.
-* `-T` disable pseudo-tty allocation, which is done by default for the run command.
+If you don't have Homebrew installed or don't use Homebrew Cask you can install `jet` via the following commands.
 
-### `jet load`
+```bash
+curl -SLO "{{ site.data.jet.base_url }}/{{ site.data.jet.version }}/jet-darwin_amd64_{{ site.data.jet.version }}.tar.gz"
+tar -xC /usr/local/bin/ -f jet-darwin_amd64_{{ site.data.jet.version }}.tar.gz
+chmod u+x /usr/local/bin/jet
+```
 
-This is analogous to docker-compose's `pull` and `build` commands:
+[^1]: Instructions for tapping the _Caskroom_ are at the very bottom of the page.
 
-* If the `image` directive is specified for a service, this will pull the image.
-* If the `build` directive is specified for a service, this will build the image.
+### Installing Jet On Linux
 
-## Encryption commands
+```bash
+curl -SLO "{{ site.data.jet.base_url }}/{{ site.data.jet.version }}/jet-linux_amd64_{{ site.data.jet.version }}.tar.gz"
+sudo tar -xaC /usr/local/bin -f jet-linux_amd64_{{ site.data.jet.version }}.tar.gz
+sudo chmod +x /usr/local/bin/jet
+```
 
-These commands are for generating keys, and encrypting and decrypting environment variable or `.dockercfg` files.
+### Installing Jet On Windows
 
-- [Example](https://github.com/codeship/codeship-tool-examples/tree/master/11.encrypted-aes)
+There is no supported Jet version for Windows machines, although [Windows Subsystem For Linux](https://blogs.msdn.microsoft.com/wsl/) works for many of our customers.
 
-### `jet generate`
+### Dynamically linked version
 
-Generate new keys for use with the CLI. The generated keys are saved to `codeship.aes` in the current directory by default.
+The above version is statically linked and will work the same way on all platforms. But it doesn't support certain features, e.g. resolving `.local` DNS names. If your builds require this, please use the dynamically linked version instead.
 
-You can specify alternate keys for every other command with `--key-path`, otherwise keys are looked up in the location mentioned above. Note, that you do not need to generate a key unless you either require encrypted environment variables or plan to use `push` steps (which require an encrypted `dockercfg`).
+* [Mac OS X]({{ site.data.jet.base_url }}/{{ site.data.jet.version }}/jet-darwin_amd64_{{ site.data.jet.version }}-dynamic.tar.gz)
+* [Linux]({{ site.data.jet.base_url }}/{{ site.data.jet.version }}/jet-linux_amd64_{{ site.data.jet.version }}-dynamic.tar.gz)
 
-### `jet encrypt [infile] [outfile]`
+### Validating Installation
 
-Encrypt a file. If this is a YAML file containing environment variable, you can use the encrypted file directly with the `encrypted_env_file` directive in your services definition.
+Once this is done you can check that _Jet_ is working by running `jet help`. This will print output similar to the following.
 
-### `jet decrypt [infile] [outfile]`
+```bash
+$ jet version
+{{ site.data.jet.version }}
+$ jet help
+Usage:
+  jet [command]
+...
+```
 
-Decrypt a file. This is useful to make sure the encryption worked properly.
+### Docker Configuration
+
+`DOCKER_HOST` must be set. `DOCKER_TLS_VERIFY` and `DOCKER_CERT_PATH` are respected in the same way as with the official Docker client. If you installed Docker via [Docker For Mac](https://docs.docker.com/docker-for-mac/) this is typically done by default during installation.
+
+If you installed and configured your Docker environment via [Docker Machine](https://docs.docker.com/machine/) (and you are on OS X or Linux) and named the environment _dev_, running the following command will set those variables.
+
+```bash
+eval $(docker-machine env dev)
+```
+
+## Using Jet
+
+Now that you have Jet installed and configured, [learn how to use it.]({{ site.baseurl }}{% link _pro/getting-started/cli.md %})
+
+### Jet Steps
+
+The most often used feature of Jet is `jet steps`.
+
+By running `jet steps`, you are running your full CI/CD process on your local machine. This lets you test your builds, configuration files and pipelines locally without having to commit your code.
+
+**Note** that `jet steps` skips [image pushes]({{ site.baseurl }}{% link _pro/getting-started/steps.md %}#push-steps) and any [branch-specific commands]({{ site.baseurl }}{% link _pro/getting-started/steps.md %}#limiting-steps-to-specific-branches--tags) by default, but you can always run `jet steps --help` to see a list of special options you can pass Jet to invoke different CI/CD contexts and behaviors.
+
+### Jet Encrypt
+
+Jet also allows you to encrypt [environment variables]({{ site.baseurl }}{% link _pro/getting-started/environment-variables.md %}), [build arguments]({{ site.baseurl }}{% link _pro/getting-started/build-arguments.md %}) and [registry credentials]({{ site.baseurl }}{% link _pro/getting-started/image-registries.md %}). This is done with the `jet encrypt` command. Click the links in this paragraph for specific instructions on encrypting different types of secrets.
+
+### Jet Run
+
+While `jet steps` runs your CI/CD pipeline locally, you can also use `jet run` to instead build a single service or run a single command.
+
+For instance, you can run `jet run service_app` or `jet run service_app echo "hello"` where `service_app` is one of the services defined in your [codeship-services.yml]({{ site.baseurl }}{% link _pro/getting-started/services.md %}).
+
+**Note** that you can also run `jet run --help` to see a list of special options you can pass Jet to invoke different CI/CD contexts and behaviors.

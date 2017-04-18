@@ -43,7 +43,7 @@ We should point out that, even though Deployment updates need to be triggered in
 
 So, given a functioning Kubernetes Deployment, how do we integrate it in to your Codeship work now? The answer to this question ultimately depends on your Kubernetes host, but because the official documentation uses [Google Cloud](https://documentation.codeship.com/pro/continuous-deployment/google-cloud/) as an example, this is the platform we'll address. To make this easier we've built out some Google Cloud integrations into Codeship Pro that we can use to authenticate and deploy new images to Google Cloud.
 
-Before we can do anything, however, we need to create an encrypted environment file using the [Jet CLI]({% link _pro/getting-started/installation.md %}) tool in order to authenticate to Google Cloud. We have a [documentation article](https://documentation.codeship.com/pro/getting-started/encryption/) on how to do this, so we won't go over it here - but the environment variables that need to be set are:
+Before we can do anything, however, we need to create an encrypted environment file using the [Jet CLI]({% link _pro/getting-started/cli.md %}) tool in order to authenticate to Google Cloud. We have a [documentation article](https://documentation.codeship.com/pro/getting-started/encryption/) on how to do this, so we won't go over it here - but the environment variables that need to be set are:
 
 - a Google Cloud Key – `GOOGLE_AUTH_JSON`
 - a Google Authentication Email – `GOOGLE_AUTH_EMAIL`

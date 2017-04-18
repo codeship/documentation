@@ -10,6 +10,7 @@ tags:
 
 redirect_from:
   - /docker/steps/
+  - /pro/getting-started/image-push-fails/
 ---
 
 * include a table of contents
@@ -175,11 +176,6 @@ Run steps specify a command to run on a service. You must specify one or two dir
 
 ## Push steps
 
-<br />
-<div class="info-block">
-We implemented tagging via templates. See below for the available variables. Did we miss any important ones? Let us know at [support@codeship.com](mailto:support@codeship.com).
-</div>
-
 Push steps allow a generated container to be pushed to a remote docker registry. When running after a build, this allows a deployment based upon the successful build to occur. You must specify a number of directives:
 
 * `type: push`
@@ -215,6 +211,32 @@ When using a private repository, or a non-standard tag in the `image_name`, keep
 
 As for the `encrypted_dockercfg_path` directive, we support both, the older `.dockercfg` as well as the newer `${HOME}/.docker/config.json` format. You can simply encrypt either of those files via `jet encrypt` and commit the encrypted files to the repository and the configuration will be picked up.
 
+### Troubleshooting Push issues
+
+The **image** in `codeship-services.yml` has to match the **image_name** in `codeship-steps.yml`, like in the following example:
+
+```yaml
+- type: serial
+  steps:
+    - name: dockerhub_push
+      service: demo
+      type: push
+      image_name: something/test-repo
+      registry: https://index.docker.io/v1/
+      dockercfg_path: dockercfg
+```
+
+Note that our **image_name** here is *something/test-repo*. This is the name of the image in `codeship-services.yml`:
+
+```yaml
+demo:
+  build:
+    image: something/test-repo
+    dockerfile: Dockerfile
+```
+
+Find out more about these two files in [steps configuration]({{ site.baseurl }}{% link _pro/getting-started/steps.md %}) and [services configuration]({{ site.baseurl }}{% link _pro/getting-started/services.md %}).
+
 ## Build Environment
 
 For each step, the running container is provided with a set of environment variables from the CI process. These values can help your containers to make decisions based on your build pipeline.
@@ -234,4 +256,4 @@ For each step, the running container is provided with a set of environment varia
 * `CI` (defaults to `true`)
 * `CI_NAME` (defaults to `codeship`)
 
-Please see our [Docker Push Tutorial]({{ site.baseurl }}{% link _pro/getting-started/docker-push.md %}) for an example on how to push to [Quay.io](https://quay.io) or the Docker Hub.
+Please see our [Docker Push Tutorial]({{ site.baseurl }}{% link _pro/getting-started/image-registries.md %}) for an example on how to push to [Quay.io](https://quay.io) or the Docker Hub.

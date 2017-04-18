@@ -13,6 +13,16 @@ layout: default
   <div class="grid">
     <div class="colxs100 pageContent">
 
+        <div class="product-indicator">
+          {% if page.collection == "pro" %}
+            <p class="product-pro">This article is about <a href="https://codeship.com/features/pro">Codeship Pro</a>.</p>
+          {% elsif page.collection == "basic" %}
+            <p class="product-basic">This article is about <a href="https://codeship.com/features/basic">Codeship Basic</a>.</p>
+          {% elsif page.collection == "general" %}
+            <p class="product-general">This article is about <a href="https://codeship.com/features">General Codeship Configuration</a>.</p>
+          {% endif %}
+        </div>
+
       <h1 class="pageTitle" data-swiftype-name="title" data-swiftype-type="string"  data-swiftype-index='true'>{{ title }}</h1>
 
       <div data-swiftype-name="body" data-swiftype-type="text" data-swiftype-index='true'>

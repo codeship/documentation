@@ -152,7 +152,7 @@ app:
 
 The way we encrypt our environment variables is by creating a file in our root directory - in this case, a file named `env` and then [downloading our project AES key.]({{ site.baseurl }}{% link _pro/getting-started/environment-variables.md %}) to root directory (and adding it to our `.gitignore` file.)
 
-Once the AES key is in our directory, we can run the `jet encrypt` command with an *input* and an *output* filename: `jet encrypt env env.encrypted` ([Learn more about using Jet]({{ site.baseurl }}{% link _pro/getting-started/installation.md %}))
+Once the AES key is in our directory, we can run the `jet encrypt` command with an *input* and an *output* filename: `jet encrypt env env.encrypted` ([Learn more about using Jet]({{ site.baseurl }}{% link _pro/getting-started/cli.md %}))
 
 Lastly, we would either delete the unencrypted `env` file or add it to our `.gitignore`.
 

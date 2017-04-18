@@ -11,7 +11,7 @@ redirect_from:
 ---
 
 <div class="info-block">
-This tutorial describes the way caching works on Codeship's infrastructure during a build. For [local builds using the `jet` CLI]({{ site.baseurl }}{% link _pro/getting-started/installation.md %}), rely on the local Docker image cache.
+This tutorial describes the way caching works on Codeship's infrastructure during a build. For [local builds using the `jet` CLI]({{ site.baseurl }}{% link _pro/getting-started/cli.md %}), rely on the local Docker image cache.
 </div>
 
 * include a table of contents
