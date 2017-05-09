@@ -31,6 +31,16 @@ wget https://storage.googleapis.com/dart-archive/channels/stable/release/latest/
 unzip -o dartsdk-linux-x64-release.zip -d ~
 ```
 
+### Default Setup Commands
+
+Below you will find standard setup commands for Dart and Codeship Basic. Note that you will need to tweak and adjust these as necessary, but if you're setting up a new Ruby project these commands may be a good starting place.
+
+**Setup Commands**:
+
+```
+pub get
+```
+
 ## Dependencies
 
 You can install any dependencies you defined in your `pubspec.yaml` by running

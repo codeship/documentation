@@ -36,13 +36,23 @@ One use case is that you can change your Ruby version for different branches.
 
 ### Default Setup Commands
 
+Below you will find standard setup commands for Ruby on Rails and Codeship Basic. Note that you will need to tweak and adjust these as necessary, but if you're setting up a new Ruby project these commands may be a good starting place.
 
+
+**Setup Commands**:
 
 ```
 rvm use 2.2.3 --install
 bundle install
 export RAILS_ENV=test
 bundle exec rake db:schema:load
+```
+
+**Test Commands**:
+
+```
+bundle exec rake test
+bundle exec rspec
 ```
 
 ## Dependencies

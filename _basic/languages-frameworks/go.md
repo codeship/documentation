@@ -32,6 +32,23 @@ You can build your Go project with
 go build
 ```
 
+### Default Setup Commands
+
+Below you will find standard setup commands for Go and Codeship Basic. Note that you will need to tweak and adjust these as necessary, but if you're setting up a new Ruby project these commands may be a good starting place.
+
+
+**Setup Commands**:
+
+```
+go get -t -v ./...
+```
+
+**Test Commands**:
+
+```
+go test -v ./...
+```
+
 ## Dependencies
 
 You can install dependencies with:

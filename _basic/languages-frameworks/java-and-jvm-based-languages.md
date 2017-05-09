@@ -93,6 +93,20 @@ The following tools are preinstalled in our virtual machine. You can add them to
 
 Scala , Clojure, Groovy and other JVM based languages should run without issue on Codeship, as well. [Let us know](https://helpdesk.codeship.com) if you find something that doesn't work as expected.
 
+### Default Setup Commands
+
+Below you will find standard setup commands for Java and Codeship Basic. Note that you will need to tweak and adjust these as necessary, but if you're setting up a new Ruby project these commands may be a good starting place.
+
+**Test Commands**:
+
+```
+mvn -B test
+sbt test
+ant test
+gradle test
+lein test
+```
+
 ## Dependencies
 
 Installing dependencies through Maven is fully supported.

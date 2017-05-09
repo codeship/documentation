@@ -33,6 +33,26 @@ We have the latest versions of the following NodeJS releases pre-installed on ou
 
 Please note that we only install the latest version for each of those releases. You can however install any custom version via the `nvm install` command mentioned above.
 
+### Default Setup Commands
+
+Below you will find standard setup commands for Node and Codeship Basic. Note that you will need to tweak and adjust these as necessary, but if you're setting up a new Ruby project these commands may be a good starting place.
+
+
+**Setup Commands**:
+
+```
+nvm install 0.10
+npm install
+npm install -g grunt-cli
+```
+
+**Test Commands**:
+
+```
+npm test
+grunt test
+```
+
 ## Dependencies
 
 You can use npm to install your dependencies. We set the `$PATH` to include the `node_modules/.bin` folder so all executables installed through npm can be run.

@@ -37,6 +37,25 @@ PYTHON_VERSION=3.6.0
 
 Next add [this command](https://github.com/codeship/scripts/blob/master/languages/python.sh#L10) to your _Setup Commands_ and the script will automatically be called at build time.
 
+### Default Setup Commands
+
+Below you will find standard setup commands for Python and Codeship Basic. Note that you will need to tweak and adjust these as necessary, but if you're setting up a new Ruby project these commands may be a good starting place.
+
+
+**Setup Commands**:
+
+```
+pip install -r requirements.txt
+python manage.py syncdb --noinput
+python manage.py migrate --noinput
+```
+
+**Test Commands**:
+
+```
+python manage.py test
+python run_tests.py
+```
 
 ## Dependencies
 
