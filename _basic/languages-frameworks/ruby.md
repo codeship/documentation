@@ -34,6 +34,17 @@ rvm use $(cat .ruby-version) --install
 
 One use case is that you can change your Ruby version for different branches.
 
+### Default Setup Commands
+
+
+
+```
+rvm use 2.2.3 --install
+bundle install
+export RAILS_ENV=test
+bundle exec rake db:schema:load
+```
+
 ## Dependencies
 You can install dependencies using bundler in your [setup commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}).
 
