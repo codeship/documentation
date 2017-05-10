@@ -55,6 +55,24 @@ phpenv rehash
 
 so phpenv is aware of the new executable and sets it up correctly
 
+### Default Setup Commands
+
+Below you will find standard setup commands for PHP and Codeship Basic. Note that you will need to tweak and adjust these as necessary, but if you're setting up a new Ruby project these commands may be a good starting place.
+
+
+**Setup Commands**:
+
+```
+phpenv local 5.6
+composer install --prefer-source --no-interaction
+```
+
+**Test Commands**:
+
+```
+phpunit
+```
+
 ## Dependencies
 
 You can install dependencies through pear and composer in your [setup commands]({{ site.baseurl }}{% link _basic/quickstart/getting-started.md %}).
