@@ -216,7 +216,7 @@ Push steps allow a generated container to be pushed to a remote docker registry.
     * `ImageName` (the user defined name for the image)
     * `Ci` (defaults to `true`)
     * `CiName` (defaults to `codeship`)
-* `registry` the url of the registry being pushed to. For Docker Hub, use `https://index.docker.io/v1/`.
+* `registry` the url of the registry being pushed to. Required if the registy is not the Docker Hub.
 * `encrypted_dockercfg_path` the path to your relevant dockercfg file, encrypted using `jet encrypt`.
 * `tag` a group tag associated with this build step (optional).
 

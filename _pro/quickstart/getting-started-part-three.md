@@ -69,7 +69,6 @@ Add the following code, and then we'll go through it, to discuss what's happenin
       service: demo
       type: push
       image_name: account/repo
-      registry: https://index.docker.io/v1/
       encrypted_dockercfg_path: dockercfg.encrypted
 ```
 
@@ -79,7 +78,7 @@ There are a few things to note here:
 
 * `Image name` takes a slightly different form depending on the repo - if it's Docker Hub, it's `account_name/repo_name`. This is your repo account name and then the name of the specific repo on your account you're pushing to. You'll need to review specific documentation if you're using Quay.io / AWS ECR or a private repo to make sure the name is defined correctly.
 
-* `Registry` is the unique push URL for the image repo. Again, this varies per registry so if you're not using Docker Hub be sure to verify that you get the right value for this.
+* `Registry` is the unique push URL for the image repo. Codeship Pro uses the Docker Hub as the default registry for pushes. If you're not using Docker Hub, be sure to verify that you have the correct registry here, such as quay.io.
 
 * `Encrypted_dockercfg_path` is where we grab the credentials for your image repo account from. But, why is it encrypted and how did we encrypt it? Let's take a look at that now...
 
