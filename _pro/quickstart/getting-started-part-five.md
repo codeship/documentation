@@ -78,7 +78,6 @@ Of course, to see our cache in action we'll have to push *another* build using t
       service: checkrb
       type: push
       image_name: account/repo
-      registry: https://index.docker.io/v1/
       encrypted_dockercfg_path: dockercfg.encrypted
 ```
 

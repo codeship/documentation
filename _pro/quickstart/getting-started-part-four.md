@@ -129,7 +129,6 @@ Now that we have our new service and both of our scripts, we need to edit our `c
       service: checkrb
       type: push
       image_name: account/repo
-      registry: https://index.docker.io/v1/
       encrypted_dockercfg_path: dockercfg.encrypted
 ```
 

@@ -58,7 +58,6 @@
       service: documentation
       image_name: codeship/documentation
       image_tag: latest
-      registry: https://index.docker.io/v1/
       encrypted_dockercfg_path: dockercfg.encrypted
 - name: Notify Slack
   service: documentation
