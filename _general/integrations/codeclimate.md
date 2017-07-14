@@ -62,7 +62,7 @@ After your final test commands:
 ```bash
 - name: codeclimate_post
   service: YOURSERVICE
-  command: cc-test-reporter after-build --exit-code $ -prefix /path
+  command: cc-test-reporter after-build --exit-code $ -prefix /home/rof/src/github.com/user_or_org_name/repo_name
 ```
 
 The prefix here is what you'll need to remove from absolute paths in coverage payloads, to make them relative to the project root. This is usually the directory in which the tests were run.
@@ -141,7 +141,7 @@ cc-test-reporter before-build
 After your final tests have run:
 
 ```bash
-cc-test-reporter after-build --exit-code $ -prefix /path
+cc-test-reporter after-build --exit-code $ -prefix /home/rof/src/github.com/user_or_org_name/repo_name
 ```
 
 The prefix here is what you'll need to remove from absolute paths in coverage payloads, to make them relative to the project root. This is usually the directory in which the tests were run.
