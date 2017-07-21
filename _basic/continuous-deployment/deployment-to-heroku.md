@@ -88,16 +88,8 @@ This causes git to disable some checks and can cause the remote repository to lo
 
 See [git push -f](https://git-scm.com/docs/git-push) for more info.
 
-#### Run Migrations (Ruby on Rails only)
-You can specify to run the migration during the Heroku deployment. If you want to run your migration after the deployment, you can add a [custom script]({{ site.baseurl }}{% link _basic/continuous-deployment/deployment-with-custom-scripts.md %}) after the Heroku deployment and run the migration. If you are not using Rails you will need to use a custom script to run the correct migration command for your framework.
-
-**Example**:
-
-```shell
-heroku run --exit-code --app ${HEROKU_APPLICATION_NAME} -- bundle exec rake db:migrate
-```
-
-![Heroku Migration After Deploy]({{ site.baseurl }}/images/continuous-deployment/heroku-migration-after-deploy.png)
+#### Post-deploy Command
+You can specify a command to run post-deployment. The dynos will be restarted after running. This can be useful for running migrations or other commands that need to be run on each deploy.
 
 #### Check app URL
 This will enable your build to check the URL of your application to make sure that it is up.
