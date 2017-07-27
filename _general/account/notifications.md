@@ -26,7 +26,9 @@ As a default, we've setup a notification rule that sends an email to everyone on
 
 Notification rules are grouped by branch, or branches, and you can setup as many as you like. Each rule applies to one service, so if you want to e.g. send the same notification to two slack channels, you'll have to setup two rules.
 
-Each group can apply to a specific branch, e.g. `master`, or multiple branches that match a pattern, e.g. `feature/*`. 
+Each group can apply to a specific branch, e.g. `master`, or multiple branches that match a pattern, e.g. `feature/*`.
+
+![Notifications]({{ site.baseurl }}/images/general/notifications.gif)
 
 ### Branch Matching
 
@@ -50,7 +52,7 @@ If the service you're looking for isn't on the list, you might be able to use th
 
 ## Configuring Build Notifications
 
-To configure build notifications, go to your *Project Settings* and then click into the **Notifications** tab. 
+To configure build notifications, go to your *Project Settings* and then click into the **Notifications** tab.
 
 If you want to add more rules to an existing branch (or branch match) click the `add` button to the right of the branch name. If you want to add rules for a new branch (or branch match) click the big `new notification` button at the bottom of the page.
 
@@ -71,9 +73,9 @@ Additionally, all rules can select between `started`, `failed`, `succeeded`, and
 
 ## Email Notification
 
-For an email rule, you can select whether all members of the project will recieve notifications, or only the person whos commit triggered the build. 
+For an email rule, you can select whether all members of the project will recieve notifications, or only the person whos commit triggered the build.
 
-If only the committer should be notified, either the emails or usernames must be the same in both Codeship and Github/Bitbucket/Gitlab. If they're different, no notifications are sent. 
+If only the committer should be notified, either the emails or usernames must be the same in both Codeship and Github/Bitbucket/Gitlab. If they're different, no notifications are sent.
 
 #### Disable Email
 

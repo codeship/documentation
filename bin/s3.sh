@@ -7,11 +7,11 @@ case "$action" in
 	'sync')
 		if [ "${CI_BRANCH}" = "master" ]; then
 			log "Pushing documenation to s3://${AWS_S3_BUCKET}/"
-			aws s3 sync "/site/master/" "s3://${AWS_S3_BUCKET}/" --acl public-read --follow-symlinks --exclude "staging/*" --exclude "private/*" --delete
+			aws s3 sync "/site/master/" "s3://${AWS_S3_BUCKET}/" --acl public-read --cache-control "${AWS_CACHE_CONTROL}" --follow-symlinks --exclude "staging/*" --exclude "private/*" --delete
 		else
 			target="${CI_BRANCH}"
 			log "Pushing documenation to s3://${AWS_S3_BUCKET}/${target}/"
-			aws s3 sync "/site/${target}/" "s3://${AWS_S3_BUCKET}/${target}/" --acl public-read --follow-symlinks --delete
+			aws s3 sync "/site/${target}/" "s3://${AWS_S3_BUCKET}/${target}/" --acl public-read --cache-control "private, no-cache" --follow-symlinks --delete
 		fi
 		;;
 	'configure_website')
