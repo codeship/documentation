@@ -1,7 +1,3 @@
----
----
-@import 'rig/rig';
-
 // CUSTOM VARIABLES SECTION
 
 $cMainNav:          #000000;
@@ -18,16 +14,3 @@ $cAsideBg:          #f3f6fb;
 
 $cFooter:           $_cWhite;
 $cFooterBg:         #101b27;
-
-@import 'docs/nav';
-@import 'docs/header';
-@import 'docs/search';
-@import 'docs/page';
-@import 'docs/rouge';
-@import 'docs/swift';
-@import 'docs/footer';
-@import 'docs/gist';
-@import 'docs/footnotes';
-@import 'docs/topmenu';
-@import 'docs/sidebar';
-@import 'docs/mobile_fix';

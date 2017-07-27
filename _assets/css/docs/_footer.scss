@@ -2,7 +2,7 @@ $footer-color: #949ba8;
 $footer-bg: #15202d;
 
 .Footer {
-  background: url('/assets/img/footer-logo.png') no-repeat right 10% center $cFooterBg;
+  background: url('img/footer-logo.png') no-repeat right 10% center $cFooterBg;
   color: $cFooter;
   padding-top: 40px;
   font-family: 'Lato';
@@ -32,8 +32,7 @@ $footer-bg: #15202d;
 .Footer_links {
   box-sizing: border-box;
   width: 100%;
-  background: image-url('website/logo.png') no-repeat left 1rem center $footer-bg;
-  background-size: 8rem;
+  background: $footer-bg;
   text-align: right;
   margin: 0;
   padding: 0 $base-padding;
