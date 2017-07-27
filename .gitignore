@@ -8,6 +8,7 @@ deployment.env
 dockercfg
 node_modules
 tmp/*
+.asset-cache/*
 
 # OS & editors
 .DS_Store
