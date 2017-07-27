@@ -71,6 +71,7 @@ plugins:
   - jekyll-redirect-from
   - jekyll-menus
   - jekyll-assets
+  - shipyard
 
 # SASS
 sass:

@@ -14,11 +14,10 @@ gem 'jekyll-redirect-from', '~> 0.12.1'
 gem 'jekyll-menus', '~> 0.6.0'
 gem 'jekyll-assets', '~> 2.3.0'
 
-# Design Assets
-gem 'bootstrap-sass'
 gem 'shipyard', '~> 0.1.0',
-    git: 'https://github.com/shipyard-framework/shipyard-rubygem',
-    branch: 'master'
+    path: '/Users/ryanwilke/Dropbox/Sites/shipyard-rubygem'
+    # git: 'https://github.com/shipyard-framework/shipyard-rubygem',
+    # branch: 'master'
 
 group :test do
   gem 'scss_lint', '~> 0.54.0'
