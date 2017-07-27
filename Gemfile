@@ -12,7 +12,7 @@ gem 'jekyll-seo-tag', '~> 2.2.3'
 gem 'jekyll-sitemap', '~> 1.1.1'
 gem 'jekyll-redirect-from', '~> 0.12.1'
 gem 'jekyll-menus', '~> 0.6.0'
-gem 'jekyll-assets'
+gem 'jekyll-assets', '~> 2.3.0'
 
 # Design Assets
 gem 'bootstrap-sass'
