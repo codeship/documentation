@@ -8,7 +8,7 @@ tags:
 menus:
   general/integrations:
     title: Using Appranix
-    weight: 10
+    weight: 16
 ---
 
 * include a table of contents
@@ -30,10 +30,18 @@ The script file will connect to Appranix and trigger deployment for the new buil
 
 ## Adding Appranix Values
 
-To start, you need to add the following values in environment variables `USER`, `PASSWORD`, `ORG`, `ASSEMBLY`, `AppSpace`, `PLATFORM`, `ARTIFACT`.
+To start, you need to add the following values in the environment page of your Codeship project, for more info read [Environment Variables](https://documentation.codeship.com/basic/builds-and-configuration/set-environment-variables/)
+
+- `USER` - Username of your Appranix account
+- `PASSWORD` - Password of your Appranix account
+- `ORG` - Organization in your Appranix account
+- `AppSpace` - Name of the AppSpace where the artifact component is located
+- `PLATFORM` - Name of the platform where the artifact component is located
+- `ARTIFACT` - Specific name of the artifact component which should will deploy the latest build
 
 ## Deploying With Appranix
 
 During the next code push after all pipleine tests are complete at the deployment stage the artifact will be deployed to your artifactory repository as per your configuration after which the appranix.sh script file will be executed. The script file will start a new deployment for the latest build.
+Add `sh appranix.sh` at the end of your deployment configuration in project settings.
 
 ## Application Operations
