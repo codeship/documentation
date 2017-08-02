@@ -33,4 +33,4 @@ In all of the above cases, reach out to our support team at [support@codeship.co
 [gist]: https://gist.github.com/
 [fork]: http://help.github.com/fork-a-repo/
 [branch]: https://github.com/blog/1377-create-and-delete-branches
-[pr]: http://help.github.com/send-pull-requests/
+[pr]: https://help.github.com/articles/creating-a-pull-request/
