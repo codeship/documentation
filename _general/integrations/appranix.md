@@ -20,12 +20,13 @@ menus:
 
 ## Using Appranix
 
-This article will cover on how to setup and deploy the latest builds to your existing Appranix AppSpace through artifact component. The article will not cover on how to set up the AppSpace
+This article will cover on how to setup and deploy the latest builds to your existing Appranix AppSpace through artifact component with [Codeship Basic](https://codeship.com/features/basic). This article will not cover on how to set up the AppSpace, documentation on that can be found at [Appranix's User Docs]{https://app.appranix.net/docs/}.
 
 ## Configuring Deployments
 
-Configure the build deployment to your artifactory repository as per your requirements.
-The next stage of deployment process triggers a new deployment in the Appranix AppSpace to load the new artifact by executing a script file which should be executed.
+In the deployment section of your [Codeship](https://codeship.com/) project configure all your settings to deploy the artifact to your artifactory repository.
+After that include code to execute the appranix.sh script.
+The script file will connect to Appranix and trigger deployment for the new build.
 
 ## Adding Appranix Values
 
@@ -33,6 +34,6 @@ To start, you need to add the following values in environment variables `USER`, 
 
 ## Deploying With Appranix
 
-During the next build the artifact will be deployed to the artifactory repository after which Appranix process will be triggered with the latest build number which initiates a deployment with
+During the next code push after all pipleine tests are complete at the deployment stage the artifact will be deployed to your artifactory repository as per your configuration after which the appranix.sh script file will be executed. The script file will start a new deployment for the latest build.
 
 ## Application Operations
