@@ -1,32 +1,32 @@
-echo "Appranix: Logging in."
-ssh ${USER}@app.appranix.net << (echo "${PASSWORD}\n")
-sleep 2
+echo "Setting Ruby version to 2.3.3"
+rvm use 2.3.3
 
-echo "Appranix: Creating appranix.json"
-cat <<EOF > ---
-platforms:
-  ${PLATFORM}:
-      artifact/core.1.Artifact:
-        ${ARTIFACT}:
-          install_dir: /opt/tomcat7/webapps
-          version: ${CI_BUILD_NUMBER},
-      user/core.1.User:
-        user: {}
-EOF
-echo "Appranix: Design is Loaded"
-sleep 5
+echo "Installing Appranix CLI"
+gem install prana
 
-/inductor/appranix/client commit -m "auto commit"
-echo "Appranix: Design is commited with message 'auto commit'"
-sleep 5
+echo "Setting Appranix URL"
+prana config set site=http://app.appranix.net/web -g
 
-/inductor/appranix/client/deploy -m "auto deploy"
-echo "Appranix: Deploying Build #${CI_BUILD_NUMBER}"
-sleep 6
+echo "Logging into Appranix"
+prana auth login --username=${USER} --password=${PASSWORD} --account=${ORG}
 
+echo "Setting Organization as ${SUBORG}"
+prana config set organization=${SUBORG}
 
-echo "Appranix: Deployment completed successfully"
-sleep 2
+echo "Setting Assembly as ${ASSEMBLY}"
+prana config set assembly=${ASSEMBLY} -g
 
-logout
-exit
+echo "Updating latest build number"
+prana design variable update -a ${ASSEMBLY} --platform=${PLATFORM} appVersion=${CI_BUILD_NUMBER}
+
+echo "Commiting design"
+prana design commit design-commit
+
+echo "Pulling design to ${AppSpace} AppSpace"
+prana configure pull -e ${AppSpace}
+
+echo "Commiting AppSpace changes"
+prana configure commit appspace-commit -e ${AppSpace}
+
+echo "Starting AppSpace deployment"
+prana transition deployment create -e ${AppSpace}
