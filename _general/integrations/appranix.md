@@ -25,7 +25,7 @@ This article will cover on how to setup and deploy the latest builds to your exi
 With Appranix the devloper doesn't have to worry about integrating the latest build to an existing backend.
 Once you push the code Appranix takes care of integrating it with your AppSpace and have it in production without any extra effort. With Appranix integration the code flow is as simple as from your editor to production.
 
-![Appranix DevOps Flow](documentation/images/integrations/appranix-code-flow.jpg)
+![Appranix DevOps Flow](https://github.com/RushinthJohn/documentation/blob/appranix/images/integrations/appranix-code-flow.jpg)
 
 ## Configuring Deployments
 
