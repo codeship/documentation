@@ -13,7 +13,7 @@ menus:
 
 ## About Appranix
 
-This article will cover on how to setup and deploy the latest builds to your existing Appranix AppSpace through artifact component with ![Codeship Basic](https://codeship.com/features/basic). This article will not cover on how to set up the AppSpace, documentation on that can be found at [Appranix's User Docs]{https://app.appranix.net/docs/}.
+This article will cover on how to setup and deploy the latest builds to your existing Appranix AppSpace through artifact component with ![Codeship Basic](https://codeship.com/features/basic). This article will not cover on how to set up the AppSpace, documentation on that can be found at ![Appranix's User Docs](https://app.appranix.net/docs/).
 
 ## Using Appranix
 
