@@ -17,7 +17,7 @@ menus:
 ## About Appranix
 
 <div class="info-block">
-This article will cover on how to setup and deploy the latest builds to your existing Appranix AppSpace through artifact component with [Codeship Basic](https://codeship.com/features/basic). This article will not cover on how to set up the AppSpace, documentation on that can be found at [Appranix's User Docs]{https://app.appranix.net/docs/}.
+This article will cover on how to setup and deploy the latest builds to your existing Appranix AppSpace through artifact component with ![Codeship Basic](https://codeship.com/features/basic). This article will not cover on how to set up the AppSpace, documentation on that can be found at [Appranix's User Docs]{https://app.appranix.net/docs/}.
 </div>
 
 ## Using Appranix
@@ -25,17 +25,17 @@ This article will cover on how to setup and deploy the latest builds to your exi
 With Appranix the devloper doesn't have to worry about integrating the latest build to an existing backend.
 Once you push the code Appranix takes care of integrating it with your AppSpace and have it in production without any extra effort. With Appranix integration the code flow is as simple as from your editor to production.
 
-[Appranix DevOps Flow](https://github.com/RushinthJohn/documentation/blob/appranix/images/integrations/appranix-code-flow.jpg)
+![Appranix DevOps Flow](https://github.com/RushinthJohn/documentation/blob/appranix/images/integrations/appranix-code-flow.jpg)
 
 ## Configuring Deployments
 
-In the deployment section of your [Codeship](https://codeship.com/) project configure all your settings to deploy the artifact to your artifactory repository.
+In the deployment section of your ![Codeship](https://codeship.com/) project configure all your settings to deploy the artifact to your artifactory repository.
 After that include code to execute the appranix.sh script.
 The script file will connect to Appranix and trigger deployment for the new build.
 
 ## Adding Appranix Values
 
-To start, you need to add the following values in the environment page of your Codeship project, for more info read [Environment Variables](https://documentation.codeship.com/basic/builds-and-configuration/set-environment-variables/)
+To start, you need to add the following values in the environment page of your Codeship project, for more info read ![Environment Variables](https://documentation.codeship.com/basic/builds-and-configuration/set-environment-variables/)
 
 - `USER` - Username of your Appranix account
 - `PASSWORD` - Password of your Appranix account
