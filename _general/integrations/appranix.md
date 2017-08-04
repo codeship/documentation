@@ -11,14 +11,9 @@ menus:
     weight: 16
 ---
 
-* include a table of contents
-{:toc}
-
 ## About Appranix
 
-<div class="info-block">
 This article will cover on how to setup and deploy the latest builds to your existing Appranix AppSpace through artifact component with ![Codeship Basic](https://codeship.com/features/basic). This article will not cover on how to set up the AppSpace, documentation on that can be found at [Appranix's User Docs]{https://app.appranix.net/docs/}.
-</div>
 
 ## Using Appranix
 
