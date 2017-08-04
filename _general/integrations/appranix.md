@@ -16,11 +16,16 @@ menus:
 
 ## About Appranix
 
-[Appranix ServiceFormation’s](http://www.appranix.com/) continually learning adaptive system optimizes your cloud resources from your applications perspective. Knowing how applications are designed and deployed, Appranix creates and manages only what’s required on hyperscale cloud platforms. Unlike other fragmented operations tools that automate applications and data separately, Appranix unifies them with ServiceFormation to deliver Cloud Ops and DevOps in one platform. Appranix User Documentation does a great job of providing more information, in addition to the setup instructions below.
+<div class="info-block">
+This article will cover on how to setup and deploy the latest builds to your existing Appranix AppSpace through artifact component with [Codeship Basic](https://codeship.com/features/basic). This article will not cover on how to set up the AppSpace, documentation on that can be found at [Appranix's User Docs]{https://app.appranix.net/docs/}.
+</div>
 
 ## Using Appranix
 
-This article will cover on how to setup and deploy the latest builds to your existing Appranix AppSpace through artifact component with [Codeship Basic](https://codeship.com/features/basic). This article will not cover on how to set up the AppSpace, documentation on that can be found at [Appranix's User Docs]{https://app.appranix.net/docs/}.
+With Appranix the devloper doesn't have to worry about integrating the latest build to an existing backend.
+Once you push the code Appranix takes care of integrating it with your AppSpace and have it in production without any extra effort. With Appranix integration the code flow is as simple as from your editor to production.
+
+[Appranix DevOps Flow](images/integrations/appranix-code-flow.jpg)
 
 ## Configuring Deployments
 
