@@ -111,9 +111,14 @@ mvn deploy
 sh appranix.sh
 ```
 
-## Application Operations
+## Appranix Operations
 
-After successfull deployment all operation management can be easily done from the Appranix dashboard. Operations like scaling up, scaling down, instance replace, health monitoring, instance termination can be performed with the click of a button.
+A recent DevOps survey by Quali found the following results:
+- 54% of respondents indicated they had no access to self-service infrastructure which means they had to wait for a long time for someone to provision their resources.
+- Over 59% of respondents said it takes up to a month or more to deliver infrastructure, this slows application delivery.
+- Many repondents feel that some applications are very complex for cloud.
+
+Appranix solves the above problems with it's ServiceFormation technology, LiveDeploy feature allows you to frequently deploy your application, platform or database changes to running applications from your CI/CD systems, continuously monitor and update infrastructure changes made in your cloud accounts with LiveDiscovery, scale your application components be it applications, platforms, sharded databases easily based on your policies using LiveScale.
 
 ## Need More Help?
 
