@@ -1,6 +1,6 @@
 ---
-title: Integrating Codeship With Appranix for Direct Deployments
-shortTitle: Using Appranix For Application Management
+title: Integrating Codeship With Appranix
+shortTitle: Using Appranix For App Ops
 tags:
   - integrations
   - operations
@@ -24,7 +24,7 @@ Once the code is pushed Codeship builds it and Appranix integrates the latest bu
 
 Appranix can be integrated with [Codeship Basic](https://codeship.com/features/basic) and [Codeship Pro](https://codeship.com/features/pro). This article will not cover on how to set up the AppSpace, documentation on that can be found at [Appranix's User Docs](https://app.appranix.net/docs/).
 
-![Appranix Operations](https://github.com/RushinthJohn/documentation/blob/appranix/images/integrations/appranix-ops.jpg)
+![Appranix Operations]({{ site.baseurl }}/images/continuous-integration/appranix-ops.jpg)
 
 ## Codeship Pro
 
@@ -48,9 +48,9 @@ After adding `appranix.sh` to your project repository add the following values i
 ### Appranix Setup
 In your Appranix AppSpace where the latest build is to be integrated, the `appVersion` variable must be created in that platform and must be included in Version field of artifact component within that same platfrom.
 
-1. Add the `appVersion` variable in your Appranix platform. ![Appranix Variable](https://github.com/RushinthJohn/documentation/blob/appranix/images/integrations/appranix-variable.jpg)
+1. Add the `appVersion` variable in your Appranix platform. ![Appranix Variable]({{ site.baseurl }}/images/continuous-integration/appranix-variable.jpg)
 
-2. Add the `appVersion` variable in `Version` field of the artifact component. ![Appranix Artifact](https://github.com/RushinthJohn/documentation/blob/appranix/images/integrations/appranix-artifact.jpg)
+2. Add the `appVersion` variable in `Version` field of the artifact component. ![Appranix Artifact]({{ site.baseurl }}/images/continuous-integration/appranix-artifact.jpg)
 
 When a new build is completed the build number is stored in the `CI_BUILD_NUMBER` environment variable, this build number is then updated in Appranix within the `appVersion` variable and the artifact component pulls the artifat with that build number.
 
@@ -70,7 +70,7 @@ sh appranix.sh
 
 ### Appranix's Kubernetes-as-a-service
 
-Appranix can run and operate Codeship built docker images on Kubernetes container orchestration system. Appranix manages the entire Kubernetes system including deployment, cloud infrastructure provisioning, configuration management, monitoring, self-healing of the Master nodes or kube nodes. ![Appranix Kubernetes](https://github.com/RushinthJohn/documentation/blob/appranix/images/integrations/appranix-k8.png)
+Appranix can run and operate Codeship built docker images on Kubernetes container orchestration system. Appranix manages the entire Kubernetes system including deployment, cloud infrastructure provisioning, configuration management, monitoring, self-healing of the Master nodes or kube nodes. ![Appranix Kubernetes]({{ site.baseurl }}/images/continuous-integration/appranix-k8.png)
 
 ## Codeship Basic
 
@@ -80,7 +80,7 @@ Include the  [appranix.sh](https://github.com/RushinthJohn/documentation/blob/ap
 
 ### Prerequisites
 
-After adding `appranix.sh` to your project repository add the following values in the environment page of your Codeship project, for more info read [Environment Variables](https://documentation.codeship.com/basic/builds-and-configuration/set-environment-variables/)
+After adding `appranix.sh` to your project repository add the following values in the environment page of your Codeship project, for more info read [Environment Variables]({{ site.baseurl }}/images/continuous-integration/set-environment-variables/)
 
 - `USER` - Username of your Appranix account
 - `PASSWORD` - Password of your Appranix account
@@ -93,9 +93,9 @@ After adding `appranix.sh` to your project repository add the following values i
 
 ### Appranix Setup
 
-1. Add the `appVersion` variable in your Appranix platform. ![Appranix Variable](https://github.com/RushinthJohn/documentation/blob/appranix/images/integrations/appranix-variable.jpg)
+1. Add the `appVersion` variable in your Appranix platform. ![Appranix Variable]({{ site.baseurl }}/images/continuous-integration/appranix-variable.jpg)
 
-2. Add the `appVersion` variable in `Version` field of the artifact component. ![Appranix Artifact](https://github.com/RushinthJohn/documentation/blob/appranix/images/integrations/appranix-artifact.jpg)
+2. Add the `appVersion` variable in `Version` field of the artifact component. ![Appranix Artifact]({{ site.baseurl }}/images/continuous-integration/appranix-artifact.jpg)
 
 ### Configuring Deployments
 
@@ -110,6 +110,13 @@ mvn deploy
 #Appranix deployment
 sh appranix.sh
 ```
+## Integration Video
+
+Here is a simple video on how the Appranix integration with codeship works.
+<body>
+ <iframe src="http://www.youtube.com/embed/3KE7EyTEHqg"
+  width="896" height="504" frameborder="0" allowfullscreen></iframe>
+</body>
 
 ## Appranix Operations
 
@@ -123,10 +130,3 @@ Appranix solves the above problems with it's ServiceFormation technology, LiveDe
 ## Need More Help?
 
 Get in touch if you need more help at <a href="mailto:info@appranix.com?Subject=Reg-Codeship%20Integration" target="_blank" >info@appranix.com</a>
-
-<html>
- <body>
-  <iframe src="http://www.youtube.com/embed/3KE7EyTEHqg"
-   width="560" height="315" frameborder="0" allowfullscreen></iframe>
- </body>
-</html>
