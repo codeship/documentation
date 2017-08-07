@@ -113,7 +113,7 @@ sh appranix.sh
 
 ## Appranix Operations
 
-A recent DevOps survey by Quali found the following results:
+A recent DevOps [survey](http://www.prnewswire.com/news-releases/qualis-survey-offers-insights-about-it-challenges-in-cloud-and-devops-300423438.html) found the following results:
 - 54% of respondents indicated they had no access to self-service infrastructure which means they had to wait for a long time for someone to provision their resources.
 - Over 59% of respondents said it takes up to a month or more to deliver infrastructure, this slows application delivery.
 - Many repondents feel that some applications are very complex for cloud.
@@ -123,3 +123,10 @@ Appranix solves the above problems with it's ServiceFormation technology, LiveDe
 ## Need More Help?
 
 Get in touch if you need more help at <a href="mailto:info@appranix.com?Subject=Reg-Codeship%20Integration" target="_blank" >info@appranix.com</a>
+
+<html>
+ <body>
+  <iframe src="http://www.youtube.com/embed/3KE7EyTEHqg"
+   width="560" height="315" frameborder="0" allowfullscreen></iframe>
+ </body>
+</html>
