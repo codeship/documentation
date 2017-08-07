@@ -64,4 +64,4 @@ sh appranix.sh
 After successfull deployment all operations management can be easily done from the Appranix dashboard. Operations like scaling up, scaling down, instance replace, health monitoring, instance termination can be performed with the click of a button.
 
 ## Need More Help?
-Get in touch if you need more help at <a href="mailto:info@appranix.com?Subject=Reg-Codeship%20Integration" target="blank">info@appranix.com</a>
+Get in touch if you need more help at <a href="mailto:info@appranix.com?Subject=Reg-Codeship%20Integration" >info@appranix.com</a>
