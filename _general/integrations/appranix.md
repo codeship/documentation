@@ -49,7 +49,15 @@ When a new build is completed the build number is stored in the `CI_BUILD_NUMBER
 
 In the deployment section of your [Codeship](https://codeship.com/) project configure all your settings to deploy the artifact to your artifactory repository.
 
-After that add `sh appranix.sh` at the end. The script file will connect to Appranix and trigger deployment for the new build.
+After that add `sh appranix.sh` at the end. The script file will connect to Appranix and trigger deployment for the new build. For eg,
+```sh
+#Deployment to artifactory repository
+mvn package
+mvn deploy
+
+#Appranix deployment
+sh appranix.sh
+```
 
 ## Application Operations
 
