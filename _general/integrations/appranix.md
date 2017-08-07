@@ -29,7 +29,7 @@ Integrating Appranix with Codeship is as simple as including the  [appranix.sh](
 
 ## Prerequisites
 
-To start, you need to add the following values in the environment page of your Codeship project, for more info read [Environment Variables](https://documentation.codeship.com/basic/builds-and-configuration/set-environment-variables/)
+After adding `appranix.sh` to your project repository add the following values in the environment page of your Codeship project, for more info read [Environment Variables](https://documentation.codeship.com/basic/builds-and-configuration/set-environment-variables/)
 
 - `USER` - Username of your Appranix account
 - `PASSWORD` - Password of your Appranix account
@@ -41,7 +41,11 @@ To start, you need to add the following values in the environment page of your C
 - `AppSpace` - Name of the AppSpace where the artifact component is located
 
 ## Appranix Setup
-In your Appranix AppSpace where the latest build is to be integrated, the `appVersion` variable must be created in that platform and included in Version field of artifact component within that same platfrom.
+In your Appranix AppSpace where the latest build is to be integrated, the `appVersion` variable must be created in that platform and must be included in Version field of artifact component within that same platfrom.
+
+- 1. Add the `appVersion` variable in your Appranix platform. ![Appranix Variable](https://github.com/RushinthJohn/documentation/blob/appranix/images/integrations/appranix-variable.jpg)
+
+- 2. Add the `appVersion` variable in `Version` field of artifact component. ![Appranix Artifact](https://github.com/RushinthJohn/documentation/blob/appranix/images/integrations/appranix-artifact.jpg)
 
 When a new build is completed the build number is stored in the `CI_BUILD_NUMBER` environment variable, this build number is then updated in Appranix within the `appVersion` variable and the artifact component pulls the artifat with that build number.
 
