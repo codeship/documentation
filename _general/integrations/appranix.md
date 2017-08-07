@@ -65,4 +65,4 @@ After successfull deployment all operations management can be easily done from t
 
 ## Need More Help?
 
-Get in touch if you need more help at <a href="mailto:info@appranix.com?Subject=Reg-Codeship%20Integration" target="_new" >info@appranix.com</a>
+Get in touch if you need more help at <a href="mailto:info@appranix.com?Subject=Reg-Codeship%20Integration" target="_blank" >info@appranix.com</a>
