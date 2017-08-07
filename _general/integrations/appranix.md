@@ -48,9 +48,11 @@ After adding `appranix.sh` to your project repository add the following values i
 ### Appranix Setup
 In your Appranix AppSpace where the latest build is to be integrated, the `appVersion` variable must be created in that platform and must be included in Version field of artifact component within that same platfrom.
 
-1. Add the `appVersion` variable in your Appranix platform. ![Appranix Variable]({{ site.baseurl }}/images/continuous-integration/appranix-variable.jpg)
+1. Add the `appVersion` variable in your Appranix platform.
+![Appranix Variable]({{ site.baseurl }}/images/continuous-integration/appranix-variable.jpg)
 
-2. Add the `appVersion` variable in `Version` field of the artifact component. ![Appranix Artifact]({{ site.baseurl }}/images/continuous-integration/appranix-artifact.jpg)
+2. Add the `appVersion` variable in `Version` field of the artifact component.
+![Appranix Artifact]({{ site.baseurl }}/images/continuous-integration/appranix-artifact.jpg)
 
 When a new build is completed the build number is stored in the `CI_BUILD_NUMBER` environment variable, this build number is then updated in Appranix within the `appVersion` variable and the artifact component pulls the artifat with that build number.
 
