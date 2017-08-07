@@ -1,6 +1,6 @@
 ---
 title: Integrating Codeship With Appranix
-shortTitle: Using Appranix For App Ops
+shortTitle: Integrating Codeship With Appranix
 tags:
   - integrations
   - operations
@@ -95,9 +95,12 @@ After adding `appranix.sh` to your project repository add the following values i
 
 ### Appranix Setup
 
-1. Add the `appVersion` variable in your Appranix platform. ![Appranix Variable]({{ site.baseurl }}/images/continuous-integration/appranix-variable.jpg)
+1. Add the `appVersion` variable in your Appranix platform.
 
-2. Add the `appVersion` variable in `Version` field of the artifact component. ![Appranix Artifact]({{ site.baseurl }}/images/continuous-integration/appranix-artifact.jpg)
+![Appranix Variable]({{ site.baseurl }}/images/continuous-integration/appranix-variable.jpg)
+
+2. Add the `appVersion` variable in `Version` field of the artifact component.
+![Appranix Artifact]({{ site.baseurl }}/images/continuous-integration/appranix-artifact.jpg)
 
 ### Configuring Deployments
 
