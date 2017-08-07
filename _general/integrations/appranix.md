@@ -26,7 +26,7 @@ Appranix can be integrated with [Codeship Basic](https://codeship.com/features/b
 
 ![Appranix Operations](https://github.com/RushinthJohn/documentation/blob/appranix/images/integrations/appranix-ops.jpg)
 
-##Codeship Pro
+## Codeship Pro
 
 ### Manual Integration
 
@@ -70,9 +70,9 @@ sh appranix.sh
 
 ### Appranix's Kubernetes-as-a-service
 
-Appranix can run and operate Codeship built docker images on Kubernetes container orchestration system. Appranix manages the entire Kubernetes system including deployment, cloud infrastructure provisioning, configuration management, monitoring, self-healing of the Master nodes or kube nodes. ![Appranix Kubernetes](https://github.com/RushinthJohn/documentation/blob/appranix/images/integrations/appranix-k8.jpg)
+Appranix can run and operate Codeship built docker images on Kubernetes container orchestration system. Appranix manages the entire Kubernetes system including deployment, cloud infrastructure provisioning, configuration management, monitoring, self-healing of the Master nodes or kube nodes. ![Appranix Kubernetes](https://github.com/RushinthJohn/documentation/blob/appranix/images/integrations/appranix-k8.png)
 
-##Codeship Basic
+## Codeship Basic
 
 ### Manual Integration
 
