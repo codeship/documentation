@@ -15,7 +15,7 @@ menus:
 
 [Appranix](http://www.appranix.com/) ServiceFormation’s continually learning adaptive system optimizes your cloud resources from your applications perspective. Knowing how applications are designed and deployed, Appranix creates and manages only what’s required on hyperscale cloud platforms. Unlike other fragmented operations tools that automate applications and data separately, Appranix unifies them with ServiceFormation to deliver Cloud Ops and DevOps in one platform.
 
-With Appranix integration in Codeship the devloper doesn't have to worry about integrating the latest build to an existing backend whenever new code is pushed.
+With Appranix integration in [Codeship](https://codeship.com/) the devloper doesn't have to worry about integrating the latest build to an existing backend whenever new code is pushed.
 
 Once the code is pushed Codeship builds it and Appranix integrates the latest build in the AppSpace and brings it to production without any manual hassle. With Appranix integration the code flow is as simple as from your editor to production.
 
