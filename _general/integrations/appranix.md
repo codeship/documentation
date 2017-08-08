@@ -25,7 +25,7 @@ Once the code is pushed Codeship builds it and Appranix integrates the latest bu
 
 Appranix can be integrated with [Codeship Basic](https://codeship.com/features/basic) and [Codeship Pro](https://codeship.com/features/pro). This article will not cover on how to set up the AppSpace, documentation on that can be found at [Appranix's User Docs](https://app.appranix.net/docs/).
 
-![Appranix Operations]({{ site.baseurl }}/images/continuous-integration/appranix-ops.jpg){:height="36px" width="36px"}
+![Appranix Operations]({{ site.baseurl }}/images/continuous-integration/appranix-ops.jpg){:height="504px" width="896px"}
 
 <!-- <img src="http://ec2-52-201-255-209.compute-1.amazonaws.com:4000/images/continuous-integration/appranix-variable.jpg" alt="img"> -->
 
