@@ -10,6 +10,7 @@ tags:
   - getting started
   - account
   - projects
+  - firewall
 
 redirect_from:
   - /administration/delete-a-project/
@@ -30,9 +31,6 @@ redirect_from:
 {:toc}
 
 This article will teach you how to create and delete a project as well as give some further information on specific questions.
-
-* include a table of contents
-{:toc}
 
 ## Create a Project
 The screenshot below shows the initial [dashboard](https://app.codeship.com/projects) after logging in to Codeship for the first time.
@@ -107,11 +105,13 @@ Under ***Project Settings > Team members***, simply add their email address to s
 
 ## Whitelisting Codeship On Your Firewall
 
-Codeship is hosted on AWS EC2 us-east-1 region. Because of this, Codeship services do not have a static IP address. AWS publishes their most up-to-date [IP Address Ranges](http://docs.aws.amazon.com/general/latest/gr/aws-ip-ranges.html) in [JSON format](https://ip-ranges.amazonaws.com/ip-ranges.json).
+Codeship is hosted on AWS EC2 in the us-east-1 region. Because of this, Codeship services do not have static IP addresses. There are several different options for allowing Codeship to pass through your firewall.
 
-You can enable access for those ranges on your own server's firewall settings.
+AWS publishes current [IP address ranges](http://docs.aws.amazon.com/general/latest/gr/aws-ip-ranges.html) in [JSON format](https://ip-ranges.amazonaws.com/ip-ranges.json). You can enable access for those ranges on your own server's firewall settings.
 
-Another option, while not fully supported, would be to set up and run your own bastion host. This would allow you to route all Codeship calls through your bastion host and white list only this host.
+Another option, while not fully supported, is to set up and run your own [bastion host](https://en.wikipedia.org/wiki/Bastion_host). This would allow you to route all Codeship calls through your bastion host and white list only this host.
+
+We realize these options may not work for all configurations. If there is something specific you would like to see, please [get in touch](mailto:support@codeship.com) and let us know more details about your environment.
 
 ## Can't Locate A File
 

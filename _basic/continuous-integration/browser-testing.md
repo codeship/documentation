@@ -30,9 +30,9 @@ redirect_from:
 ## Chrome
 Current versions of Google Chrome and Chromium are installed by default.
 
-Google Chrome is at version 59 and is located at `/usr/bin/google-chrome`.
+Google Chrome is at version 60 and is located at `/usr/bin/google-chrome`.
 
-Chromium is at version 58 and is located at `/usr/bin/chromium-browser`.
+Chromium is at version 59 and is located at `/usr/bin/chromium-browser`.
 
 There is a `chrome` symlink in the PATH that defaults to calling Google Chrome. You can change it to point to Chromium by adding these commands to your build steps:
 
@@ -45,7 +45,7 @@ ln -sf /usr/bin/chromium-browser /home/rof/bin/Chrome
 Beginning in Google Chrome 59, you can run Chrome in [headless mode](https://developers.google.com/web/updates/2017/04/headless-chrome). To take advantage of this be sure your build is targeting Google Chrome and using ChromeDriver 2.30 or greater.  Your application will also need to pass the `headless` and `disable-gpu` flags to Chrome.
 
 ## ChromeDriver
-[ChromeDriver](https://sites.google.com/a/chromium.org/chromedriver) 2.30 is installed by default and available in the PATH.
+[ChromeDriver](https://sites.google.com/a/chromium.org/chromedriver) 2.31 is installed by default and available in the PATH.
 
 To install a [custom ChromeDriver version](https://github.com/codeship/scripts/blob/master/packages/chromedriver.sh) add the following commands to your build steps:
 

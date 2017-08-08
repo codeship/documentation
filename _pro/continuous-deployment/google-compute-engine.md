@@ -24,7 +24,7 @@ We maintain an [example repository](https://github.com/codeship-library/google-c
 
 ## Authentication
 
-To deploy to Compute Engine, you will need to define a Google _Service account_ as well as add your Googel credentials to your [encrypted environment variables]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}) so that the `gcloud` utility can authenticate approriately.
+To deploy to Compute Engine, you will need to define a Google _Service account_ as well as add your Google credentials to your [encrypted environment variables]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}) so that the `gcloud` utility can authenticate approriately.
 
 For full instructions, see the [authentication portion of our Google Cloud documentation]({{ site.baseurl }}{% link _pro/continuous-deployment/google-cloud.md %}#authentication).
 

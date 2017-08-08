@@ -32,7 +32,7 @@ phpenv versions
 ### Ubuntu 14.04
 By default we use 5.5
 
-Specific versions: 5.3.29, 5.4.45, 5.5.38, 5.6.29, 7.0.14 and 7.1.0
+Specific versions: 5.3.29, 5.4.45, 5.5.38, 5.6.31, 7.0.21 and 7.1.7
 
 ***Do not rely on the specific versions we have as this can change any time and could break your build.***
 

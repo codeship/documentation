@@ -12,7 +12,7 @@ gem 'jekyll-seo-tag', '~> 2.2.3'
 gem 'jekyll-sitemap', '~> 1.1.1'
 gem 'jekyll-redirect-from', '~> 0.12.1'
 gem 'jekyll-menus', '~> 0.6.0'
-gem 'shipyard-framework', '~> 0.2.3'
+gem 'shipyard-framework', '~> 0.2.9'
 
 group :test do
   gem 'scss_lint', '~> 0.54.0'

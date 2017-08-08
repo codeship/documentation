@@ -42,7 +42,7 @@ To deploy Google Cloud Functions from a local filesystem you will need a Cloud S
 
 ### Creating Your Services
 
-You will want to add a service which builds the [Google Cloud deployment image]((https://hub.docker.com/r/codeship/google-cloud-deployment/), which is maintained by Codeship, in your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}). For example:
+You will want to add a service which builds the [Google Cloud deployment image](https://hub.docker.com/r/codeship/google-cloud-deployment/), which is maintained by Codeship, in your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}). For example:
 
 ```yaml
 googleclouddeployment:

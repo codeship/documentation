@@ -44,7 +44,7 @@ The Codeship Pro build environment is configurable depending on plan and availab
 On Codeship Pro, builds run on infrastructure equipped with version {{ site.data.docker.version }} of Docker.
 
 ## Firewall
-All incoming ports except for ssh port 22 are rejected by default. Outgoing port 25 (SMTP) is closed by default so Codeship can't be used for spamming.
+All incoming ports are rejected by default except port 22, which is open to allow [SSH debug sessions]({{ site.baseurl }}{% link _basic/builds-and-configuration/ssh-access.md %}). Outgoing port 25 (SMTP) is closed by default so Codeship can't be used for spamming.
 
 ## Disk Space
 All builds on both Codeship Basic and Codeship Pro have 10gb of disk space allocation for the build environment.
