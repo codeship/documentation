@@ -1,6 +1,3 @@
-echo "Setting Ruby version to 2.3.3"
-rvm use 2.3.3
-
 echo "Installing Appranix CLI"
 gem install prana
 

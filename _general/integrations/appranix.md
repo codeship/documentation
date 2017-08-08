@@ -35,7 +35,7 @@ Integrating Appranix with Codeship is as simple as including the  [appranix.sh](
 
 ### Prerequisites
 
-After adding `appranix.sh` to your project repository add the following environment variables to your Codeship project, for more info read [Environment Variables]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %})
+After adding `appranix.sh` to your project repository along with `codeship-services.yml` and `codeship-steps.yml` files add the following environment variables to your `codeship-services.yml` file. You can also encrypt the environment variables, for more info read [Environment Variables]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}).
 
 - `USER` - Username of your Appranix account
 - `PASSWORD` - Password of your Appranix account
@@ -59,21 +59,26 @@ When a new build is completed the build number is stored in the `CI_BUILD_NUMBER
 
 ### Configuring Deployments
 
-In the deployment section of your [Codeship](https://codeship.com/) project configure all your settings to deploy the artifact to your artifactory repository.
-
-After that add `sh appranix.sh` at the end. The script file will connect to Appranix and trigger deployment for the new build. For eg,
+In `codeship-steps.yml` file, after the step where the artifact is deployed to your artifactory server add another step in the end to execute the `appranix.sh` file. For eg,
 ```bash
-#Deployment to artifactory repository
-mvn package
-mvn deploy
-
-#Appranix deployment
-sh appranix.sh
+- name: artifact deployment
+  tag: master
+  service: app
+  command: mvn package
+  command: mvn deploy
+- name: Appranix deployment
+  tag: master
+  service: app
+  command: sh appranix.sh
 ```
+<div class="info-block">
+Note:
+The container must have Ruby version 2.3.3 or higher for the `appranix.sh` file to execute the required gem install.
+</div>
 
 ### Appranix's Kubernetes-as-a-service
 
-Appranix can run and operate Codeship built docker images on Kubernetes container orchestration system. Appranix manages the entire Kubernetes system including deployment, cloud infrastructure provisioning, configuration management, monitoring, self-healing of the Master nodes or kube nodes.
+Appranix can run and operate Codeship built docker images on [Kubernetes](https://kubernetes.io/) container orchestration system. Appranix manages the entire Kubernetes system including deployment, cloud infrastructure provisioning, configuration management, monitoring, self-healing of the Master nodes or kube nodes.
 
 ![Appranix Kubernetes]({{ site.baseurl }}/images/continuous-integration/appranix-k8.png)
 
@@ -85,7 +90,7 @@ Include the  [appranix.sh](https://github.com/RushinthJohn/documentation/blob/ap
 
 ### Prerequisites
 
-After adding `appranix.sh` to your project repository add the following values in the environment page of your Codeship project, for more info read [Environment Variables]({{ site.baseurl }}{% link _basic/builds-and-configuration/set-environment-variables.md %})
+After adding `appranix.sh` to your project repository add the following values in the Environment page of your Codeship Project Settings, for more info read [Environment Variables]({{ site.baseurl }}{% link _basic/builds-and-configuration/set-environment-variables.md %})
 
 - `USER` - Username of your Appranix account
 - `PASSWORD` - Password of your Appranix account
@@ -106,7 +111,7 @@ After adding `appranix.sh` to your project repository add the following values i
 
 ### Configuring Deployments
 
-In the deployment section of your [Codeship](https://codeship.com/) project configure all your settings to deploy the artifact to your artifactory repository.
+In the Deploy section of your [Codeship](https://codeship.com/) Project Settings configure all your settings to deploy the artifact to your artifactory repository.
 
 After that add `sh appranix.sh` at the end. The script file will connect to Appranix and trigger deployment for the new build. For eg,
 ```bash
@@ -117,6 +122,10 @@ mvn deploy
 #Appranix deployment
 sh appranix.sh
 ```
+<div class="info-block">
+Note:
+Make sure you have selected Ruby version 2.3.3 or higher. It can be done by adding `rvm use 2.3.3` to Deploy Configuration of your Codeship Project Settings.
+</div>
 ## Integration Video
 
 Here is a simple video on how the Appranix integration with codeship works.
