@@ -17,7 +17,7 @@ menus:
 
 ## About Appranix
 
-[Appranix](http://www.appranix.com/) simplifies and automates the entire application operations on cloud platforms using its app-centric, real-time, cognitive automation technology called ServiceFormation. Refer to Appranix platform capabilities [here](http://www.appranix.com/product/platform.html).
+[Appranix](http://www.appranix.com/) simplifies and automates the entire application operations on cloud platforms using its app-centric, real-time, cognitive automation technology called ServiceFormation. Refer to Appranix platform capabilities at [www.appranix.com/product/platform.html](http://www.appranix.com/product/platform.html).
 
 With Appranix integration in [Codeship](https://codeship.com/) the devloper doesn't have to worry about integrating the latest build to an existing backend whenever new code is pushed.
 
