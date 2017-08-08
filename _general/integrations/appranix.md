@@ -17,13 +17,15 @@ menus:
 
 ## About Appranix
 
-[Appranix](http://www.appranix.com/) simplifies and automates the entire application operations on cloud platforms using its app-centric, real-time, cognitive automation technology called ServiceFormation. Refer to Appranix platform capabilities at [www.appranix.com/product/platform.html](http://www.appranix.com/product/platform.html).
+[Appranix](http://www.appranix.com/) simplifies and automates the entire application operations (Site Reliability Engineering) on cloud platforms using its app-centric, real-time, cognitive automation technology called ServiceFormation. Refer to the full set of Appranix platform capabilities at [www.appranix.com/product/platform.html](http://www.appranix.com/product/platform.html).
 
-With Appranix integration in [Codeship](https://codeship.com/) the devloper doesn't have to worry about integrating the latest build to an existing backend whenever new code is pushed.
+Similar to Codeship, ServiceFormation is a SaaS platform that is readily accessible and implemented for any distributed application bound to run on any private or public cloud platforms.
 
-Once the code is pushed Codeship builds it and Appranix integrates the latest build in the AppSpace and brings it to production without any manual hassle. With Appranix integration the code flow is as simple as from your editor to production.
+With Appranix [Codeship](https://codeship.com/) integration, Codeship developer doesn’t have to worry about pushing the code to operations. Application operations teams (SREs) can confidently deploy, run and operate the code in production to achieve the Service Level Objectives.
 
 Appranix can be integrated with [Codeship Basic](https://codeship.com/features/basic) and [Codeship Pro](https://codeship.com/features/pro). This article will not cover on how to set up the AppSpace, documentation on that can be found at [Appranix's User Docs](https://app.appranix.net/docs/).
+
+This article explains how development and operations teams can quickly extend their Codeship CI pipelines beyond their typical Continuous Deployments (CD) to App Operations.
 
 ![Appranix Operations]({{ site.baseurl }}/images/continuous-integration/appranix-ops.jpg){:class="app-img"}
 
