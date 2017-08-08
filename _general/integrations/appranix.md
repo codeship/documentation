@@ -35,7 +35,7 @@ Integrating Appranix with Codeship is as simple as including the  [appranix.sh](
 
 ### Prerequisites
 
-After adding `appranix.sh` to your project repository add the following values in the environment page of your Codeship project, for more info read [Environment Variables]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %})
+After adding `appranix.sh` to your project repository add the following values in the environment page of your Codeship project, for more info read [Environment Variables]({{ site.baseurl }}{% link _basic/builds-and-configuration/environment-variables.md %})
 
 - `USER` - Username of your Appranix account
 - `PASSWORD` - Password of your Appranix account
