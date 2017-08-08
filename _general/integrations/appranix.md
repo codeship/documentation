@@ -17,7 +17,7 @@ menus:
 
 ## About Appranix
 
-[Appranix](http://www.appranix.com/) simplifies and automates the entire application operations on cloud platforms using its app-centric, real-time, cognitive automation technology called ServiceFormation.
+[Appranix](http://www.appranix.com/) simplifies and automates the entire application operations on cloud platforms using its app-centric, real-time, cognitive automation technology called ServiceFormation. Refer to Appranix platform capabilities [here](http://www.appranix.com/product/platform.html).
 
 With Appranix integration in [Codeship](https://codeship.com/) the devloper doesn't have to worry about integrating the latest build to an existing backend whenever new code is pushed.
 
@@ -25,7 +25,7 @@ Once the code is pushed Codeship builds it and Appranix integrates the latest bu
 
 Appranix can be integrated with [Codeship Basic](https://codeship.com/features/basic) and [Codeship Pro](https://codeship.com/features/pro). This article will not cover on how to set up the AppSpace, documentation on that can be found at [Appranix's User Docs](https://app.appranix.net/docs/).
 
-![Appranix Operations]({{ site.baseurl }}/images/continuous-integration/appranix-ops.jpg){:height="504px" width="896px"}
+![Appranix Operations]({{ site.baseurl }}/images/continuous-integration/appranix-ops.jpg){:class="app-img"}
 
 <!-- <img src="http://ec2-52-201-255-209.compute-1.amazonaws.com:4000/images/continuous-integration/appranix-variable.jpg" alt="img"> -->
 
@@ -51,11 +51,13 @@ After adding `appranix.sh` to your project repository along with `codeship-servi
 ### Appranix Setup
 In your Appranix AppSpace where the latest build is to be integrated, the `appVersion` variable must be created in that platform and must be included in Version field of artifact component within that same platfrom.
 
-1. Add the `appVersion` variable in your Appranix platform.
-![Appranix Variable]({{ site.baseurl }}/images/continuous-integration/appranix-variable.jpg)
+- Add the `appVersion` variable in your Appranix platform.
 
-2. Add the `appVersion` variable in `Version` field of the artifact component.
-![Appranix Artifact]({{ site.baseurl }}/images/continuous-integration/appranix-artifact.jpg)
+![Appranix Variable]({{ site.baseurl }}/images/continuous-integration/appranix-variable.jpg){:class="app-img"}
+
+- Add the `appVersion` variable in `Version` field of the artifact component.
+
+![Appranix Artifact]({{ site.baseurl }}/images/continuous-integration/appranix-artifact.jpg){:class="app-img"}
 
 When a new build is completed the build number is stored in the `CI_BUILD_NUMBER` environment variable, this build number is then updated in Appranix within the `appVersion` variable and the artifact component pulls the artifat with that build number.
 
@@ -82,7 +84,7 @@ The container must have Ruby version 2.3.3 or higher for the `appranix.sh` file 
 
 Appranix can run and operate Codeship built docker images on [Kubernetes](https://kubernetes.io/) container orchestration system. Appranix manages the entire Kubernetes system including deployment, cloud infrastructure provisioning, configuration management, monitoring, self-healing of the Master nodes or kube nodes.
 
-![Appranix Kubernetes]({{ site.baseurl }}/images/continuous-integration/appranix-k8.png)
+![Appranix Kubernetes]({{ site.baseurl }}/images/continuous-integration/appranix-k8.png){:class="app-img"}
 
 ## Codeship Basic
 
@@ -106,10 +108,10 @@ After adding `appranix.sh` to your project repository add the following values i
 ### Appranix Setup
 
 1. Add the `appVersion` variable in your Appranix platform.
-![Appranix Variable]({{ site.baseurl }}/images/continuous-integration/appranix-variable.jpg)
+![Appranix Variable]({{ site.baseurl }}/images/continuous-integration/appranix-variable.jpg){:class="app-img"}
 
 2. Add the `appVersion` variable in `Version` field of the artifact component.
-![Appranix Artifact]({{ site.baseurl }}/images/continuous-integration/appranix-artifact.jpg)
+![Appranix Artifact]({{ site.baseurl }}/images/continuous-integration/appranix-artifact.jpg){:class="app-img"}
 
 ### Configuring Deployments
 
@@ -135,15 +137,6 @@ Here is a simple video on how the Appranix integration with Codeship Basic works
  <iframe src="http://www.youtube.com/embed/3KE7EyTEHqg"
   width="896" height="504" frameborder="0" allowfullscreen></iframe>
 </body>
-
-## Appranix Operations
-
-A recent DevOps [survey](http://www.prnewswire.com/news-releases/qualis-survey-offers-insights-about-it-challenges-in-cloud-and-devops-300423438.html) found the following results:
-- 54% of respondents indicated they had no access to self-service infrastructure which means they had to wait for a long time for someone to provision their resources.
-- Over 59% of respondents said it takes up to a month or more to deliver infrastructure, this slows application delivery.
-- Many repondents feel that some applications are very complex for cloud.
-
-Appranix solves the above problems with it's ServiceFormation technology, LiveDeploy feature allows you to frequently deploy your application, platform or database changes to running applications from your CI/CD systems, continuously monitor and update infrastructure changes made in your cloud accounts with LiveDiscovery, scale your application components be it applications, platforms, sharded databases easily based on your policies using LiveScale.
 
 ## Need More Help?
 
