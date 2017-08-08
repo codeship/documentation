@@ -62,7 +62,7 @@ When a new build is completed the build number is stored in the `CI_BUILD_NUMBER
 ### Configuring Deployments
 
 In `codeship-steps.yml` file, after the step where the artifact is deployed to your artifactory server add another step in the end to execute the `appranix.sh` file. For eg,
-```bash
+```yaml
 - name: artifact deployment
   tag: master
   service: app
