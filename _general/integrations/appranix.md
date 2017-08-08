@@ -83,7 +83,7 @@ Include the  [appranix.sh](https://github.com/RushinthJohn/documentation/blob/ap
 
 ### Prerequisites
 
-After adding `appranix.sh` to your project repository add the following values in the environment page of your Codeship project, for more info read [Environment Variables]({{ site.baseurl }}/images/continuous-integration/set-environment-variables/)
+After adding `appranix.sh` to your project repository add the following values in the environment page of your Codeship project, for more info read [Environment Variables]({{ site.baseurl }}{% link _pro/builds-and-configuration/set-environment-variables.md %})
 
 - `USER` - Username of your Appranix account
 - `PASSWORD` - Password of your Appranix account
