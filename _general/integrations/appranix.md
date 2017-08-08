@@ -27,8 +27,6 @@ Appranix can be integrated with [Codeship Basic](https://codeship.com/features/b
 
 ![Appranix Operations]({{ site.baseurl }}/images/continuous-integration/appranix-ops.jpg){:class="app-img"}
 
-<!-- <img src="http://ec2-52-201-255-209.compute-1.amazonaws.com:4000/images/continuous-integration/appranix-variable.jpg" alt="img"> -->
-
 ## Codeship Pro
 
 ### Manual Integration
@@ -51,11 +49,11 @@ After adding `appranix.sh` to your project repository along with `codeship-servi
 ### Appranix Setup
 In your Appranix AppSpace where the latest build is to be integrated, the `appVersion` variable must be created in that platform and must be included in Version field of artifact component within that same platfrom.
 
-- Add the `appVersion` variable in your Appranix platform.
+1. Add the `appVersion` variable in your Appranix platform.
 
 ![Appranix Variable]({{ site.baseurl }}/images/continuous-integration/appranix-variable.jpg){:class="app-img"}
 
-- Add the `appVersion` variable in `Version` field of the artifact component.
+2. Add the `appVersion` variable in `Version` field of the artifact component.
 
 ![Appranix Artifact]({{ site.baseurl }}/images/continuous-integration/appranix-artifact.jpg){:class="app-img"}
 
