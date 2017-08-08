@@ -128,7 +128,7 @@ Make sure you have selected Ruby version 2.3.3 or higher. It can be done by addi
 </div>
 ## Integration Video
 
-Here is a simple video on how the Appranix integration with codeship works.
+Here is a simple video on how the Appranix integration with Codeship Basic works.
 <body>
  <iframe src="http://www.youtube.com/embed/3KE7EyTEHqg"
   width="896" height="504" frameborder="0" allowfullscreen></iframe>
