@@ -74,6 +74,7 @@ sh appranix.sh
 ### Appranix's Kubernetes-as-a-service
 
 Appranix can run and operate Codeship built docker images on Kubernetes container orchestration system. Appranix manages the entire Kubernetes system including deployment, cloud infrastructure provisioning, configuration management, monitoring, self-healing of the Master nodes or kube nodes.
+
 ![Appranix Kubernetes]({{ site.baseurl }}/images/continuous-integration/appranix-k8.png)
 
 ## Codeship Basic
