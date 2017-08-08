@@ -5,6 +5,7 @@ tags:
   - integrations
   - operations
   - management
+  - DevOps
 menus:
   general/integrations:
     title: Using Appranix
@@ -34,7 +35,7 @@ Integrating Appranix with Codeship is as simple as including the  [appranix.sh](
 
 ### Prerequisites
 
-After adding `appranix.sh` to your project repository add the following values in the environment page of your Codeship project, for more info read [Environment Variables](https://documentation.codeship.com/basic/builds-and-configuration/set-environment-variables/)
+After adding `appranix.sh` to your project repository add the following values in the environment page of your Codeship project, for more info read [Environment Variables]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %})
 
 - `USER` - Username of your Appranix account
 - `PASSWORD` - Password of your Appranix account
@@ -96,7 +97,6 @@ After adding `appranix.sh` to your project repository add the following values i
 ### Appranix Setup
 
 1. Add the `appVersion` variable in your Appranix platform.
-
 ![Appranix Variable]({{ site.baseurl }}/images/continuous-integration/appranix-variable.jpg)
 
 2. Add the `appVersion` variable in `Version` field of the artifact component.
