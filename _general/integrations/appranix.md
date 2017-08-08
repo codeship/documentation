@@ -35,7 +35,7 @@ Integrating Appranix with Codeship is as simple as including the  [appranix.sh](
 
 ### Prerequisites
 
-After adding `appranix.sh` to your project repository add the following values in the environment page of your Codeship project, for more info read [Environment Variables]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %})
+After adding `appranix.sh` to your project repository add the following environment variables to your Codeship project, for more info read [Environment Variables]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %})
 
 - `USER` - Username of your Appranix account
 - `PASSWORD` - Password of your Appranix account
@@ -73,7 +73,8 @@ sh appranix.sh
 
 ### Appranix's Kubernetes-as-a-service
 
-Appranix can run and operate Codeship built docker images on Kubernetes container orchestration system. Appranix manages the entire Kubernetes system including deployment, cloud infrastructure provisioning, configuration management, monitoring, self-healing of the Master nodes or kube nodes. ![Appranix Kubernetes]({{ site.baseurl }}/images/continuous-integration/appranix-k8.png)
+Appranix can run and operate Codeship built docker images on Kubernetes container orchestration system. Appranix manages the entire Kubernetes system including deployment, cloud infrastructure provisioning, configuration management, monitoring, self-healing of the Master nodes or kube nodes.
+![Appranix Kubernetes]({{ site.baseurl }}/images/continuous-integration/appranix-k8.png)
 
 ## Codeship Basic
 
