@@ -32,8 +32,8 @@ redirect_from:
 
 Code Climate is an automated code coverage service. Starting with Code Climate and Codeship is fast and easy. [Their documentation](http://docs.codeclimate.com/article/219-setting-up-test-coverage) does a great job of providing more information, as well as links to:
 
-[setup with Codeship Basic](https://docs.codeclimate.com/docs/codeship-ci-test-coverage-example#section-codeship-basic)<br>
-[setup for Codeship Pro](https://docs.codeclimate.com/docs/codeship-ci-test-coverage-example#section-codeship-pro)
+- [setup with Codeship Basic](https://docs.codeclimate.com/docs/codeship-ci-test-coverage-example#section-codeship-basic)<br>
+- [setup for Codeship Pro](https://docs.codeclimate.com/docs/codeship-ci-test-coverage-example#section-codeship-pro)
 
 
 
