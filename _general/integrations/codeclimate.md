@@ -30,7 +30,9 @@ redirect_from:
 
 ## About Code Climate
 
-Code Climate is an automated code coverage service. Starting with Code Climate and Codeship is fast and easy. [Their documentation](http://docs.codeclimate.com/article/219-setting-up-test-coverage) does a great job of providing more information, as well as links to:
+Code Climate empowers teams to take control of their code quality by incorporating fully-configurable test coverage and maintainability data throughout the development workflow. Hook in your code coverage data from test runs on Codeship to see coverage line by line within diffs, and never merge code without sufficient tests again.
+
+[Their documentation](http://docs.codeclimate.com/article/219-setting-up-test-coverage) does a great job of providing more information, as well as links to:
 
 - [setup with Codeship Basic](https://docs.codeclimate.com/docs/codeship-ci-test-coverage-example#section-codeship-basic)<br>
 - [setup for Codeship Pro](https://docs.codeclimate.com/docs/codeship-ci-test-coverage-example#section-codeship-pro)
