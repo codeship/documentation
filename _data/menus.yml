@@ -64,6 +64,9 @@ pro:
   - title: Builds & Configuration
     identifier: pro/builds
     url: pro/builds
+  - title: Jet CLI
+    identifier: pro/jet
+    url: pro/jet-cli
   - title: Languages And Frameworks
     identifier: pro/languages
     url: pro/languages

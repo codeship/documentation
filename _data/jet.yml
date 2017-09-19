@@ -1,2 +1,118 @@
 base_url: https://s3.amazonaws.com/codeship-jet-releases
-version: "1.6.0"
+version: "1.19.0"
+
+flags:
+  load:
+    - name: --ci-branch
+      description: The name of the branch being built
+    - name: --debug
+      description: Turn debug output on
+    - name: --dir
+      description: The directory to use
+      default: ./
+    - name: --dockercfg-service
+      description: The name of the service with which the dockercfg should be generated
+    - name: --encrypted-dockercfg-path
+      description: The path to the encrypted dockercfg file to be used
+    - name: --keep-volume-containers
+      description: Keep volume containers after exit
+    - name: --key-path
+      description: The key path for encrypting secure environment variables.
+      default: codeship.aes
+    - name: --log-driver
+      description: The log driver to use [v1,v2,v3,logrus,color]
+      default: color
+    - name: --no-cache
+      description: Disable local Docker image cache
+    - name: --no-print-build-output
+      description: Do not print docker build output
+    - name: --no-remove
+      description: Do not remove any containers that are run, overrides all other settings
+    - name: --pull-if-present
+      description: Pull images that are already present
+      default: false
+    - name: --services-path
+      description: The relative services path
+      default: "[jet-services.yml,jet-services.json,codeship-services.yml,codeship-services.json,docker-compose.yml]"
+    - name: --singleton-links
+      description: Use a single link for a service
+    - name: --system
+      description: Turn system output on
+  decrypt:
+    - name: --key-path
+      description: The key path for encrypting secure environment variables.
+      default: codeship.aes
+  encrypt:
+    - name: --key-path
+      description: The key path for encrypting secure environment variables.
+      default: codeship.aes
+  steps:
+      - name: --ci-branch
+        description: The name of the branch being built
+      - name: --ci-build-id
+        description: The id of the build being run
+      - name: --ci-commit-description
+        description: The short description of the current commit, e.g. git describe
+      - name: --ci-commit-id
+        description: The id/sha of the commit being built
+      - name: --ci-commit-message
+        description: The message of the commit being built
+      - name: --ci-committer-email
+        description: The email of the commiter
+      - name: --ci-committer-name
+        description: The name of the commiter
+      - name: --ci-committer-username
+        description: The username of the commiter
+      - name: --ci-name
+        description: The name of the CI system
+      - name: --ci-project-id
+        description: The id of the project being built
+      - name: --ci-repo-name
+        description: The name of the scm repository being built
+      - name: --debug
+        description: Turn debug output on
+      - name: --dir
+        description: The directory to use (default is current directory)
+        default: ./
+      - name: --dockercfg-service
+        description: The name of the service with which the dockercfg should be generated
+      - name: --encrypted-dockercfg-path
+        description: The path to the encrypted dockercfg file to be used
+      - name : env, -e
+        description: Set an environment variable (can be used multiple times)
+        default: "[]"
+      - name: --keep-volume-containers
+        description: Keep volume containers after exit
+      - name: --key-path string
+        description: The key path for encrypting secure environment variables.
+        default: codeship.aes
+      - name: --log-driver
+        description: The log driver to use [v1,v2,v3,logrus,color]
+        default: color
+      - name: --no-cache
+        description: Disable local Docker image cache
+      - name: --no-parallel
+        description: Turn parallelism off
+      - name: --no-print-build-output
+        description: Do not print docker build output
+      - name: --no-remove
+        description: Do not remove any containers that are run, overrides all other settings
+      - name: --no-tty, -T
+        description: Disable pseudo-tty allocation
+      - name: --pull-if-present
+        description: Pull images that are already present
+        default: false
+      - name: --push
+        description: Run push steps
+      - name: --services-path string
+        description: The relative services path
+        default: "[jet-steps.yml,jet-steps.json,codeship-steps.yml,codeship-steps.json]"
+      - name: --singleton-links
+        description: Use a single link for a service
+      - name: --steps-path string
+        description: The relative steps path
+        default: "[jet-steps.yml,jet-steps.json,codeship-steps.yml,codeship-steps.json]"
+      - name: --system
+        description: Turn system output on
+      - name: --tag string
+        description: The tag to use

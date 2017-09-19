@@ -1,0 +1,14 @@
+<table class="table">
+  <thead>
+    <th>Name, shorthand</th>
+    <th>Default</th>
+    <th>Description</th>
+  </thead>
+  {% for flag in include.flags %}
+  <tr>
+    <td>{{ flag.name }}</td>
+    <td>{{ flag.default }}</td>
+    <td>{{ flag.description }}</td>
+  </tr>
+  {% endfor %}
+</table>
