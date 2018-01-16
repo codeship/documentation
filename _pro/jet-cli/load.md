@@ -24,8 +24,3 @@ jet load service [flags]
 ## Flags
 
 {% include flags.html flags=site.data.jet.flags.load %}
-
-## Extended description
-
-
-## Examples

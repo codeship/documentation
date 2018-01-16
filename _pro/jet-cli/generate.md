@@ -13,13 +13,9 @@ tags:
 ---
 
 ## Description
-Generate an AES key for encrypting environment variables
+Generate an AES key for encrypting files.
 
 ## Usage
 ```
 jet generate [flags]
 ```
-
-## Extended description
-
-## Examples

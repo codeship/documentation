@@ -1,7 +1,12 @@
 base_url: https://s3.amazonaws.com/codeship-jet-releases
-version: "1.19.0"
+version: "2.1.0"
 
 flags:
+  cleanup:
+    - name: --debug
+      description: Enables debug output
+    - name: --dry-run
+      description: Provides a list of items to be removed by the cleanup command.
   load:
     - name: --ci-branch
       description: The name of the branch being built
@@ -116,3 +121,15 @@ flags:
         description: Turn system output on
       - name: --tag string
         description: The tag to use
+  validate:
+    - name: --debug
+      description: Enables debug output
+    - name: --dir
+      description: Specify a directory within the project.
+      default: current directory
+    - name: --services-path
+      description: Specify relative services file path.
+      default: codeship-services.yml
+    - name: --steps-path
+      description: Specify relative steps file path.
+      default: codeship-steps.yml 
