@@ -22,7 +22,7 @@ categories:
 ---
 
 <div class="info-block">
-To follow this tutorial on your own computer, please [install the `jet` CLI locally first]({{ site.baseurl }}{% link _pro/builds-and-configuration/cli.md %}).
+See the [example repo](pending) for a full example and further instructions on using SSH and SCP with Codeship Pro.
 </div>
 
 * include a table of contents
@@ -32,95 +32,51 @@ To follow this tutorial on your own computer, please [install the `jet` CLI loca
 
 To deploy using SSH and SCP with Codeship Pro, you will need to create a container that can connect to your server via SSH. Then, you will pass this container the necessary deployment commands.
 
-To do this you need to set up an encrypted SSH Key that is available as either a [build argument]({{ site.baseurl }}{% link _pro/builds-and-configuration/build-arguments.md %}) or as an [environment variable]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}). It will also need to be able to write to the `.ssh` folder.
+We provide a deployment container configured to making deploying with SSH and SCP via Docker in Codeship Pro easier to do.
 
 ## Configuring SSH Deployments
 
-### Creating Your SSH Key
+### Deployment Container
 
-The first thing you will need to do is generate a usable SSH key locally. If you have an existing key, you can use it, or you can use the following recommended commands to generate the key:
+To get started deploying via SSH and SCP with Codeship Pro, first see our [deployment container](pending) for use in your [codeship-services.yml file]({% link _pro/builds-and-configuration/services.md %}).
 
-```shell
-ssh-keygen -t rsa -b 4096 -C "your_email@example.com" -f keyfile.rsa
-```
+This container is an image we maintain that you can pull is an additional service in your build and is pre-configured to help streamline SSH authentication.
 
-When you run this command, it will generate two files in your local repository: `keyfile.rsa` and `keyfile.rsa.pub`.
-
-- `keyfile.rsa`  contains the private key that you will add to your repository so that it can be used by your Codeship Pro build containers to authenticate with your external servers. Note the instructions below for encrypting this file to keep it secure at all times.
-
-- `keyfile.rsa.pub` is the corresponding public key, which you will add to all resources that your Codeship Pro builds will be attempting to authenticate with.
-
-### Encrypting The Key
-
-Now that the you have the `keyfile.rsa` file, you will need to encrypt this file into either a [encrypted build arguments file]({{ site.baseurl }}{% link _pro/builds-and-configuration/build-arguments.md %}) or an [encrypted environment variable file]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}) to saved in your repository and used during your builds.
-
-- If you only need the SSH key to be available at _runtime_ - that is, via your [codeship-steps.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}) after all of your containers have built successfully - then you will need to create an [encrypted environment variable file]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}).
-
-- If you only need the SSH key to be available at _buildtime_ - that is, via your Dockerfile as your containers build - then you will need to create an [encrypted build arguments file]({{ site.baseurl }}{% link _pro/builds-and-configuration/build-arguments.md %}).
-
-**Note** that you may need the key as both a build argument and an environment variable, since build arguments are _only_ available via the Dockerfile and environment variables are _only_ available via the [codeship-steps.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}) after your containers have built.
-
-Whether using build arguments or environment variables, you will need to be sure to replace newlines with `\n` so that the entire SSH key is in one line. For example:
-
-```
-PRIVATE_SSH_KEY=-----BEGIN RSA PRIVATE KEY-----\nMIIJKAIBAAKCFgEA2LcSb6INQUVZZ0iZJYYkc8dMHLLqrmtIrzZ...
-```
-
-And here is a `docker run` command that will do the work of replacing your newlines with `\n`
-
-```shell
-docker run -it --rm -v ${PATH_TO_PRIVATE_KEY}:/key alpine sed -E ':a;N;$!ba;s/\r?\n/\\n/g' /key
-```
-
-To encrypt your key and add it to your build process, follow the specific tutorials for either [build arguments]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}) or [environment variables]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}) using your escaped key.
-
-You will ultimately add the encrypted  key to a service with the `encrypted_env_file` option or the `encrypted_args_file` option.
-
-For example:
+In your [codeship-services.yml file]({% link _pro/builds-and-configuration/services.md %}), add the following:
 
 ```yaml
-app:
-  build: .
-    encrypted_args_file: sshkey.args.encrypted
+ssh:
+  image: codeship/ssh
+  encrypted_env_file: codeship.env.encrypted
+  volumes:
+    - ./:/keys/
+deployment:
+  image: trsouz/ssh
+  volumes:
+    - .ssh:/root/.ssh
 ```
 
-or:
+These new services will help you write and use an SSH key so that you can pass along SSH and SCP commands for your deployments.
+
+### Creating SSH Key
+
+Now that the service is defined, you will want to add a new step at the top of your [codeship-steps.yml file]({% link _pro/builds-and-configuration/steps.md %}) to create and write your private key to a volume for your deployment to use:
 
 ```yaml
-app:
-  build: .
-  encrypted_env_file: sshkey.env.encrypted
+# codeship-steps.yml
+- name: Write Private SSH Key
+  service: ssh
+  command: write
 ```
 
-### Loading The Key For Use
+### Using SSH and SCP
 
-Before running any command that requires the SSH key to be available, make sure to run the following commands in that container.
-
-These commands will load the SSH key into the required container directory so that is available for use. This will usually happen inside your Dockerfile, although in some cases it may happen with via a script in your [codeship-steps.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}):
-
-```shell
-mkdir -p "${HOME}/.ssh"
-echo "${PRIVATE_SSH_KEY}" >> "${HOME}/.ssh/id_rsa"
-```
-
-**Note** that `${PRIVATE_SSH_KEY}` will change depending on what you have specifically named your build argument or environment variable.
-
-### Deploying Your Code
-
-Now you will need to connect VIA SSH and deploy you code. This is accomplished via standard SSH commands set up as steps in your [codeship-steps.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}).
+Once the key has been written, you can use that key to run standard ssh commands in your [codeship-steps.yml file]({% link _pro/builds-and-configuration/steps.md %}):
 
 ```yaml
-- service: ssh
-  command: scp -rp . ssh_user@your.server.com:/path/on/server/
-```
-
-Note that the `service` references on the step will be whatever service you have set your key up in via your [codeship-services.yml file]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}).
-
-Also note that you may run your SSH commands separately, as individual steps, or you may group them together as a single script that you call:
-
-```yaml
-- service: ssh
-  command: ssh-deploy.sh
+- name: Copy Files
+  service: deployment
+  command: ssh user@myserver.com command
 ```
 
 ## Common Problems
