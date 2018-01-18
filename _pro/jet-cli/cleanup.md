@@ -23,7 +23,7 @@ jet cleanup [flags]
 ```
 
 ## Flags
-{% include flags.html flags=site.data.jet.flags.cleanup %}
+{% include jet_flag_table.html flags=site.data.jet.flags.cleanup %}
 
 ## Extended description
 With `jet cleanup` you can be sure that Jet removes any leftover containers, networks and all other Docker build artifacts of your local build run.

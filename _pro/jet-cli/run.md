@@ -23,7 +23,7 @@ jet run SERVICE [COMMAND [ARGS...]] [flags]
 ```
 
 ## Flags
-{% include flags.html flags=site.data.jet.flags.run %}
+{% include jet_flag_table.html flags=site.data.jet.flags.run %}
 
 ## Extended description
 

@@ -23,7 +23,7 @@ jet encrypt INPUT_PATH OUTPUT_PATH [flags]
 ```
 
 ## Flags
-{% include flags.html flags=site.data.jet.flags.encrypt %}
+{% include jet_flag_table.html flags=site.data.jet.flags.encrypt %}
 
 ## Extended description
 The `jet encrypt` function will take any file as input, and output an encrypted file using the key found in your _Project Settings_.

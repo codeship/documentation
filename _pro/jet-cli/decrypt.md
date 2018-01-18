@@ -23,7 +23,7 @@ jet decrypt /path/to/input_encrypted_file /path/to/output_file [flags]
 ```
 
 ## Flags
-{% include flags.html flags=site.data.jet.flags.decrypt %}
+{% include jet_flag_table.html flags=site.data.jet.flags.decrypt %}
 
 ## Extended description
 The `jet decrypt` function will take any encrypted file as input, and output a decrypted file using the key found in your _Project Settings_.

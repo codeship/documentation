@@ -24,7 +24,7 @@ jet load service [flags]
 
 ## Flags
 
-{% include flags.html flags=site.data.jet.flags.load %}
+{% include jet_flag_table.html flags=site.data.jet.flags.load %}
 
 ## Extended Description
 The `jet load` command allows you to build a service without executing anything. This can be helpful for debugging, e.g. if one particular service fails to load correctly you can isolate the issue by loading only that service. You can load a service defined in the [codeship-services.yml]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}) file.

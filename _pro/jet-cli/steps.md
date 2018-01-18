@@ -24,7 +24,7 @@ jet steps [flags]
 ```
 
 ## Flags
-{% include flags.html flags=site.data.jet.flags.steps %}
+{% include jet_flag_table.html flags=site.data.jet.flags.steps %}
 
 ## Extended description
 Executing the `jet steps` command will build the services defined in the [codeship-services.yml]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}) file, and execute the steps in the [codeship-steps.yml]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}) file.
