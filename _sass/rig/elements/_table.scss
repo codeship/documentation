@@ -1,21 +1,19 @@
 .table {
   width: 100%;
-  border: 1px solid $_cGrey;
   border-collapse: collapse;
-  color: $_cDarkblue;
+  color: $cBody;
 
   thead{
-    background: lighten($_cGrey,5%);
+    background: none;
   }
 
   thead + tbody {
-    border-top: 1rem solid transparent;
     border-collapse: collapse;
   }
 
   td,th {
-    padding: .5rem .2rem;
-
+    padding: 1rem .4rem;
+    border-collapse: collapse;
     &:first-child {padding-left: 1.5rem;}
     &:last-child {padding-right: 1.5rem;}
   }
@@ -33,4 +31,3 @@
   }
 
 }
-
