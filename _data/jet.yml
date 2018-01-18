@@ -1,6 +1,5 @@
 base_url: https://s3.amazonaws.com/codeship-jet-releases
 version: "2.1.0"
-
 flags:
   cleanup:
     - name: --debug
@@ -8,28 +7,28 @@ flags:
     - name: --dry-run
       description: Provides a list of items to be removed by the cleanup command.
   load:
-      - name: --ci-branch
-        description: The name of the branch being built
-      - name: --debug
-        description: Turn debug output on
-      - name: --dir
-        description: The directory to use
-        default: Current Directory
-      - name: --dockercfg-service
-        description: The name of the service with which the dockercfg should be generated
-      - name: --encrypted-dockercfg-path
-        description: The path to the encrypted dockercfg file to be used
-      - name: --key-path string
-        description: The key path for encrypting secure environment variables.
-        default: codeship.aes
-      - name: --no-remove
-        description: Do not remove any containers that are run, overrides all other settings
-      - name: --pull-if-present
-        description: Pull images that are already present
-        default: false
-      - name: --services-path string
-        description: The relative services path
-        default: codeship-services.yml
+    - name: --ci-branch
+      description: The name of the branch being built
+    - name: --debug
+      description: Turn debug output on
+    - name: --dir
+      description: The directory to use
+      default: Current Directory
+    - name: --dockercfg-service
+      description: The name of the service with which the dockercfg should be generated
+    - name: --encrypted-dockercfg-path
+      description: The path to the encrypted dockercfg file to be used
+    - name: --key-path string
+      description: The key path for encrypting secure environment variables.
+      default: codeship.aes
+    - name: --no-remove
+      description: Do not remove any containers that are run, overrides all other settings
+    - name: --pull-if-present
+      description: Pull images that are already present
+      default: false
+    - name: --services-path string
+      description: The relative services path
+      default: codeship-services.yml
   decrypt:
     - name: --key-path
       description: The key path for encrypting secure environment variables.
@@ -66,57 +65,57 @@ flags:
       description: The relative services path
       default: codeship-services.yml
   steps:
-      - name: --ci-branch
-        description: The name of the branch being built
-      - name: --ci-build-id
-        description: The id of the build being run
-      - name: --ci-commit-description
-        description: The short description of the current commit, e.g. git describe
-      - name: --ci-commit-id
-        description: The id/sha of the commit being built
-      - name: --ci-commit-message
-        description: The message of the commit being built
-      - name: --ci-committer-email
-        description: The email of the commiter
-      - name: --ci-committer-name
-        description: The name of the commiter
-      - name: --ci-committer-username
-        description: The username of the commiter
-      - name: --ci-project-id
-        description: The id of the project being built
-      - name: --ci-repo-name
-        description: The name of the scm repository being built
-      - name: --debug
-        description: Turn debug output on
-      - name: --dir
-        description: The directory to use
-        default: Current Directory
-      - name: --dockercfg-service
-        description: The name of the service with which the dockercfg should be generated
-      - name: --encrypted-dockercfg-path
-        description: The path to the encrypted dockercfg file to be used
-      - name: --env, -e
-        description: Set an environment variable (can be used multiple times)
-      - name: --key-path
-        description: The key path for encrypting secure environment variables.
-        default: codeship.aes
-      - name: --no-remove
-        description: Do not remove any containers that are run, overrides all other settings
-      - name: --no-tty, -T
-        description: Disable pseudo-tty allocation
-      - name: --pull-if-present
-        description: Pull images that are already present
-        default: false
-      - name: --push
-        description: Run push steps
-      - name: --services-path
-        description: The relative services path
-        default: codeship-services.yml
-      - name: --steps-path
-        description: The relative steps path
-        default: codeship-steps.yml
-      - name: --tag
-        description: The tag to use
+    - name: --ci-branch
+      description: The name of the branch being built
+    - name: --ci-build-id
+      description: The id of the build being run
+    - name: --ci-commit-description
+      description: The short description of the current commit, e.g. git describe
+    - name: --ci-commit-id
+      description: The id/sha of the commit being built
+    - name: --ci-commit-message
+      description: The message of the commit being built
+    - name: --ci-committer-email
+      description: The email of the commiter
+    - name: --ci-committer-name
+      description: The name of the commiter
+    - name: --ci-committer-username
+      description: The username of the commiter
+    - name: --ci-project-id
+      description: The id of the project being built
+    - name: --ci-repo-name
+      description: The name of the scm repository being built
+    - name: --debug
+      description: Turn debug output on
+    - name: --dir
+      description: The directory to use
+      default: Current Directory
+    - name: --dockercfg-service
+      description: The name of the service with which the dockercfg should be generated
+    - name: --encrypted-dockercfg-path
+      description: The path to the encrypted dockercfg file to be used
+    - name: --env, -e
+      description: Set an environment variable (can be used multiple times)
+    - name: --key-path
+      description: The key path for encrypting secure environment variables.
+      default: codeship.aes
+    - name: --no-remove
+      description: Do not remove any containers that are run, overrides all other settings
+    - name: --no-tty, -T
+      description: Disable pseudo-tty allocation
+    - name: --pull-if-present
+      description: Pull images that are already present
+      default: false
+    - name: --push
+      description: Run push steps
+    - name: --services-path
+      description: The relative services path
+      default: codeship-services.yml
+    - name: --steps-path
+      description: The relative steps path
+      default: codeship-steps.yml
+    - name: --tag
+      description: The tag to use
   validate:
     - name: --debug
       description: Enables debug output
