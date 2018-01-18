@@ -1,6 +1,5 @@
 ---
 title: jet steps
-shortTitle: jet steps
 menus:
   pro/jet:
     title: jet steps

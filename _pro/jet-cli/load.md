@@ -1,6 +1,5 @@
 ---
 title: jet load
-shortTitle: jet load
 menus:
   pro/jet:
     title: jet load

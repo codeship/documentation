@@ -1,6 +1,5 @@
 ---
 title: Installing the Jet CLI
-shortTitle: Installing the Jet CLI
 menus:
   pro/jet:
     title: Installation

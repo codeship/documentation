@@ -1,6 +1,5 @@
 ---
 title: jet cleanup
-shortTitle: jet cleanup
 menus:
   pro/jet:
     title: jet cleanup
@@ -15,7 +14,7 @@ tags:
 ---
 
 ## Description
-Remove docker resources left behind by jet
+Remove docker resources left behind by Jet.
 
 ## Usage
 

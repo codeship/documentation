@@ -1,6 +1,5 @@
 ---
 title: jet encrypt
-shortTitle: jet encrypt
 menus:
   pro/jet:
     title: jet encrypt

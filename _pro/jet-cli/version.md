@@ -1,6 +1,5 @@
 ---
 title: jet version
-shortTitle: jet version
 menus:
   pro/jet:
     title: jet version

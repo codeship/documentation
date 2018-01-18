@@ -1,6 +1,5 @@
 ---
 title: jet decrypt
-shortTitle: jet decrypt
 menus:
   pro/jet:
     title: jet decrypt

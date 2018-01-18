@@ -1,6 +1,5 @@
 ---
 title: jet run
-shortTitle: jet run
 menus:
   pro/jet:
     title: jet run

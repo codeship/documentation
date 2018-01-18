@@ -1,6 +1,5 @@
 ---
 title: jet validate
-shortTitle: jet validate
 menus:
   pro/jet:
     title: jet validate

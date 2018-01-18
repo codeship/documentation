@@ -1,6 +1,5 @@
 ---
 title: jet generate
-shortTitle: jet generate
 menus:
   pro/jet:
     title: jet generate

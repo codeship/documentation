@@ -1,6 +1,5 @@
 ---
 title: Using the Jet CLI
-shortTitle: Using the Jet CLI
 description: Technical documentation for Codeship Pro's CLI (Jet) that allows to debug and run builds locally on the development machine
 menus:
   pro/jet:
