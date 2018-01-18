@@ -35,7 +35,7 @@ We’re going to walk you through using Codeship Pro to build, test, and deploy 
 
 Additionally, Codeship Pro uses a complimentary command-line tool called Jet to help you encrypt your secrets, as well as to debug and troubleshoot locally for a much faster feedback cycle.
 
-The first thing you want to do is [install the Jet CLI]({% link _pro/builds-and-configuration/cli.md %}) on your local machine. For Mac users, you can do this through [Homebrew](https://brew.sh/) and Linux users can curl the Jet CLI binary directly.
+The first thing you want to do is [install the Jet CLI]({% link _pro/jet-cli/usage-overview.md %}) on your local machine. For Mac users, you can do this through [Homebrew](https://brew.sh/) and Linux users can curl the Jet CLI binary directly.
 
 ## Testing Jet
 

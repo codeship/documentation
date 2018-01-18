@@ -99,7 +99,7 @@ COPY . ./
 
 ## Notes And Known Issues
 
-Because of version and test dependency issues, it is advised to try using [the Jet CLI]({% link _pro/builds-and-configuration/cli.md %}) to debug issues locally via `jet steps`.
+Because of version and test dependency issues, it is advised to try using [the Jet CLI]({% link _pro/jet-cli/usage-overview.md %}) to debug issues locally via `jet steps`.
 
 ## Caching
 

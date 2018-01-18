@@ -193,7 +193,7 @@ RUN apt-get install -y curl
 ADD ./slack ./
 ```
 
-We'll need to provide this container with the necessary environment variables. The standard `CI_*` variables will be provided automatically, however we'll need to provide the `SLACK_WEBHOOK_TOKEN`. This can be safely injected via the `encrypted_env_file` service declaration, and the [encryption commands]({{ site.baseurl }}{% link _pro/builds-and-configuration/cli.md %}#encryption-commands). By encrypting this environment variable, and adding it to our repository, it can be later decoded and provided to our notifications container.
+We'll need to provide this container with the necessary environment variables. The standard `CI_*` variables will be provided automatically, however we'll need to provide the `SLACK_WEBHOOK_TOKEN`. This can be safely injected via the `encrypted_env_file` service declaration, and the [encryption commands]({{ site.baseurl }}{% link _pro/jet-cli/usage-overview.md %}#encryption-commands). By encrypting this environment variable, and adding it to our repository, it can be later decoded and provided to our notifications container.
 
 ```yaml
 deploynotify

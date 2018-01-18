@@ -48,7 +48,7 @@ Running with Docker, your Codeship services allow you to:
 **Your Codeship builds run on infrastructure equipped with version {{ site.data.docker.version }} of Docker.**
 
 ## Prerequisites
-Your services file will require that you have [installed Jet locally]({{ site.baseurl }}{% link _pro/builds-and-configuration/cli.md %}) or [set up your project on Codeship.]({{ site.baseurl }}{% link _pro/quickstart/codeship-configuration.md %})
+Your services file will require that you have [installed Jet locally]({{ site.baseurl }}{% link _pro/jet-cli/usage-overview.md %}) or [set up your project on Codeship.]({{ site.baseurl }}{% link _pro/quickstart/codeship-configuration.md %})
 
 ## Services File Setup & Configuration
 By default, we look for the filename `codeship-services.yml`. In its absence, Codeship will automatically search for a `docker-compose.yml` file to use in its place.
@@ -170,7 +170,7 @@ app:
 
 The way we encrypt our environment variables is by creating a file in our root directory - in this case, a file named `env` and then [downloading our project AES key.]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %}) to root directory (and adding it to our `.gitignore` file.)
 
-Once the AES key is in our directory, we can run the `jet encrypt` command with an *input* and an *output* filename: `jet encrypt env env.encrypted` ([Learn more about using Jet]({{ site.baseurl }}{% link _pro/builds-and-configuration/cli.md %}))
+Once the AES key is in our directory, we can run the `jet encrypt` command with an *input* and an *output* filename: `jet encrypt env env.encrypted` ([Learn more about using Jet]({{ site.baseurl }}{% link _pro/jet-cli/usage-overview.md %}))
 
 Lastly, we would either delete the unencrypted `env` file or add it to our `.gitignore`.
 
@@ -325,7 +325,7 @@ Or, a health check poll could look like [this script](https://github.com/codeshi
 
 ## Validating Your Files
 
-You can use the `jet validate` command, via our [local CLI]({{ site.baseurl }}{% link _pro/builds-and-configuration/cli.md %}), to verify that your files are configured correctly and ready to be used.
+You can use the `jet validate` command, via our [local CLI]({{ site.baseurl }}{% link _pro/jet-cli/usage-overview.md %}), to verify that your files are configured correctly and ready to be used.
 
 ## More Resources
 * [Docker Compose](https://docs.docker.com/compose/)

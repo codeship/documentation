@@ -49,7 +49,7 @@ Now whenever the build is run, whether locally or via commit to the Codeship bui
 
 ![Codeship Pro Build Example]({{ site.baseurl }}/images/jenkins-guide/build_example.png)
 
-As mentioned, with the [Jet CLI]({% link _pro/builds-and-configuration/cli.md %}) tool you can run your builds locally before you push to your source code management system or to help you debug. Here you can see the output in the console after using the `jet steps` command.
+As mentioned, with the [Jet CLI]({% link _pro/jet-cli/usage-overview.md %}) tool you can run your builds locally before you push to your source code management system or to help you debug. Here you can see the output in the console after using the `jet steps` command.
 
 ![Codeship Pro Jet CLI Output Example]({{ site.baseurl }}/images/jenkins-guide/jet_example.png)
 

@@ -45,7 +45,7 @@ This article is about the `codeship-steps.yml` file that powers Codeship Pro.
 _Jet_ will look for a steps file in this order. If you are running _Jet_ locally, you can override the filename with the `--steps-path` flag. Both YAML and JSON formats are accepted.
 
 ## Prerequisites
-Your Steps file will require that you have [installed Jet locally]({{ site.baseurl }}{% link _pro/builds-and-configuration/cli.md %}) or [set up your project on Codeship.]({{ site.baseurl }}{% link _pro/quickstart/codeship-configuration.md %}). It will also require that you have configured your [codeship-services.yml file]({% link _pro/builds-and-configuration/services.md %}).
+Your Steps file will require that you have [installed Jet locally]({{ site.baseurl }}{% link _pro/jet-cli/usage-overview.md %}) or [set up your project on Codeship.]({{ site.baseurl }}{% link _pro/quickstart/codeship-configuration.md %}). It will also require that you have configured your [codeship-services.yml file]({% link _pro/builds-and-configuration/services.md %}).
 
 ## Using codeship-steps.yml
 
@@ -264,4 +264,4 @@ On **Codeship Pro**, a build can run for up to 2 hours, although builds will tim
 
 ## Validating Your Files
 
-You can use the `jet validate` command, via our [local CLI]({{ site.baseurl }}{% link _pro/builds-and-configuration/cli.md %}), to verify that your files are configured correctly and ready to be used.
+You can use the `jet validate` command, via our [local CLI]({{ site.baseurl }}{% link _pro/jet-cli/usage-overview.md %}), to verify that your files are configured correctly and ready to be used.

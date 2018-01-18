@@ -36,7 +36,7 @@ You will simply need to add one of the IBM deployment images as a service in you
 Prior to getting started, please ensure you have the following:
 
 - [An Understanding Of Codeship Pro]({% link _pro/quickstart/getting-started.md %})
-- [Codeship's Jet CLI]({% link _pro/builds-and-configuration/cli.md %}) installed locally
+- [Codeship's Jet CLI]({% link _pro/jet-cli/usage-overview.md %}) installed locally
 - [Docker](https://www.Docker.com/products/overview)
 - [An IBM Cloud Account](https://www.ibm.com/cloud-computing/bluemix/)
 - An understanding of using IBM Cloud Foundry and the required manifest and database files for a Cloud Foundry application

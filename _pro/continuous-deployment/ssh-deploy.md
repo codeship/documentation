@@ -22,7 +22,7 @@ categories:
 ---
 
 <div class="info-block">
-To follow this tutorial on your own computer, please [install the `jet` CLI locally first]({{ site.baseurl }}{% link _pro/builds-and-configuration/cli.md %}).
+To follow this tutorial on your own computer, please [install the `jet` CLI locally first]({{ site.baseurl }}{% link _pro/jet-cli/usage-overview.md %}).
 </div>
 
 * include a table of contents
