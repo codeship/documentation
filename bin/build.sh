@@ -26,8 +26,8 @@ if [ -f "_data/jet.yml" ]; then
 	sed -i'' -e "s|^version:.*|version: $(cat ${jet_source}/version)|" "_data/jet.yml"
 fi
 
-if [ -f "_pro/builds-and-configuration/release-notes.md" ]; then
-	cat "${jet_source}/CHANGELOG.md" >> "_pro/builds-and-configuration/release-notes.md"
+if [ -f "_pro/jet-cli/release-notes.md" ]; then
+	cat "${jet_source}/CHANGELOG.md" >> "_pro/jet-cli/release-notes.md"
 fi
 
 rm -rf "${jet_source}"
