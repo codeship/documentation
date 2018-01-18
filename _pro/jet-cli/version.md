@@ -4,10 +4,12 @@ shortTitle: jet version
 menus:
   pro/jet:
     title: jet version
-    weight: 8
+    weight: 11
+categories:
+  - Jet CLI
 tags:
   - jet
-  - usage
+  - version
   - cli
   - pro
 ---

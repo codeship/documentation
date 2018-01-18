@@ -4,13 +4,14 @@ shortTitle: jet decrypt
 menus:
   pro/jet:
     title: jet decrypt
-    weight: 3
+    weight: 4
+categories:
+  - Jet CLI
 tags:
   - jet
-  - usage
+  - decrypt
   - cli
   - pro
-  - decrypt
 ---
 
 ## Description
@@ -26,21 +27,24 @@ jet decrypt /path/to/input_encrypted_file /path/to/output_file [flags]
 {% include flags.html flags=site.data.jet.flags.decrypt %}
 
 ## Extended description
-If your project is using an encrypted environment variable file, or any other encrypted file using the `codeship.aes` key, you can decrypt that file using `jet decrypt`.
+The `jet decrypt` function will take any encrypted file as input, and output a decrypted file using the key found in your _Project Settings_.
 
-The `jet decrypt` function will take any `codeship.aes` key encrypted file as input, and output a decrypted file.
+If you encounter the error `No AES key provided`, and you have already downloaded the key, verify that the file is named `codeship.aes` and in the same directory where you are executing `jet decrypt`, or you are passing in the correct `key-path` value.
 
-<div class="info-block">
-For a more in depth explanation of environment variables and encryption, you can [read more here](https://documentation.codeship.com/pro/builds-and-configuration/environment-variables/#encrypted-environment-variables).
-</div>
 
 ## Examples
-```
-jet decrypt env.encrypted env
+
+### Default Usage
+```shell
+$ jet decrypt env.encrypted env
 ```
 
-In this example `env.encrypted` is the name of the encrypted text file containing your environment variables, and `env` is the name of the decrypted file, with the `codeship.aes` key in the same folder.
+This will create `env` from the `env.encrypted` file using the key in the `codeship.aes` file.
 
+### encrypt with key-path
+
+```shell
+$ jet decrypt env.encrypted env --key-path PATH_TO_AES_KEY
 ```
-jet decrypt env.encrypted env --key-path PATH_TO_AES_KEY
-```
+
+This will create `env` from the `env.encrypted` file using the key located at `PATH_TO_AES_KEY`.

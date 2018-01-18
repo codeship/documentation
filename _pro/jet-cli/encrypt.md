@@ -4,10 +4,12 @@ shortTitle: jet encrypt
 menus:
   pro/jet:
     title: jet encrypt
-    weight: 4
+    weight: 5
+categories:
+  - Jet CLI
 tags:
   - jet
-  - usage
+  - encrypt
   - cli
   - pro
 ---
@@ -16,6 +18,7 @@ tags:
 Encrypt a file using an AES Key.
 
 ## Usage
+
 ```
 jet encrypt INPUT_PATH OUTPUT_PATH [flags]
 ```
@@ -24,22 +27,29 @@ jet encrypt INPUT_PATH OUTPUT_PATH [flags]
 {% include flags.html flags=site.data.jet.flags.encrypt %}
 
 ## Extended description
-Typical usage of `jet encrypt` is for secrets management, such as an environment variable file.  You can encrypt any file you want using the `codeship.aes` key. During the build process, and encrypted environment variable file will be automatically decrypted and used during the build process.
+The `jet encrypt` function will take any file as input, and output an encrypted file using the key found in your _Project Settings_.
 
-The `jet encrypt` function will take any file as input, and output an encrypted file using the `codeship.aes` key.
+If you encounter the error `No AES key provided`, and you have already downloaded the key, verify that the file is named `codeship.aes` and in the same directory where you are executing `jet encrypt`, or you are passing in the correct `key-path` value.
 
-<div class="info-block">
-For a more in depth explanation of environment variables and encryption, you can [read more here](https://documentation.codeship.com/pro/builds-and-configuration/environment-variables/#encrypted-environment-variables).
-</div>
+## Common Encrypted Files
+
+ + [Environment variables]({{ site.baseurl }}{% link _pro/builds-and-configuration/environment-variables.md %})
+ + [Build arguments]({{ site.baseurl }}{% link _pro/builds-and-configuration/build-arguments.md %})
+ + [Registry credentials]({{ site.baseurl }}{% link _pro/builds-and-configuration/image-registries.md %}).
 
 ## Examples
 
-```
-jet encrypt env env.encrypted
+### Default Usage
+```shell
+$ jet encrypt env env.encrypted
 ```
 
-In this example `env` is the name of the text file containing your environment variables, and `env.encrypted` is the name of the encrypted file, with the `codeship.aes` key in the same folder.
+This will create `env.encrypted` from the `env` file using the key in the `codeship.aes` file.
 
+### encrypt with key-path
+
+```shell
+$ jet encrypt env env.encrypted --key-path PATH_TO_AES_KEY
 ```
-jet encrypt env env.encrypted --key-path PATH_TO_AES_KEY
-```
+
+This will create `env.encrypted` from the `env` file using the key located at `PATH_TO_AES_KEY`.

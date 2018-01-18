@@ -4,13 +4,14 @@ shortTitle: jet validate
 menus:
   pro/jet:
     title: jet validate
-    weight: 8
+    weight: 10
+categories:
+  - Jet CLI
 tags:
   - jet
-  - usage
+  - validate
   - cli
   - pro
-  - validate
 ---
 
 ## Description
@@ -26,6 +27,6 @@ jet validate [flags]
 {% include flags.html flags=site.data.jet.flags.validate %}
 
 ## Extended description
+The `jet validate` command will confirm that your [codeship-services.yml]({{ site.baseurl }}{% link _pro/builds-and-configuration/services.md %}) and [codeship-steps.yml]({{ site.baseurl }}{% link _pro/builds-and-configuration/steps.md %}) are valid and ready to be used, or if there are any configuration issues.
 
-
-## Examples
+* need examples of error output
