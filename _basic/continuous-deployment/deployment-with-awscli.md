@@ -26,7 +26,7 @@ Codeship Basic offers a variety of turnkey deployment integrations for AWS, incl
 - [CodeDeploy]({{ site.baseurl }}{% link _basic/continuous-deployment/deployment-to-aws-codedeploy.md %})
 - [Lambda]({{ site.baseurl }}{% link _basic/continuous-deployment/deployment-to-aws-lambda.md %})
 - [Elastic Beanstalk]({{ site.baseurl }}{% link _basic/continuous-deployment/deployment-to-elastic-beanstalk.md %})
-- [S3](({{ site.baseurl }}{% link _basic/continuous-deployment/deployment-to-aws-codedeploy.md %}))
+- [S3]({{ site.baseurl }}{% link _basic/continuous-deployment/deployment-to-aws-codedeploy.md %})
 
 These are the simplest ways to deploy to AWS via Codeship Basic.
 
