@@ -206,7 +206,7 @@ And if you scroll through your logs, you should see the versions for *redis* and
 
 Now we'll take a look at one of the cool benefits of doing all of your CI/CD process with these simple files in your repo.
 
-Open up `codeship-services.yml` and find the line where you define your *redis* service. Change `image: redis:3.0.5` to `image: redis:3.2.11`.
+Open up `codeship-services.yml` and find the line where you define your *redis* service. Change `image: healthcheck/redis:alpine` to `image: redis:3.2.11`.
 
 ## Run Locally Again
 
