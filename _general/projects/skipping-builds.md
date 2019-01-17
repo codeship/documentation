@@ -14,6 +14,7 @@ tags:
   - testing
   - skipping
   - skip
+  - trigger
 categories:
   - Projects
   - Testing
@@ -34,12 +35,13 @@ You can skip builds on both [Codeship Basic](https://codeship.com/features/basic
 
 ## Skipping On Certain Branches
 
-You can use the _Branches_ tab in your _Project Settings_ to exclude certain branches from running builds.
+You can use the _Build Triggers_ tab in your _Project Settings_ to exclude certain branches from running builds.
 
 ![Exclude branches from running builds]({{ site.baseurl }}/images/general/exclude_branches.png)
 
-**Note** that you can also choose to only run builds on certain branches by using the other toggle on the _Branches_ tab as well.
+**Note** that you can also choose to only run builds on certain branches by using the other toggle on the _Build Triggers_ tab as well.
 
+Branches can be defined using the full name, e.g. `master`, or by specifying a regular expression, e.g. `^releases.*$`. Make sure to remember `^` and `$` to indicate that a branch name is a regular expression.
 
 ### Skipping Via Commit Message
 
