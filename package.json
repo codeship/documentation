@@ -19,7 +19,7 @@
   },
   "dependencies": {
     "autoprefixer": "^9.4.7",
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.0",
     "gulp-folders": "^1.1.0",
     "gulp-image-resize": "^0.13.0",
     "gulp-imagemin": "^4.1.0",
