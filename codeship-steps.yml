@@ -15,7 +15,7 @@
           command: gulp post-process
         - name: htmlproofer
           service: documentation
-          exclude: master
+          tag: "^htmlproof*"
           command: bundle exec rake htmlproofer
     - type: serial
       name: linters
