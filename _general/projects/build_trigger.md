@@ -55,7 +55,6 @@ To trigger a build only on PRs:
 2. Select the _Build Triggers_ tab.
 
 3. Select the _Build only on PR events_ radio button.
-
 ![Build only on PRs]({{ site.baseurl }}/images/general/build_only_PR.png)
 4. Click the _Save Configuration_ button.
 
