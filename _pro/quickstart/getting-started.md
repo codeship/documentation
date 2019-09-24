@@ -48,6 +48,10 @@ CodeShip Pro uses a complimentary command-line tool called Jet to help you encry
 
 The first thing you want to do is [install the Jet CLI]({% link _pro/jet-cli/installation.md %}) on your local machine. For Mac users, you can do this through [Homebrew](https://brew.sh/) and Linux users can curl the Jet CLI binary directly.
 
+```shell
+brew cask install jet
+```
+
 Once Jet is installed, type `jet version` to print the version number on screen. Next, type `jet help` to bring up the help options. Jet is very powerful - from running CI to encrypting your credentials, so take some time to play around with what you see when you run `jet help`.
 
 ![Jet Help Log Output]({{ site.baseurl }}/images/gettingstarted/jet-help.png)
