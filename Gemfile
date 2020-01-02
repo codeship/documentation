@@ -7,7 +7,7 @@ gem 'sassc', '~> 2.2.1'
 gem 'shipyard-framework', '~> 1.0.1'
 
 # Jekyll Plugins
-gem 'jekyll-coffeescript', '~> 1.2.2'
+gem 'jekyll-coffeescript', '~> 2.0.0'
 gem 'jekyll-seo-tag', '~> 2.6.1'
 gem 'jekyll-sitemap', '~> 1.4.0'
 gem 'jekyll-redirect-from', '~> 0.15.0'
