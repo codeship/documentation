@@ -22,7 +22,7 @@
     "gulp": "^4.0.2",
     "gulp-folders-4x": "^1.0.1",
     "gulp-image-resize": "^0.13.0",
-    "gulp-imagemin": "^6.2.0",
+    "gulp-imagemin": "^7.1.0",
     "gulp-jsonlint": "^1.3.1",
     "gulp-postcss": "^8.0.0",
     "markdown-spellcheck": "^1.3.1"
