@@ -4,6 +4,9 @@
     - type: serial
       name: prepare_site
       steps:
+        - name: build
+          service: documentation
+          command: bash yolo
         - name: jet_release_notes
           service: aws
           command: sh bin/jet.sh
